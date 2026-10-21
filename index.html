@@ -338,6 +338,14 @@ body{background:#101114;color:#F4F2EA;background-image:none}
 @media(max-width:760px){.contactgrid{grid-template-columns:1fr}.contactcard{padding:21px}.contactcard strong{font-size:18px}}
 </style>
 
+
+<style id="paradox-seamless-marquee-fix">
+.marquee{overflow:hidden!important}
+.marqueetrack{display:flex!important;flex-wrap:nowrap!important;gap:0!important;width:max-content!important;animation:paradox-marquee-loop 30s linear infinite!important;transform:translate3d(0,0,0);will-change:transform}
+.marqueetrack>span{display:flex!important;flex:0 0 auto!important;width:max-content!important;white-space:nowrap!important;padding-right:28px!important}
+@keyframes paradox-marquee-loop{from{transform:translate3d(0,0,0)}to{transform:translate3d(-33.333333%,0,0)}}
+@media(prefers-reduced-motion:reduce){.marqueetrack{animation-duration:60s!important}}
+</style>
 </head>
 <body>
 <header class="topbar"><div class="wrap nav">
@@ -353,7 +361,7 @@ body{background:#101114;color:#F4F2EA;background-image:none}
 <div class="heronote"><span class="noteicon" aria-hidden="true"><span class="notecheck"></span></span><span>Только просмотр меню. Без корзины и оформления заказов.</span></div><div class="hero-stats"><div><strong>01</strong><span>Дизайн под бренд</span></div><div><strong>QR</strong><span>Удобно открыть</span></div><div><strong>∞</strong><span>Ваши идеи</span></div></div></div>
 <div class="heroart"><div class="heroimg"><img src="https://images.unsplash.com/photo-1558030006-450675393462?auto=format&fit=crop&w=1200&q=90" alt="Премиальная подача блюда в ресторане" fetchpriority="high"><div class="photolabel"><div><small>ЦИФРОВОЕ МЕНЮ С ХАРАКТЕРОМ</small><br><strong>Вкус начинается<br>с первого взгляда.</strong></div><small>01 / 04</small></div></div><div class="tag">ДИЗАЙН,<br>КОТОРЫЙ ЗАМЕЧАЮТ</div><div class="floatcard"><img src="https://images.unsplash.com/photo-1555939594-58d7cb561ad1?auto=format&fit=crop&w=500&q=88" alt="Мясо на гриле с аппетитной корочкой"><strong>Рибай на гриле</strong><small>Подача, которую замечают</small></div></div>
 </div></section>
-<div class="marquee" aria-hidden="true"><div class="marqueetrack"><span>Цифровые меню <i aria-hidden="true"></i> Вкус, который говорит <i aria-hidden="true"></i> Ваш стиль — ваши правила <i aria-hidden="true"></i> Создано PARADOX <i aria-hidden="true"></i></span><span>Цифровые меню <i aria-hidden="true"></i> Вкус, который говорит <i aria-hidden="true"></i> Ваш стиль — ваши правила <i aria-hidden="true"></i> Создано PARADOX <i aria-hidden="true"></i></span></div></div>
+<div class="marquee" aria-hidden="true"><div class="marqueetrack"><span>Цифровые меню <i aria-hidden="true"></i> Вкус, который говорит <i aria-hidden="true"></i> Ваш стиль — ваши правила <i aria-hidden="true"></i> Создано PARADOX <i aria-hidden="true"></i></span><span>Цифровые меню <i aria-hidden="true"></i> Вкус, который говорит <i aria-hidden="true"></i> Ваш стиль — ваши правила <i aria-hidden="true"></i> Создано PARADOX <i aria-hidden="true"></i></span><span>Цифровые меню <i aria-hidden="true"></i> Вкус, который говорит <i aria-hidden="true"></i> Ваш стиль — ваши правила <i aria-hidden="true"></i> Создано PARADOX <i aria-hidden="true"></i></span></div></div>
 <section class="section demo" id="demo"><div class="wrap">
 <div class="section-head reveal"><div><span class="eyebrow">Живой просмотр</span><h2>Меню в вашем<br><em>стиле.</em></h2></div><p>Не просто картинки на сайте — переключайте варианты и смотрите, как цифровое меню будет выглядеть на экране смартфона. Каждый формат можно адаптировать под ваш бренд.</p></div>
 <div class="demogrid"><div class="tabs reveal" role="tablist" aria-label="Варианты оформления меню">
@@ -456,3 +464,5 @@ document.querySelectorAll("[data-pick-style]").forEach(a=>a.addEventListener("cl
 let toastTimer;function toast(message){const el=document.getElementById("toast");el.textContent=message;el.classList.add("show");clearTimeout(toastTimer);toastTimer=setTimeout(()=>el.classList.remove("show"),3200);}
 </script>
 </body></html>
+Paradox111.html
+Отображается файл "Paradox111.html"
