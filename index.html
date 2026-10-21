@@ -1,0 +1,434 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#101114">
+<meta name="description" content="PARADOX — индивидуальные цифровые меню для ресторанов. Выразительный дизайн, фотографии блюд и удобный просмотр на смартфоне.">
+<meta property="og:title" content="PARADOX — индивидуальные цифровые меню для ресторанов"><meta property="og:description" content="Меню, которое хочется открыть."><meta property="og:type" content="website">
+<title>PARADOX — цифровые меню для ресторанов</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Onest:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#101114;--panel:#1d2026;--paper:#F4F2EA;--muted:#a6aaa2;--line:#ffffff20;--lime:#D5E66A;--ink:#101114;--r:24px;--max:1200px;--ease:cubic-bezier(.2,.75,.25,1)}
+*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:86px}body,button,input,textarea,select{font-family:Onest,sans-serif}body{margin:0;background:var(--bg);color:var(--paper);-webkit-font-smoothing:antialiased}a{color:inherit;text-decoration:none}button{color:inherit}img{display:block;max-width:100%}::selection{background:var(--lime);color:var(--ink)}.wrap{width:min(var(--max),calc(100% - 48px));margin:auto}.eyebrow{display:inline-flex;align-items:center;gap:9px;color:var(--lime);font-size:11px;font-weight:800;letter-spacing:.13em;text-transform:uppercase}.eyebrow:before{content:"";width:7px;height:7px;background:var(--lime);border-radius:50%}.muted{color:var(--muted)}.section{padding:105px 0}.section-head{display:flex;justify-content:space-between;align-items:end;gap:28px;margin-bottom:38px}.section-head h2{font-size:clamp(35px,5vw,66px);line-height:.98;letter-spacing:-.065em;margin:14px 0 0;font-weight:800}.section-head p{max-width:370px;color:var(--muted);font-size:14px;line-height:1.75;margin:0}.btn{min-height:51px;display:inline-flex;align-items:center;justify-content:center;gap:12px;padding:0 22px;border:1px solid transparent;border-radius:999px;font-size:13px;font-weight:800;cursor:pointer;transition:transform .25s var(--ease),background .25s,border-color .25s}.btn:hover{transform:translateY(-3px)}.primary{background:var(--lime);color:var(--ink)}.primary:hover{background:#C084FC}.outline{border-color:var(--line);background:#ffffff05}.outline:hover{border-color:var(--lime)}.small{min-height:41px;padding:0 16px;font-size:12px}.topbar{position:sticky;top:0;z-index:20;background:#101114d9;backdrop-filter:blur(18px);border-bottom:1px solid #ffffff10}.nav{min-height:76px;display:flex;align-items:center;justify-content:space-between;gap:22px}.logo{font-size:24px;font-weight:800;letter-spacing:-.08em}.logo span{color:var(--lime)}.navlinks{display:flex;align-items:center;gap:25px;font-size:12px;font-weight:700;color:#d0d2cb}.navlinks a:hover,.footerlinks a:hover{color:var(--lime)}.toggle{display:none;width:43px;height:43px;border:1px solid var(--line);border-radius:50%;background:transparent;font-size:19px}.hero{padding:65px 0 55px;overflow:hidden;position:relative}.hero:before{content:"";position:absolute;right:-100px;top:-220px;width:550px;height:550px;border-radius:50%;background:radial-gradient(circle,#D5E66A1c,transparent 70%);pointer-events:none}.herogrid{position:relative;display:grid;grid-template-columns:1.03fr .97fr;gap:45px;align-items:center}.hero h1{font-size:clamp(48px,7.5vw,98px);line-height:.91;letter-spacing:-.085em;margin:20px 0 24px;font-weight:800}.hero h1 span{color:var(--lime)}.herocopy{max-width:510px;color:#c1c5bc;font-size:15px;line-height:1.8}.actions{display:flex;flex-wrap:wrap;gap:11px;margin-top:28px}.heronote{display:flex;align-items:center;gap:11px;margin-top:28px;color:var(--muted);font-size:11px}.noteicon{display:grid;place-items:center;width:27px;height:27px;border:1px solid var(--line);border-radius:50%;color:var(--lime)}.heroart{position:relative;min-height:500px;display:grid;place-items:center}.heroimg{position:absolute;inset:12px 0 24px 35px;border-radius:32px;overflow:hidden;background:#39372f}.heroimg img{width:100%;height:100%;object-fit:cover;filter:saturate(.82);animation:zoom-in 1.1s var(--ease) both}.heroimg:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 35%,#0b0d0dbd)}.photolabel{position:absolute;z-index:1;bottom:25px;left:25px;right:25px;display:flex;align-items:end;justify-content:space-between;gap:12px}.photolabel strong{font-size:clamp(23px,3vw,35px);line-height:1;letter-spacing:-.06em}.photolabel small{font-size:9px;letter-spacing:.12em}.tag{position:absolute;z-index:2;left:0;top:45px;padding:14px 17px;border-radius:17px;background:var(--lime);color:var(--ink);font-size:10px;font-weight:800;transform:rotate(-5deg);animation:float 5s ease-in-out infinite}.floatcard{position:absolute;z-index:3;right:-5px;bottom:0;width:190px;padding:13px;border-radius:20px;background:var(--paper);color:var(--ink);box-shadow:0 20px 55px #0005;transform:rotate(4deg)}.floatcard img{width:100%;height:100px;object-fit:cover;border-radius:12px}.floatcard strong{display:block;margin-top:9px;font-size:12px}.floatcard small{color:#656960;font-size:10px}.marquee{overflow:hidden;border-block:1px solid var(--line);padding:17px 0}.marqueetrack{display:flex;width:max-content;gap:28px;animation:marquee 32s linear infinite;color:#b6bab1;font-size:10px;font-weight:800;letter-spacing:.16em;text-transform:uppercase}.marqueetrack span{display:flex;align-items:center;gap:28px}.marqueetrack i{font-style:normal;color:var(--lime);font-size:17px}
+.demo{background:var(--paper);color:var(--ink)}.demo .eyebrow{color:#D5E66A}.demo .eyebrow:before{background:#D5E66A}.demo .section-head p{color:#656960}.demogrid{display:grid;grid-template-columns:.72fr 1.28fr;gap:34px;align-items:start}.tabs{display:grid;gap:10px}.tab{width:100%;display:flex;align-items:center;justify-content:space-between;gap:12px;text-align:left;padding:17px 19px;border:1px solid #d9dbd2;border-radius:17px;background:transparent;color:var(--ink);cursor:pointer;transition:.25s}.tab strong{display:block;font-size:14px}.tab small{display:block;margin-top:5px;color:#6c7067;font-size:11px}.tab .arrow{font-size:20px}.tab.active{background:var(--ink);color:var(--paper);border-color:var(--ink)}.tab.active small{color:#b5b9af}.tab.active .arrow{color:var(--lime)}.phonestage{min-height:550px;padding:24px;border-radius:28px;background:#e8ebf3;display:grid;place-items:center;overflow:hidden}.phone{width:min(100%,340px);padding:8px;border-radius:36px;background:#191b19;box-shadow:0 28px 65px #15171325;transition:transform .4s var(--ease)}.phone:hover{transform:translateY(-4px) rotate(.4deg)}.screen{overflow:hidden;border-radius:29px;min-height:480px;background:#faf9f3;color:#242622}.phonetop{display:flex;justify-content:space-between;padding:16px 15px 11px;font-size:10px;font-weight:800}.cover{height:150px;position:relative;overflow:hidden;background:#39362e}.cover img{width:100%;height:100%;object-fit:cover;transition:transform .5s}.cover:after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,#10120fb3,transparent 80%)}.covertext{position:absolute;z-index:1;left:14px;bottom:12px;color:white}.covertext small{display:block;font-size:8px;letter-spacing:.14em}.covertext strong{display:block;margin-top:4px;font-size:22px;letter-spacing:-.06em}.categories{display:flex;gap:6px;overflow:auto;padding:12px;scrollbar-width:none}.categories span{flex:0 0 auto;padding:7px 10px;border-radius:999px;background:#e9e9e0;font-size:9px;font-weight:800}.categories span:first-child{background:#222521;color:white}.foodlist{display:grid;gap:8px;padding:0 11px 12px}.food{display:grid;grid-template-columns:72px 1fr auto;gap:9px;align-items:center;padding:7px;border-radius:13px;background:white;transition:transform .25s,box-shadow .25s}.food:hover{transform:translateY(-3px);box-shadow:0 8px 18px #10111412}.food img{width:72px;height:63px;object-fit:cover;border-radius:9px}.food strong{display:block;font-size:10px;line-height:1.35}.food small{display:block;margin-top:4px;color:#73766e;font-size:8px;line-height:1.4}.food b{align-self:end;padding-bottom:4px;font-size:9px;white-space:nowrap}.democaption{display:flex;justify-content:space-between;gap:15px;align-items:center;margin-top:18px;color:#676b62;font-size:11px}.democaption strong{color:var(--ink)}
+.features{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}.feature{min-height:225px;padding:24px;border:1px solid var(--line);border-radius:var(--r);background:linear-gradient(145deg,#1d2026,#1b1e1c);transition:transform .3s,border-color .3s}.feature:hover{transform:translateY(-5px);border-color:#D5E66A70}.featureicon{display:grid;place-items:center;width:43px;height:43px;margin-bottom:28px;border-radius:14px;background:#D5E66A19;color:var(--lime);font-size:20px}.feature h3{margin:0 0 9px;font-size:18px;letter-spacing:-.04em}.feature p{margin:0;color:var(--muted);font-size:12px;line-height:1.75}.options{background:#1a1c22}.optiongrid{display:grid;grid-template-columns:repeat(2,1fr);gap:15px}.option{position:relative;min-height:280px;padding:25px;overflow:hidden;display:flex;flex-direction:column;justify-content:space-between;border:1px solid var(--line);border-radius:27px;background:#232630;transition:transform .3s}.option:hover{transform:translateY(-4px)}.option.reveal{transition-delay:0s}.optiongrid .option:nth-child(2){transition-delay:.12s}.optiongrid .option:nth-child(3){transition-delay:.08s}.optiongrid .option:nth-child(4){transition-delay:.2s}.optionno{color:var(--lime);font-size:10px;font-weight:800;letter-spacing:.12em}.option h3{font-size:clamp(26px,3vw,39px);letter-spacing:-.06em;margin:20px 0 9px}.option p{max-width:330px;color:#b3b7ae;font-size:12px;line-height:1.7;margin:0}.option a{display:inline-flex;gap:8px;margin-top:17px;color:var(--lime);font-size:11px;font-weight:800}.optionart{position:absolute;right:-6px;bottom:-20px;width:45%;height:62%;overflow:hidden;border-radius:22px 0 0 0;opacity:.75;transform:rotate(-6deg);transition:.4s}.option:hover .optionart{opacity:1;transform:rotate(0) scale(1.04)}.optionart img{width:100%;height:100%;object-fit:cover}.option>div:first-child{position:relative;z-index:2}.option>div:first-child{max-width:68%}.process{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;counter-reset:step}.process article{padding-top:20px;border-top:1px solid var(--line);counter-increment:step}.process article:before{content:"0" counter(step);color:var(--lime);font-size:11px;font-weight:800}.process h3{font-size:20px;margin:22px 0 9px}.process p{color:var(--muted);font-size:12px;line-height:1.8;margin:0}
+.brief{background:var(--lime);color:var(--ink)}.brief .eyebrow{color:#F4F2EA}.brief .eyebrow:before{background:#F8FAFC}.briefshell{display:grid;grid-template-columns:.75fr 1.25fr;gap:36px;align-items:start}.briefaside{position:sticky;top:105px}.briefaside h2{font-size:clamp(38px,5vw,63px);line-height:.95;letter-spacing:-.07em;margin:15px 0}.briefaside p{max-width:340px;color:#e1e7ff;font-size:13px;line-height:1.8}.briefaside .tiny{padding-top:18px;margin-top:27px;border-top:1px solid #26321c2c;color:#e1e7ff;font-size:10px}.quiz{padding:clamp(21px,4vw,36px);border-radius:27px;background:#f8f8f1;box-shadow:0 24px 65px #182a5a1a;color:var(--ink)}.quizprogress{display:flex;justify-content:space-between;gap:12px;margin-bottom:24px;color:#676e5d;font-size:10px;font-weight:800}.track{height:5px;overflow:hidden;border-radius:99px;background:#e3e8f5;margin-bottom:26px}.fill{height:100%;width:25%;background:#D5E66A;border-radius:inherit;transition:width .3s}.step{display:none;animation:stepin .3s both}.step.active{display:block}.step h3{font-size:clamp(23px,3vw,30px);line-height:1.1;letter-spacing:-.055em;margin:0 0 9px}.step>p{font-size:12px;line-height:1.6;color:#6c7165;margin:0 0 20px}.choices{display:grid;grid-template-columns:repeat(2,1fr);gap:9px}.choice{position:relative}.choice input{position:absolute;opacity:0;pointer-events:none}.choice span{min-height:52px;display:flex;align-items:center;gap:9px;padding:12px;border:1px solid #d9dcc8;border-radius:14px;color:#363a32;font-size:11px;font-weight:700;cursor:pointer;transition:.2s}.choice span:before{content:"";flex:0 0 16px;width:16px;height:16px;border:1px solid #aab3c7;border-radius:5px;background:white}.choice input:checked+span{border-color:#30372a;background:#f0f3d8}.choice input:checked+span:before{border-color:#D5E66A;background:#D5E66A;box-shadow:inset 0 0 0 4px #f0f3d8}.choice input:focus-visible+span{outline:3px solid #D5E66A;outline-offset:2px}.field{display:grid;gap:7px;margin-top:14px}.field label{font-size:11px;font-weight:800}.field input,.field textarea,.field select{width:100%;border:1px solid #d9dcc8;border-radius:12px;padding:13px 14px;background:white;color:#242622;font-size:12px;outline:none}.field input:focus,.field textarea:focus,.field select:focus{border-color:#D5E66A;box-shadow:0 0 0 3px #D5E66A45}.field textarea{min-height:82px;resize:vertical}.hint{font-size:10px;line-height:1.5;color:#777d6e}.quizcontrols{display:flex;justify-content:space-between;gap:12px;margin-top:26px;padding-top:20px;border-top:1px solid #e0e1d7}.quizcontrols .outline{border-color:#d9dcc8;color:#2d3228;background:transparent}.quizcontrols .btn:disabled{opacity:.35;cursor:not-allowed;transform:none}.error{display:none;color:#a42d24;font-size:12px;line-height:1.5;margin-top:10px}.success{display:none;padding:22px;border-radius:17px;background:#f0f3d8;color:#D5E66A}.success h3{font-size:24px;letter-spacing:-.05em;margin:0 0 10px}.success p{font-size:12px;line-height:1.7}.summary{margin:14px 0;padding:14px;border:1px solid #d9dcc8;border-radius:12px;white-space:pre-wrap;overflow-wrap:anywhere;font-size:11px;line-height:1.7}.footer{padding:34px 0}.footerinner{display:flex;justify-content:space-between;align-items:center;gap:20px;padding-top:24px;border-top:1px solid var(--line)}.footer p{margin:7px 0 0;color:var(--muted);font-size:10px}.footerlinks{display:flex;flex-wrap:wrap;gap:17px;color:#d0d2cb;font-size:11px}.reveal{opacity:0;transform:translateY(22px);transition:opacity .7s var(--ease),transform .7s var(--ease)}.reveal.visible{opacity:1;transform:translateY(0)}.delay1{transition-delay:.08s}.delay2{transition-delay:.16s}.toast{position:fixed;z-index:50;right:18px;bottom:18px;max-width:min(370px,calc(100% - 36px));padding:14px 17px;border:1px solid #D5E66A55;border-radius:15px;background:#1d2026;color:var(--paper);font-size:12px;line-height:1.6;box-shadow:0 20px 55px #0005;opacity:0;transform:translateY(9px);pointer-events:none;transition:.25s}.toast.show{opacity:1;transform:translateY(0)}
+@keyframes zoom-in{from{transform:scale(1.08);opacity:.5}to{transform:scale(1);opacity:1}}@keyframes float{0%,100%{translate:0 0}50%{translate:0 -7px}}@keyframes marquee{to{transform:translateX(-50%)}}@keyframes stepin{from{opacity:0;transform:translateY(7px)}to{opacity:1;transform:translateY(0)}}
+@media(prefers-reduced-motion:reduce){*,*:before,*:after{scroll-behavior:auto!important;animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}.reveal{opacity:1;transform:none}}
+@media(max-width:900px){.herogrid{grid-template-columns:1fr;gap:20px}.heroart{min-height:480px}.demogrid,.briefshell{grid-template-columns:1fr}.briefaside{position:static}.features{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:640px){.wrap{width:calc(100% - 32px)}.section{padding:73px 0}.section-head{display:block;margin-bottom:27px}.section-head p{margin-top:16px}.nav{min-height:67px}.navlinks{display:none;position:absolute;top:67px;left:0;right:0;padding:20px 24px 24px;flex-direction:column;align-items:stretch;gap:18px;background:#1d201e;border-bottom:1px solid var(--line)}.navlinks.open{display:flex}.navlinks .btn{width:100%}.toggle{display:grid;place-items:center}.nav>.btn{display:none}.hero{padding:50px 0 40px}.hero h1{font-size:clamp(46px,14.8vw,74px)}.herocopy{font-size:13px}.heroart{min-height:390px}.heroimg{inset:12px 10px 17px 22px;border-radius:24px}.tag{top:28px;padding:11px 13px;font-size:9px}.floatcard{width:145px;padding:9px;border-radius:16px}.floatcard img{height:75px}.photolabel{left:17px;right:17px;bottom:18px}.photolabel strong{font-size:24px}.photolabel small{font-size:8px}.marqueetrack{font-size:9px}.phonestage{min-height:515px;padding:11px;border-radius:21px}.phone{width:min(100%,325px)}.features,.optiongrid,.process{grid-template-columns:1fr}.feature{min-height:190px}.featureicon{margin-bottom:21px}.option{min-height:270px;padding:22px}.option>div:first-child{max-width:75%}.optionart{width:43%;height:54%}.choices{grid-template-columns:1fr}.quiz{padding:21px 16px;border-radius:21px}.quizcontrols .btn{padding-inline:15px}.footerinner{align-items:flex-start;flex-direction:column}.footerlinks{gap:14px}}
+
+/* PARADOX visual refinement */
+:root{--lime:#D5E66A;--bg:#101114;--panel:#1d2026;--paper:#F8FAFC;--muted:#a8ada4;--line:#ffffff1c}
+body{font-family:Onest,Arial,sans-serif;font-size:15px;letter-spacing:-.012em}
+.logo{font-size:25px;letter-spacing:-.065em;font-weight:800}
+.navlinks{letter-spacing:-.015em}
+.hero h1,.section-head h2{font-weight:800;letter-spacing:-.06em}
+.hero h1{line-height:.94}
+.herocopy,.section-head p{letter-spacing:-.015em}
+.btn{letter-spacing:-.015em;box-shadow:0 0 0 0 #D5E66A00}
+.btn.primary{box-shadow:0 8px 30px #D5E66A10}
+.btn.primary:hover{box-shadow:0 10px 34px #D5E66A24}
+.card,.feature,.option,.quiz,.demo-card{box-shadow:0 18px 55px #00000012}
+::selection{background:var(--lime);color:#101114}
+
+/* Направление 01: современная цифровая студия — графит, лайм, выразительная типографика */
+:root{--bg:#101114;--panel:#1b1d22;--paper:#F8FAFC;--muted:#a4aaa0;--line:#ffffff1c;--lime:#D5E66A;--ink:#101114;--r:26px}
+body{background:var(--bg);background-image:radial-gradient(ellipse at 82% 3%,#D5E66A0b,transparent 34%)}
+.topbar{background:#101114e8;border-bottom-color:#ffffff12}
+.logo{font-size:26px;letter-spacing:-.075em}
+.logo span{font-size:.55em;vertical-align:top;margin-left:2px;letter-spacing:0}
+.hero{padding-top:76px;padding-bottom:72px}
+.hero:before{right:-60px;top:-190px;width:640px;height:640px;background:radial-gradient(circle,#D5E66A20 0, #D5E66A09 34%,transparent 70%)}
+.hero h1{font-size:clamp(52px,8vw,108px);letter-spacing:-.09em;line-height:.88}
+.hero h1 span{color:var(--lime);text-shadow:0 0 42px #D5E66A18}
+.heroimg{inset:8px 0 22px 30px;border:1px solid #ffffff12;border-radius:30px}
+.heroimg img{filter:saturate(.9) contrast(1.03)}
+.floatcard{border:1px solid #ffffff45}
+.btn{font-weight:750;transition:transform .25s var(--ease),background .25s,border-color .25s,box-shadow .25s}
+.btn.primary{background:var(--lime);box-shadow:0 8px 28px #D5E66A18}
+.btn.primary:hover{background:#C084FC;box-shadow:0 12px 36px #D5E66A28}
+.outline{border-color:#ffffff28}
+.outline:hover{background:#D5E66A0b;border-color:var(--lime)}
+.marquee{border-color:#ffffff17}
+.feature{background:linear-gradient(145deg,#20251f,#171b17);border-color:#ffffff16}
+.feature:hover{border-color:#D5E66A85;box-shadow:0 20px 55px #0003,0 0 0 1px #D5E66A10}
+.option{background:linear-gradient(145deg,#292e28,#1d211d);border-color:#ffffff19}
+.option:hover{border-color:#D5E66A66;box-shadow:0 20px 55px #0003}
+.brief{background:linear-gradient(135deg,#191d19,#101114)}
+.quiz{border-color:#ffffff22;box-shadow:0 25px 70px #0003}
+.choice:has(input:checked){border-color:var(--lime);background:#D5E66A10}
+.reveal{transform:translateY(22px);transition:opacity .7s var(--ease),transform .7s var(--ease)}
+.reveal.visible{transform:translateY(0)}
+@media(max-width:700px){.hero{padding-top:45px;padding-bottom:48px}.hero h1{font-size:clamp(47px,14vw,76px)}.heroart{min-height:390px}.heroimg{inset:10px 0 18px 16px}.tag{left:-3px;top:30px}.floatcard{right:-2px;width:155px}.section{padding:76px 0}}
+
+
+/* PARADOX — полноценная арт-дирекция первого концепта: чёрный + лайм, сетка студии, контрастные блоки */
+:root{--bg:#101114;--panel:#1b1d22;--paper:#F8FAFC;--muted:#9ba397;--line:#ffffff20;--lime:#D5E66A;--ink:#101114;--max:1240px}
+body{background:#101114;color:#F4F2EA;background-image:radial-gradient(ellipse at 75% 0%,#D5E66A0c,transparent 32%),linear-gradient(180deg,#101114,#101310 62%,#101114)}
+.wrap{width:min(var(--max),calc(100% - 64px))}
+.topbar{background:#101114e8;border-bottom:1px solid #ffffff17}
+.nav{min-height:84px}
+.navlinks{gap:30px;font-size:12px}
+.logo{font-size:27px;font-weight:800;letter-spacing:-.085em}
+.hero{padding:86px 0 78px}
+.herogrid{grid-template-columns:1.02fr .98fr;gap:54px}
+.hero h1{font-size:clamp(60px,8.5vw,118px);line-height:.82;letter-spacing:-.105em;margin:25px 0 30px}
+.hero h1 span{display:inline-block;color:var(--lime);text-shadow:none}
+.eyebrow{font-size:10px;letter-spacing:.17em}
+.herocopy{max-width:470px;font-size:15px;line-height:1.85;color:#b8beb3}
+.actions{gap:12px;margin-top:32px}
+.btn{min-height:54px;padding-inline:25px;border-radius:12px;font-size:12px}
+.btn.primary{background:var(--lime);color:#11140e;box-shadow:none}
+.btn.primary:hover{background:#C084FC;transform:translateY(-3px)}
+.outline{background:transparent;border-color:#ffffff30}
+.heroart{min-height:590px}
+.heroimg{inset:0 0 35px 30px;border-radius:8px;overflow:hidden;background:#20251d}
+.heroimg img{filter:saturate(.85) contrast(1.08);transform:scale(1.01)}
+.heroimg:after{background:linear-gradient(180deg,#05060500 38%,#050605d9 100%)}
+.photolabel{left:30px;right:28px;bottom:30px}
+.photolabel strong{font-size:clamp(28px,3.5vw,43px);letter-spacing:-.075em}
+.photolabel small{font-size:9px;letter-spacing:.16em}
+.tag{left:0;top:34px;border-radius:3px;padding:14px 17px;background:var(--lime);transform:rotate(-3deg);box-shadow:0 10px 40px #0004}
+.floatcard{right:-15px;bottom:0;width:185px;border-radius:8px;padding:10px;background:#f2f4eb;transform:rotate(3deg);box-shadow:0 24px 70px #0008}
+.floatcard img{height:104px;border-radius:4px}
+.hero-stats{display:flex;gap:0;margin-top:35px;padding-top:22px;border-top:1px solid #ffffff20;max-width:500px}
+.hero-stats div{display:flex;flex-direction:column;gap:5px;flex:1;padding-right:15px}
+.hero-stats div+div{border-left:1px solid #ffffff20;padding-left:18px}
+.hero-stats strong{font-size:22px;line-height:1;color:var(--lime);letter-spacing:-.06em}
+.hero-stats span{font-size:10px;color:#9da498;line-height:1.4}
+.marquee{border-block:1px solid #ffffff20;padding:19px 0;background:#101310}
+.marqueetrack{font-size:11px;color:#e3e8dd;letter-spacing:.13em}
+.marqueetrack i{color:var(--lime)}
+.section{padding:112px 0}
+.section-head{margin-bottom:48px}
+.section-head h2{font-size:clamp(44px,6.3vw,80px);line-height:.9;letter-spacing:-.09em}
+.section-head h2 em{font-style:normal;color:var(--lime)}
+.section-head p{font-size:13px;line-height:1.85;color:#aab1a5}
+/* The live menu preview becomes a dark showcase rather than a separate cream-coloured template */
+.demo{background:#111511;color:#F4F2EA;border-block:1px solid #ffffff12}
+.demo .eyebrow{color:var(--lime)}
+.demo .eyebrow:before{background:var(--lime)}
+.demo .section-head p{color:#aab1a5}
+.demogrid{grid-template-columns:.7fr 1.3fr;gap:44px;align-items:center}
+.tab{padding:22px 20px;border:1px solid #ffffff20;border-radius:5px;background:#171b17;color:#F4F2EA}
+.tab strong{font-size:15px;letter-spacing:-.03em}
+.tab small{color:#a1a99b;font-size:11px}
+.tab.active{background:var(--lime);border-color:var(--lime);color:#10130e}
+.tab.active small{color:#39442b}
+.tab.active .arrow{color:#10130e}
+.phonestage{min-height:590px;padding:30px;border-radius:5px;background:#D5E66A;position:relative}
+.phonestage:before{content:'ИНТЕРАКТИВНОЕ ДЕМО';position:absolute;top:22px;left:24px;font-size:9px;font-weight:800;letter-spacing:.15em;color:#192014}
+.phone{border-radius:25px;background:#0d0f0d;padding:7px;box-shadow:0 28px 70px #24330d45}
+.screen{border-radius:20px}
+.democaption{color:#a9b0a4;font-size:10px;text-transform:uppercase;letter-spacing:.08em}
+.democaption strong{color:var(--lime)}
+.features{grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
+.feature{min-height:245px;padding:26px 25px;border:1px solid #ffffff1a;border-radius:5px;background:#131713;box-shadow:none}
+.featureicon{width:45px;height:45px;border-radius:4px;background:var(--lime);color:#10130e;margin-bottom:32px;font-size:22px}
+.feature h3{font-size:19px;letter-spacing:-.055em}
+.feature p{font-size:12px;color:#aab1a5;line-height:1.8}
+.options{background:#D5E66A;color:#10130e}
+.options .eyebrow{color:#26341b}
+.options .eyebrow:before{background:#26341b}
+.options .section-head p{color:#39472c}
+.options .section-head h2 em{color:#fff}
+.optiongrid{gap:12px}
+.option{min-height:310px;padding:28px;border:1px solid #10130e30;border-radius:5px;background:#101310;color:#F4F2EA;box-shadow:none}
+.optionno{color:var(--lime);font-size:10px}
+.option h3{font-size:clamp(28px,3.3vw,42px);line-height:.98;letter-spacing:-.08em}
+.option p{color:#b1b8ac;font-size:12px;line-height:1.8}
+.option a{color:var(--lime);font-size:11px}
+.optionart{width:43%;height:58%;border-radius:3px 0 0 0;opacity:.72}
+.process{gap:16px}
+.process article{padding:23px 22px 25px;border:1px solid #ffffff20;border-radius:5px;background:#121612}
+.process article:before{display:inline-grid;place-items:center;width:36px;height:36px;border-radius:50%;background:var(--lime);color:#10130e}
+.process h3{font-size:21px;letter-spacing:-.05em}
+.process p{color:#aab1a5;font-size:12px;line-height:1.8}
+.brief{background:#111511;color:#F4F2EA;border-top:1px solid #ffffff15}
+.brief .eyebrow{color:var(--lime)}
+.brief .eyebrow:before{background:var(--lime)}
+.briefaside h2{font-size:clamp(44px,5.6vw,72px);letter-spacing:-.09em}
+.briefaside p,.briefaside .tiny{color:#aab1a5}
+.briefaside .tiny{border-top-color:#ffffff25}
+.quiz{border:1px solid #ffffff22;border-radius:6px;background:#F8FAFC;color:#101114;box-shadow:0 30px 90px #0004}
+.quiz .btn{border-radius:7px}
+.quiz .primary{background:#101114;color:var(--lime)}
+.quiz .primary:hover{background:#272d24}
+.quiz .outline{border-color:#d5dacf;color:#101114}
+.footer{background:#101114}
+.footerinner{padding-top:30px;border-top-color:#ffffff20}
+.footerlinks{gap:24px}
+@media(max-width:900px){.wrap{width:calc(100% - 42px)}.herogrid{grid-template-columns:1fr;gap:34px}.hero{padding-top:58px}.heroart{min-height:540px}.demogrid{grid-template-columns:1fr;gap:25px}.tabs{grid-template-columns:repeat(2,minmax(0,1fr))}.tabs>.btn{grid-column:1/-1}.phonestage{min-height:560px}.features{grid-template-columns:repeat(2,minmax(0,1fr))}.hero-stats{max-width:100%}}
+@media(max-width:640px){.wrap{width:calc(100% - 32px)}.nav{min-height:70px}.hero{padding:48px 0 44px}.hero h1{font-size:clamp(49px,15vw,78px);line-height:.86}.herocopy{font-size:13px}.heroart{min-height:410px}.heroimg{inset:8px 6px 20px 12px}.photolabel{left:18px;right:17px;bottom:19px}.photolabel strong{font-size:26px}.tag{top:22px;left:-4px;padding:11px 12px;font-size:8px}.floatcard{right:-2px;width:140px;padding:8px}.floatcard img{height:76px}.hero-stats{gap:0;margin-top:28px}.hero-stats div{padding-right:8px}.hero-stats div+div{padding-left:10px}.hero-stats strong{font-size:19px}.hero-stats span{font-size:9px}.section{padding:78px 0}.section-head h2{font-size:clamp(41px,12vw,60px)}.section-head p{font-size:12px}.tabs{grid-template-columns:1fr}.phonestage{min-height:510px;padding:17px}.phonestage:before{top:13px;left:15px;font-size:8px}.features,.optiongrid,.process{grid-template-columns:1fr}.feature{min-height:205px;padding:23px}.featureicon{margin-bottom:24px}.option{min-height:285px;padding:23px}.option>div:first-child{max-width:73%}.optionart{width:43%;height:54%}.briefshell{gap:25px}.briefaside{position:static}.quiz{padding:21px 16px}.footerlinks{gap:14px}.btn{min-height:50px;padding-inline:18px}}
+
+
+/* DARK TECHNO visual pass */
+:root{--bg:#08090D;--panel:#12141C;--paper:#F4F5FA;--muted:#9BA3B8;--line:#FFFFFF1C;--lime:#D5E66A;--ink:#08090D;--r:18px}
+body{background-color:#08090D;background-image:radial-gradient(ellipse at 80% 0%,#D5E66A1c,transparent 34%),radial-gradient(ellipse at 8% 45%,#22D3EE08,transparent 30%),linear-gradient(#FFFFFF04 1px,transparent 1px),linear-gradient(90deg,#FFFFFF04 1px,transparent 1px);background-size:auto,auto,42px 42px,42px 42px}
+.topbar{background:#08090DDF;border-bottom-color:#D5E66A33}
+.hero:before{background:radial-gradient(circle,#D5E66A2a 0, #22D3EE09 38%,transparent 70%)}
+.eyebrow:before{box-shadow:0 0 12px #D5E66A}
+.logo span,.navlinks a:hover,.footerlinks a:hover{color:#22D3EE}
+.primary{box-shadow:0 0 26px #D5E66A2b}
+.tag{box-shadow:0 0 28px #D5E66A33}
+.feature{background:linear-gradient(145deg,#171923,#101117);border-color:#D5E66A28}
+.feature:hover{border-color:#22D3EE80}
+.featureicon{background:#D5E66A1c;color:#22D3EE}
+.options{background:#0D0F16}
+.option{background:linear-gradient(145deg,#191724,#101117);border-color:#D5E66A2c}
+.optionno,.option a{color:#22D3EE}
+.brief{background:linear-gradient(135deg,#171022,#08090D 75%);color:var(--paper)}
+.briefaside p,.briefaside .tiny{color:#B8B3CA}
+.brief .eyebrow{color:#22D3EE}.brief .eyebrow:before{background:#22D3EE}
+.toast{border-color:#D5E66A55}
+@media(max-width:640px){.navlinks{background:#0D0F16}}
+
+</style>
+
+<style id="paradox-digital-tech">
+:root{--bg:#101114;--panel:#1d2026;--paper:#F8FAFC;--muted:#a9afba;--line:#ffffff20;--lime:#D5E66A;--ink:#101114;--max:1240px}
+body{background:#101114;color:#F4F2EA}
+::selection{background:#D5E66A;color:#fff}
+.demo{background:#F8FAFC;color:#101114}.demo .eyebrow,.demo .eyebrow:before{color:#D5E66A;background-color:transparent}.demo .eyebrow:before{background:#D5E66A}.demo .section-head p{color:#5e6571}
+.tab{border-color:#dce1e9;background:#fff;color:#101114}.tab small{color:#646c79}.tab.active{background:#101114;border-color:#101114;color:#F4F2EA}.tab.active small{color:#b9c1ce}.tab.active .arrow{color:#D5E66A}
+.phonestage{background:#e9edf5}.feature{background:linear-gradient(145deg,#22252d,#191b21)}.options{background:#1a1c22;color:#F4F2EA}.option{background:#242731}.brief{background:#F8FAFC;color:#101114}.briefaside p,.briefaside .tiny{color:#5e6571}.briefaside .eyebrow{color:#D5E66A}.briefaside .eyebrow:before{background:#D5E66A}
+.quiz{background:#fff;color:#101114}.track{background:#e3e7ef}.fill{background:#D5E66A}.choice input:checked+span{border-color:#D5E66A;background:#edf2ff}.choice input:checked+span:before{border-color:#D5E66A;background:#D5E66A;box-shadow:inset 0 0 0 4px #edf2ff}.choice input:focus-visible+span{outline-color:#D5E66A}.field input:focus,.field textarea:focus,.field select:focus{border-color:#D5E66A;box-shadow:0 0 0 3px #D5E66A30}.success{background:#edf2ff;color:#17234b}.summary{border-color:#cbd6f5}.quizcontrols .outline{border-color:#dce1e9;color:#101114}.quiz .primary,.brief .primary{background:#D5E66A;color:#fff}.hero:before{background:radial-gradient(circle,#D5E66A2b 0,transparent 70%)}.tag{background:#D5E66A;color:#fff}.primary{background:#D5E66A;color:#fff}.primary:hover{background:#244bd1}.outline:hover{border-color:#D5E66A}.topbar{background:#101114e8}.logo span,.hero h1 span,.noteicon,.marqueetrack i,.section-head h2 em,.optionno,.option a,.process article:before{color:#6e8cff}.featureicon{color:#fff;background:#D5E66A}.option:hover{border-color:#D5E66A80}.toast{border-color:#D5E66A55}.btn.primary{background:#D5E66A;color:#fff}.brief .eyebrow:before{background:#D5E66A}
+
+/* DARK TECHNO visual pass */
+:root{--bg:#08090D;--panel:#12141C;--paper:#F4F5FA;--muted:#9BA3B8;--line:#FFFFFF1C;--lime:#D5E66A;--ink:#08090D;--r:18px}
+body{background-color:#08090D;background-image:radial-gradient(ellipse at 80% 0%,#D5E66A1c,transparent 34%),radial-gradient(ellipse at 8% 45%,#22D3EE08,transparent 30%),linear-gradient(#FFFFFF04 1px,transparent 1px),linear-gradient(90deg,#FFFFFF04 1px,transparent 1px);background-size:auto,auto,42px 42px,42px 42px}
+.topbar{background:#08090DDF;border-bottom-color:#D5E66A33}
+.hero:before{background:radial-gradient(circle,#D5E66A2a 0, #22D3EE09 38%,transparent 70%)}
+.eyebrow:before{box-shadow:0 0 12px #D5E66A}
+.logo span,.navlinks a:hover,.footerlinks a:hover{color:#22D3EE}
+.primary{box-shadow:0 0 26px #D5E66A2b}
+.tag{box-shadow:0 0 28px #D5E66A33}
+.feature{background:linear-gradient(145deg,#171923,#101117);border-color:#D5E66A28}
+.feature:hover{border-color:#22D3EE80}
+.featureicon{background:#D5E66A1c;color:#22D3EE}
+.options{background:#0D0F16}
+.option{background:linear-gradient(145deg,#191724,#101117);border-color:#D5E66A2c}
+.optionno,.option a{color:#22D3EE}
+.brief{background:linear-gradient(135deg,#171022,#08090D 75%);color:var(--paper)}
+.briefaside p,.briefaside .tiny{color:#B8B3CA}
+.brief .eyebrow{color:#22D3EE}.brief .eyebrow:before{background:#22D3EE}
+.toast{border-color:#D5E66A55}
+@media(max-width:640px){.navlinks{background:#0D0F16}}
+
+</style>
+
+<style id="paradox-terracotta-final">
+:root{--bg:#101114;--panel:#22211f;--paper:#F5F0E8;--muted:#aaa39a;--line:#ffffff20;--lime:#D5E66A;--ink:#101114;--max:1240px}
+body{background:#101114;color:#F5F0E8}
+.demo{background:#F5F0E8;color:#101114;border-color:#e4dacf}
+.demo .eyebrow{color:#D5E66A}.demo .eyebrow:before{background:#D5E66A}.demo .section-head p{color:#6e665f}
+.tab{border-color:#ded4c9;background:#fffaf4;color:#101114}.tab small{color:#766e65}.tab.active{background:#101114;border-color:#101114;color:#F5F0E8}.tab.active small{color:#d4c9be}.tab.active .arrow{color:#D5E66A}
+.phonestage{background:#e9ded2}.feature{background:linear-gradient(145deg,#242320,#1b1a18)}.options{background:#22211f;color:#F5F0E8}.option{background:#2b2925}.brief{background:#F5F0E8;color:#101114}.briefaside p,.briefaside .tiny{color:#71665d}.briefaside .eyebrow{color:#D5E66A}.briefaside .eyebrow:before{background:#D5E66A}
+.quiz{background:#fffaf4}.track{background:#e8ded4}.fill{background:#D5E66A}.choice input:checked+span{border-color:#D5E66A;background:#f6e7df}.choice input:checked+span:before{border-color:#D5E66A;background:#D5E66A;box-shadow:inset 0 0 0 4px #f6e7df}.choice input:focus-visible+span{outline-color:#D5E66A}.field input:focus,.field textarea:focus,.field select:focus{border-color:#D5E66A;box-shadow:0 0 0 3px #D5E66A30}.success{background:#f6e7df;color:#3d2a22}.summary{border-color:#e1c8b9}.quizcontrols .outline{border-color:#ded4c9;color:#101114}.quiz .primary{background:#D5E66A;color:#fffaf4}.hero:before{background:radial-gradient(circle,#D5E66A20 0,transparent 70%)}.tag{background:#D5E66A;color:#fffaf4}.primary{background:#D5E66A;color:#fffaf4}.primary:hover{background:#C084FC}.outline:hover{border-color:#D5E66A}.topbar{background:#101114e8}.logo span,.hero h1 span,.noteicon,.marqueetrack i,.section-head h2 em,.optionno,.option a,.process article:before,.featureicon{color:#D5E66A}.featureicon{background:#D5E66A20}.option:hover{border-color:#D5E66A80}.toast{border-color:#D5E66A55}.brief .primary{background:#D5E66A;color:#fffaf4}
+@media(max-width:700px){.section{padding:76px 0}.hero{padding-top:44px}.heroart{min-height:390px}}
+
+/* DARK TECHNO visual pass */
+:root{--bg:#08090D;--panel:#12141C;--paper:#F4F5FA;--muted:#9BA3B8;--line:#FFFFFF1C;--lime:#D5E66A;--ink:#08090D;--r:18px}
+body{background-color:#08090D;background-image:radial-gradient(ellipse at 80% 0%,#D5E66A1c,transparent 34%),radial-gradient(ellipse at 8% 45%,#22D3EE08,transparent 30%),linear-gradient(#FFFFFF04 1px,transparent 1px),linear-gradient(90deg,#FFFFFF04 1px,transparent 1px);background-size:auto,auto,42px 42px,42px 42px}
+.topbar{background:#08090DDF;border-bottom-color:#D5E66A33}
+.hero:before{background:radial-gradient(circle,#D5E66A2a 0, #22D3EE09 38%,transparent 70%)}
+.eyebrow:before{box-shadow:0 0 12px #D5E66A}
+.logo span,.navlinks a:hover,.footerlinks a:hover{color:#22D3EE}
+.primary{box-shadow:0 0 26px #D5E66A2b}
+.tag{box-shadow:0 0 28px #D5E66A33}
+.feature{background:linear-gradient(145deg,#171923,#101117);border-color:#D5E66A28}
+.feature:hover{border-color:#22D3EE80}
+.featureicon{background:#D5E66A1c;color:#22D3EE}
+.options{background:#0D0F16}
+.option{background:linear-gradient(145deg,#191724,#101117);border-color:#D5E66A2c}
+.optionno,.option a{color:#22D3EE}
+.brief{background:linear-gradient(135deg,#171022,#08090D 75%);color:var(--paper)}
+.briefaside p,.briefaside .tiny{color:#B8B3CA}
+.brief .eyebrow{color:#22D3EE}.brief .eyebrow:before{background:#22D3EE}
+.toast{border-color:#D5E66A55}
+@media(max-width:640px){.navlinks{background:#0D0F16}}
+
+</style>
+<style id="digital-tech-palette">
+:root{--bg:#101114;--panel:#1d2026;--paper:#F8FAFC;--muted:#a7adba;--line:#ffffff20;--lime:#D5E66A;--ink:#101114}
+.demo .eyebrow,.brief .eyebrow{color:#D5E66A}.demo .eyebrow:before,.brief .eyebrow:before{background:#D5E66A}.brief{background:#D5E66A;color:#fff}.briefaside p,.briefaside .tiny{color:#e1e7ff}.brief .quiz{color:#101114}.choice input:checked+span{border-color:#D5E66A;background:#f0f3d8}.choice input:checked+span:before{border-color:#D5E66A;background:#D5E66A}.success{background:#f0f3d8;color:#101114}.fill{background:#D5E66A}
+
+/* DARK TECHNO visual pass */
+:root{--bg:#08090D;--panel:#12141C;--paper:#F4F5FA;--muted:#9BA3B8;--line:#FFFFFF1C;--lime:#D5E66A;--ink:#08090D;--r:18px}
+body{background-color:#08090D;background-image:radial-gradient(ellipse at 80% 0%,#D5E66A1c,transparent 34%),radial-gradient(ellipse at 8% 45%,#22D3EE08,transparent 30%),linear-gradient(#FFFFFF04 1px,transparent 1px),linear-gradient(90deg,#FFFFFF04 1px,transparent 1px);background-size:auto,auto,42px 42px,42px 42px}
+.topbar{background:#08090DDF;border-bottom-color:#D5E66A33}
+.hero:before{background:radial-gradient(circle,#D5E66A2a 0, #22D3EE09 38%,transparent 70%)}
+.eyebrow:before{box-shadow:0 0 12px #D5E66A}
+.logo span,.navlinks a:hover,.footerlinks a:hover{color:#22D3EE}
+.primary{box-shadow:0 0 26px #D5E66A2b}
+.tag{box-shadow:0 0 28px #D5E66A33}
+.feature{background:linear-gradient(145deg,#171923,#101117);border-color:#D5E66A28}
+.feature:hover{border-color:#22D3EE80}
+.featureicon{background:#D5E66A1c;color:#22D3EE}
+.options{background:#0D0F16}
+.option{background:linear-gradient(145deg,#191724,#101117);border-color:#D5E66A2c}
+.optionno,.option a{color:#22D3EE}
+.brief{background:linear-gradient(135deg,#171022,#08090D 75%);color:var(--paper)}
+.briefaside p,.briefaside .tiny{color:#B8B3CA}
+.brief .eyebrow{color:#22D3EE}.brief .eyebrow:before{background:#22D3EE}
+.toast{border-color:#D5E66A55}
+@media(max-width:640px){.navlinks{background:#0D0F16}}
+
+</style>
+
+<style id="paradox-comparison-theme">
+
+:root{--bg:#F5F0E8;--panel:#242320;--paper:#F5F0E8;--muted:#756f67;--line:#17171524;--lime:#D5E66A;--ink:#171715;--max:1240px;--accent:#D5E66A;--accent-hover:#A45F40;--surface:#F5F0E8;--text:#171715;--btntext:#fffaf4}
+body{background:#101114;color:#F4F2EA;background-image:none}
+.topbar{background:#F5F0E8E8;border-bottom:1px solid #17171518}.navlinks{color:#46413b}.navlinks a:hover{color:#D5E66A}
+.hero .herocopy{color:#5f5a53}.hero:before{background:radial-gradient(circle,#D5E66A24,transparent 70%)}
+.demo{background:#171715;color:#F5F0E8}.demo .section-head p{color:#b9b1a8}.demo .eyebrow{color:#D38D6D}.demo .eyebrow:before{background:#D38D6D}
+.tab{border-color:#ded4c9;background:#fffaf4;color:#171715}.tab small{color:#766e65}.tab.active{background:#292724;border-color:#292724;color:#F5F0E8}.tab.active small{color:#d4c9be}.tab.active .arrow{color:#D38D6D}
+.phonestage{background:#E8DED2}.features{color:#F5F0E8}.feature{background:linear-gradient(145deg,#242320,#1b1a18);border-color:#ffffff1b}.options{background:#22211f;color:#F5F0E8}.option{background:#2b2925;border-color:#ffffff20}
+.brief{background:#101114;color:#F4F2EA}.briefaside p,.briefaside .tiny{color:#71665d}.quiz{background:#fffaf4;color:#171715}.quizcontrols .outline{border-color:#ded4c9;color:#171715}.field input:focus,.field textarea:focus,.field select:focus{border-color:#D5E66A;box-shadow:0 0 0 3px #D5E66A30}.choice input:checked+span{border-color:#D5E66A;background:#f6e7df}.choice input:checked+span:before{border-color:#D5E66A;background:#D5E66A;box-shadow:inset 0 0 0 4px #f6e7df}.fill{background:#D5E66A}.success{background:#f6e7df;color:#3d2a22}.summary{border-color:#e1c8b9}.footer{background:#171715;color:#F5F0E8}.footerinner{border-top-color:#ffffff20}.footerlinks{color:#c9c1b8}
+.eyebrow,.logo span,.hero h1 span,.noteicon,.marqueetrack i,.section-head h2 em,.optionno,.option a,.process article:before{color:#D5E66A!important}.eyebrow:before{background:#D5E66A!important}.primary,.tag,.fill{background:#D5E66A!important;color:#fffaf4!important}.primary:hover{background:#A45F40!important}.outline:hover{border-color:#D5E66A!important}.featureicon{background:#D5E66A24!important;color:#D38D6D!important}.feature:hover,.option:hover{border-color:#D5E66A80!important}.toast{border-color:#D5E66A80!important}
+@media(max-width:640px){.navlinks{background:#101114;color:#F4F2EA}}
+
+</style>
+
+<style id="paradox-final-accessibility-fixes">
+/* Final lime edition: readable contrast and polished feature illustrations */
+:root{--lime:#D5E66A;--ink:#101114;--paper:#F4F2EA;--muted:#B8B9B1}
+.logo{color:#101114!important}.logo span{color:#6F8520!important}
+.footer .logo{color:#F4F2EA!important}.footer .logo span{color:#D5E66A!important}
+.primary{background:#D5E66A!important;color:#101114!important}.primary:hover{background:#c7d957!important;color:#101114!important}
+.hero .herocopy{color:#c4c6be!important}
+.options{background:#1a1b19!important;color:#F4F2EA!important}
+.options .eyebrow{color:#D5E66A!important}.options .eyebrow:before{background:#D5E66A!important}
+.options .section-head h2{color:#F4F2EA!important}.options .section-head h2 em{color:#D5E66A!important}
+.options .section-head p{color:#C5C8BE!important}
+.option{background:linear-gradient(145deg,#252622,#1d1e1b)!important;border-color:#ffffff22!important}
+.optionno,.option a{color:#D5E66A!important}.option p{color:#D0D2CA!important}
+.featureicon{display:grid;place-items:center;width:52px;height:52px;border-radius:14px;background:#D5E6A91A!important;color:#D5E66A!important;margin-bottom:26px}
+.featureicon svg{width:30px;height:30px;display:block}
+.feature{background:linear-gradient(145deg,#22231f,#1b1c19)!important;border-color:#ffffff20!important}
+.feature p{color:#C3C6BD!important}
+.brief{background:#D5E66A!important;color:#101114!important}.briefaside p,.briefaside .tiny{color:#29321b!important}
+.brief .eyebrow{color:#303b1b!important}.brief .eyebrow:before{background:#303b1b!important}
+.success{color:#101114!important}
+.noteicon{flex:0 0 27px}.notecheck{width:9px;height:5px;border-left:2px solid #D5E66A;border-bottom:2px solid #D5E66A;transform:rotate(-45deg);margin-top:-2px}
+.marqueetrack i{display:inline-block;width:5px;height:5px;border-radius:50%;background:#D5E66A}
+.optionart{background:#252620}
+@media(max-width:640px){.options .section-head p{color:#D0D2CA!important}.footer .logo{color:#F4F2EA!important}.featureicon{margin-bottom:22px}}
+</style>
+
+</head>
+<body>
+<header class="topbar"><div class="wrap nav">
+<a class="logo" href="#top" aria-label="PARADOX — главная">PARADOX<span>®</span></a>
+<nav class="navlinks" id="navLinks" aria-label="Главная навигация"><a href="#formats">Варианты меню</a><a href="#possibilities">Возможности</a><a href="#process">Как работаем</a><a href="#brief">Заявка</a></nav>
+<a class="btn primary small" href="#brief">Обсудить проект</a><button class="toggle" id="menuToggle" aria-label="Открыть меню" aria-expanded="false">☰</button>
+</div></header>
+<main id="top">
+<section class="hero"><div class="wrap herogrid">
+<div><span class="eyebrow">Цифровые меню для ресторанов</span><h1>МЕНЮ,<br>КОТОРОЕ<br><span>ХОЧЕТСЯ</span><br>ОТКРЫТЬ.</h1>
+<p class="herocopy">Создаём индивидуальные цифровые меню, в которых гастрономия встречается с выразительным дизайном. Красивые блюда, удобный просмотр и атмосфера вашего заведения — в одном QR-коде.</p>
+<div class="actions"><a class="btn primary" href="#demo">Посмотреть демо</a><a class="btn outline" href="#brief">Собрать своё меню</a></div>
+<div class="heronote"><span class="noteicon" aria-hidden="true"><span class="notecheck"></span></span><span>Только просмотр меню. Без корзины и оформления заказов.</span></div><div class="hero-stats"><div><strong>01</strong><span>Дизайн под бренд</span></div><div><strong>QR</strong><span>Удобно открыть</span></div><div><strong>∞</strong><span>Ваши идеи</span></div></div></div>
+<div class="heroart"><div class="heroimg"><img src="https://images.unsplash.com/photo-1546833999-b9f581a1996d?auto=format&fit=crop&w=1200&q=85" alt="Премиальная подача блюда в ресторане" fetchpriority="high"><div class="photolabel"><div><small>ЦИФРОВОЕ МЕНЮ С ХАРАКТЕРОМ</small><br><strong>Вкус начинается<br>с первого взгляда.</strong></div><small>01 / 04</small></div></div><div class="tag">ДИЗАЙН,<br>КОТОРЫЙ ЗАМЕЧАЮТ</div><div class="floatcard"><img src="https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=500&q=80" alt="Мясное блюдо"><strong>Рибай на гриле</strong><small>Подача, которую замечают</small></div></div>
+</div></section>
+<div class="marquee" aria-hidden="true"><div class="marqueetrack"><span>Цифровые меню <i aria-hidden="true"></i> Вкус, который говорит <i aria-hidden="true"></i> Ваш стиль — ваши правила <i aria-hidden="true"></i> Создано PARADOX <i aria-hidden="true"></i></span><span>Цифровые меню <i aria-hidden="true"></i> Вкус, который говорит <i aria-hidden="true"></i> Ваш стиль — ваши правила <i aria-hidden="true"></i> Создано PARADOX <i aria-hidden="true"></i></span></div></div>
+<section class="section demo" id="demo"><div class="wrap">
+<div class="section-head reveal"><div><span class="eyebrow">Живой просмотр</span><h2>Меню в вашем<br><em>стиле.</em></h2></div><p>Не просто картинки на сайте — переключайте варианты и смотрите, как цифровое меню будет выглядеть на экране смартфона. Каждый формат можно адаптировать под ваш бренд.</p></div>
+<div class="demogrid"><div class="tabs reveal" role="tablist" aria-label="Варианты оформления меню">
+<button class="tab active" role="tab" aria-selected="true" data-style="classic"><span><strong>01 / Классика</strong><small>Чисто, понятно, удобно</small></span></button>
+<button class="tab" role="tab" aria-selected="false" data-style="signature"><span><strong>02 / Премиум</strong><small>Премиальная подача</small></span></button>
+<button class="tab" role="tab" aria-selected="false" data-style="motion"><span><strong>03 / Анимация</strong><small>Живые карточки и эффекты</small></span></button>
+<button class="tab" role="tab" aria-selected="false" data-style="custom"><span><strong>04 / Индивидуальный</strong><small>Индивидуальная концепция</small></span></button>
+<a class="btn primary" href="#brief" style="margin-top:8px">Хочу такой вариант</a></div>
+<div class="reveal delay1"><div class="phonestage"><div class="phone"><div class="screen" id="phoneScreen"><div class="phonetop"><span id="restaurantName">CASA · РЕСТОРАН</span><span>•••</span></div><div class="cover"><img id="demoCover" src="https://images.unsplash.com/photo-1546833999-b9f581a1996d?auto=format&fit=crop&w=800&q=80" alt="Демонстрационное блюдо"><div class="covertext"><small id="coverKicker">СЕЗОННОЕ МЕНЮ</small><strong id="coverTitle">Попробуйте момент.</strong></div></div><div class="categories"><span>Популярное</span><span>Закуски</span><span>Основное</span><span>Десерты</span></div><div class="foodlist" id="foodList"></div></div></div></div><div class="democaption"><span id="demoCaption"><strong>КЛАССИКА</strong> — простая навигация и акцент на блюдах</span><span>ПРЕДПРОСМОТР</span></div></div></div>
+</div></section>
+<section class="section" id="possibilities"><div class="wrap"><div class="section-head reveal"><div><span class="eyebrow">Всё нужное — без лишнего</span><h2>Продумано для<br><em>гостя.</em></h2></div><p>Вы выбираете, что нужно гостям и что отражает характер заведения. Мы соединяем детали в цельный цифровой продукт.</p></div>
+<div class="features">
+<article class="feature reveal"><div class="featureicon"><svg viewBox="0 0 48 48" aria-hidden="true"><path d="M18 30l-4 4a8 8 0 0 1-11-11l9-9a8 8 0 0 1 11 0M30 18l4-4a8 8 0 0 1 11 11l-9 9a8 8 0 0 1-11 0M17 31l14-14" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div><h3>Карточки блюд</h3><p>Компактные, крупные, с фотографией на весь блок или с подробным описанием. Можно открыть блюдо и увидеть состав, вес и другую информацию.</p></article>
+<article class="feature reveal delay1"><div class="featureicon">+</div><h3>Живой визуал</h3><p>Плавное появление, движение изображений, раскрывающиеся карточки и аккуратные переходы — столько анимации, сколько уместно бренду.</p></article>
+<article class="feature reveal delay2"><div class="featureicon">文</div><h3>Несколько языков</h3><p>Русский, английский и другие языки по согласованию. Переводы предоставляются клиентом или согласуются отдельно.</p></article>
+<article class="feature reveal"><div class="featureicon">◎</div><h3>О ресторане</h3><p>История места, команда, шеф-повар, философия кухни или короткое приветствие гостям.</p></article>
+<article class="feature reveal delay1"><div class="featureicon"><svg viewBox="0 0 48 48" aria-hidden="true"><path d="M19 29l-3 3a8 8 0 0 1-11-11l8-8a8 8 0 0 1 11 0M29 19l3-3a8 8 0 0 1 11 11l-8 8a8 8 0 0 1-11 0M17 31l14-14" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div><h3>Контакты и ссылки</h3><p>Адрес, часы работы, телефон, карта, соцсети, сайт и кнопка поделиться ссылкой на меню.</p></article>
+<article class="feature reveal delay2"><div class="featureicon">＋</div><h3>Дополнительные блоки</h3><p>Акции, сезонные предложения, КБЖУ, аллергены и другие элементы — по согласованному содержанию и возможностям проекта.</p></article>
+</div></div></section>
+<section class="section options" id="formats"><div class="wrap"><div class="section-head reveal"><div><span class="eyebrow">Четыре направления</span><h2>Найдём свой<br><em>характер.</em></h2></div><p>Не обязательно выбирать один стиль целиком. Можно объединить премиальные фотографии, компактные карточки и лёгкую анимацию.</p></div>
+<div class="optiongrid">
+<article class="option reveal"><div><span class="optionno">01 — КЛАССИКА</span><h3>Чистая эстетика.</h3><p>Лёгкое меню, понятная структура, быстрый путь к нужному блюду.</p><a href="#brief" data-pick-style="Классический дизайн">Выбрать направление</a></div><div class="optionart"><img src="https://images.unsplash.com/photo-1473093295043-cdd812d0e601?auto=format&fit=crop&w=700&q=80" alt="Паста" loading="lazy"></div></article>
+<article class="option reveal delay1"><div><span class="optionno">02 — ПРЕМИУМ</span><h3>Подача со вкусом.</h3><p>Большие фотографии и визуальный язык, который поддерживает уровень ресторана.</p><a href="#brief" data-pick-style="Премиальный дизайн">Выбрать направление</a></div><div class="optionart"><img src="https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=700&q=80" alt="Премиальная подача мяса" loading="lazy"></div></article>
+<article class="option reveal"><div><span class="optionno">03 — АНИМАЦИЯ</span><h3>Дизайн в движении.</h3><p>Анимированные детали и интерактивные элементы без перегруженного интерфейса.</p><a href="#brief" data-pick-style="Интерактивный дизайн с анимацией">Выбрать направление</a></div><div class="optionart"><img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?auto=format&fit=crop&w=700&q=80" alt="Пицца" loading="lazy"></div></article>
+<article class="option reveal delay1"><div><span class="optionno">04 — ИНДИВИДУАЛЬНЫЙ</span><h3>Вне шаблонов.</h3><p>Собственная концепция под интерьер, кухню, аудиторию и стиль вашего бренда.</p><a href="#brief" data-pick-style="Индивидуальная концепция">Обсудить идею</a></div><div class="optionart"><img src="https://images.unsplash.com/photo-1515003197210-e0cd7184f8b5?auto=format&fit=crop&w=700&q=80" alt="Авторская подача" loading="lazy"></div></article>
+</div></div></section>
+<section class="section" id="process"><div class="wrap"><div class="section-head reveal"><div><span class="eyebrow">Понятный процесс</span><h2>От идеи до QR-кода.</h2></div><p>Без сложного технического задания на первом шаге. Сначала поймём задачу, затем вместе уточним детали.</p></div><div class="process">
+<article class="reveal"><h3>Вы выбираете</h3><p>Отмечаете примерный стиль, количество блюд, языки и нужные разделы в коротком квизе.</p></article>
+<article class="reveal delay1"><h3>Мы обсуждаем</h3><p>Связываемся с вами, уточняем пожелания и отправляем подробный бриф с дальнейшими шагами.</p></article>
+<article class="reveal delay2"><h3>Собираем меню</h3><p>Создаём согласованный дизайн для смартфонов и подготавливаем ссылку и QR-код после утверждения проекта.</p></article>
+</div></div></section>
+<section class="section brief" id="brief"><div class="wrap briefshell">
+<aside class="briefaside reveal"><span class="eyebrow">Создадим меню для вас</span><h2>Расскажите,<br>что вам нужно.</h2><p>Ответьте на несколько коротких вопросов. Это не окончательный бриф и ни к чему не обязывает — он поможет понять задачу перед первым разговором.</p><div class="tiny">Пара минут — и готово. Если не знаете, что выбрать, отметьте «Пока не знаю».</div></aside>
+<div class="quiz reveal delay1" id="quiz"><div class="quizprogress"><span id="stepLabel">ШАГ 01 / 04</span><span id="percent">25%</span></div><div class="track"><div class="fill" id="progressFill"></div></div>
+<form id="briefForm" novalidate>
+<div class="step active" data-step="0"><h3>Какое меню вам ближе?</h3><p>Выберите направление. Его можно изменить позже.</p><div class="choices">
+<label class="choice"><input type="radio" name="menuType" value="Классическое"><span>Классическое</span></label><label class="choice"><input type="radio" name="menuType" value="Премиальное"><span>Премиальное</span></label><label class="choice"><input type="radio" name="menuType" value="С анимацией"><span>С анимацией</span></label><label class="choice"><input type="radio" name="menuType" value="Нужна консультация"><span>Пока не знаю</span></label></div><div class="field"><label for="count">Примерное количество позиций</label><select id="count" name="count"><option value="Пока не знаю">Пока не знаю</option><option>До 30</option><option>30–80</option><option>80–150</option><option>Более 150</option></select></div></div>
+<div class="step" data-step="1"><h3>Что должно быть внутри?</h3><p>Отметьте всё подходящее. Можно пропустить этот шаг.</p><div class="choices">
+<label class="choice"><input type="checkbox" name="features" value="Фотографии блюд"><span>Фотографии блюд</span></label><label class="choice"><input type="checkbox" name="features" value="Анимированные карточки"><span>Анимированные карточки</span></label><label class="choice"><input type="checkbox" name="features" value="Компактные карточки"><span>Компактные карточки</span></label><label class="choice"><input type="checkbox" name="features" value="О ресторане"><span>О ресторане</span></label><label class="choice"><input type="checkbox" name="features" value="Акции и предложения"><span>Акции и предложения</span></label><label class="choice"><input type="checkbox" name="features" value="Контакты и карта"><span>Контакты и карта</span></label><label class="choice"><input type="checkbox" name="features" value="КБЖУ и состав"><span>КБЖУ и состав</span></label><label class="choice"><input type="checkbox" name="features" value="Поиск по меню"><span>Поиск по меню</span></label></div></div>
+<div class="step" data-step="2"><h3>Языки и дополнительные идеи</h3><p>Выберите языки и полезные функции.</p><div class="choices">
+<label class="choice"><input type="checkbox" name="languages" value="Русский"><span>Русский</span></label><label class="choice"><input type="checkbox" name="languages" value="Английский"><span>Английский</span></label><label class="choice"><input type="checkbox" name="languages" value="Другие языки"><span>Другие языки</span></label><label class="choice"><input type="checkbox" name="extras" value="Поделиться меню"><span>Поделиться меню</span></label><label class="choice"><input type="checkbox" name="extras" value="Ссылки на соцсети"><span>Ссылки на соцсети</span></label><label class="choice"><input type="checkbox" name="extras" value="Свои пожелания"><span>Есть особые пожелания</span></label></div><div class="field"><label for="wishes">Что ещё хотите видеть?</label><textarea id="wishes" name="wishes" placeholder="Например: раздел вин, видео блюд, фирменные цвета..."></textarea></div></div>
+<div class="step" data-step="3"><h3>Как с вами связаться?</h3><p>Оставьте контакт — обсудим детали и при необходимости пришлём полный бриф.</p>
+<div class="field"><label for="restaurant">Название ресторана / проекта *</label><input id="restaurant" name="restaurant" autocomplete="organization" placeholder="Например, CASA" required></div>
+<div class="field"><label for="contact">Контакт для связи *</label><input id="contact" name="contact" placeholder="Telegram @username, телефон или email" required><span class="hint">Укажите удобный способ. Не отправляйте пароли или платёжные данные.</span></div>
+<div class="field"><label for="person">Как к вам обращаться (необязательно)</label><input id="person" name="person" autocomplete="name" placeholder="Ваше имя"></div>
+<div class="field"><label for="email">Электронная почта для ответа (необязательно)</label><input id="email" name="email" type="email" autocomplete="email" placeholder="you@example.com"></div>
+<label class="choice" style="display:block;margin-top:16px"><input type="checkbox" id="consent" required><span style="font-size:10px;line-height:1.5">Согласен(на) на обработку указанных данных для ответа на заявку. *</span></label></div>
+<div class="error" id="quizError" role="alert"></div><div class="quizcontrols" id="quizControls"><button type="button" class="btn outline" id="prevBtn" disabled>← Назад</button><button type="button" class="btn primary" id="nextBtn">Далее <span>→</span></button></div>
+</form><div class="success" id="quizSuccess" role="status" aria-live="polite"><h3>Заявка подготовлена.</h3><p id="successMessage">Это демонстрационный режим: отправка в сторонние сервисы ещё не подключена.</p><div class="summary" id="summaryText"></div><button type="button" class="btn primary" id="copySummary">Скопировать заявку</button><p class="hint">До подключения интеграции заявка никуда автоматически не передаётся. Не закрывайте страницу, если хотите скопировать текст.</p></div>
+</div></div></section>
+</main>
+<footer class="footer"><div class="wrap footerinner"><div><a class="logo" href="#top">PARADOX<span>®</span></a><p>Цифровые меню для ресторанов</p></div><div class="footerlinks"><a href="#demo">Демо меню</a><a href="#formats">Форматы</a><a href="#brief">Оставить заявку</a><a href="https://www.instagram.com/djanzakoffofficial/" target="_blank" rel="noopener noreferrer">Инстаграм</a></div><p>© <span id="year"></span> PARADOX</p></div></footer>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+<script>
+/* FRONT-END DEMO ONLY. No live endpoint, Telegram bot, email, Sheets, API key or secret is configured. */
+const INTEGRATION_CONFIG={enabled:false,endpoint:""};
+const photos={
+steak:"https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=250&q=80",
+pasta:"https://images.unsplash.com/photo-1473093295043-cdd812d0e601?auto=format&fit=crop&w=250&q=80",
+pizza:"https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?auto=format&fit=crop&w=250&q=80",
+dessert:"https://images.unsplash.com/photo-1488477181946-6428a0291777?auto=format&fit=crop&w=250&q=80"
+};
+const styles={
+classic:{name:"CASA · РЕСТОРАН",kicker:"СЕЗОННОЕ МЕНЮ",title:"Вкус момента.",cover:"https://images.unsplash.com/photo-1546833999-b9f581a1996d?auto=format&fit=crop&w=800&q=80",caption:"<strong>КЛАССИКА</strong> — простая навигация и акцент на блюдах",bg:"#faf9f3",ink:"#242622",foods:[[photos.steak,"Рибай на гриле","Соус демиглас, сезонные овощи","1 890 ₽"],[photos.pasta,"Паста с травами","Пармезан, базилик","790 ₽"],[photos.pizza,"Пицца от шефа","Томаты, моцарелла","950 ₽"]]},
+signature:{name:"NOIR · РЕСТОРАН ВЫСОКОЙ КУХНИ",kicker:"ВЫБОР ШЕФ-ПОВАРА",title:"Вечер, который запомнится.",cover:"https://images.unsplash.com/photo-1515003197210-e0cd7184f8b5?auto=format&fit=crop&w=800&q=80",caption:"<strong>ПРЕМИУМ</strong> — выразительная подача и большие фотографии",bg:"#20211e",ink:"#f4f0e7",foods:[[photos.steak,"Стейк от шефа","Сезонные ингредиенты","2 400 ₽"],[photos.dessert,"Десерт дня","Авторская подача","690 ₽"],[photos.pasta,"Паста ручной работы","Соус из трав","1 150 ₽"]]},
+motion:{name:"КУХНЯ · В ДВИЖЕНИИ",kicker:"СВЕЖЕСТЬ И ДВИЖЕНИЕ",title:"Создано, чтобы наслаждаться.",cover:"https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?auto=format&fit=crop&w=800&q=80",caption:"<strong>АНИМАЦИЯ</strong> — лёгкая анимация и интерактивные карточки",bg:"#f7f4eb",ink:"#242622",foods:[[photos.pizza,"Пицца в движении","Томаты, моцарелла","950 ₽"],[photos.steak,"Горячая подача","Соус от шефа","1 890 ₽"],[photos.dessert,"Сладкий финал","Ягоды и крем","650 ₽"]]},
+custom:{name:"ВАШ БРЕНД · ВАШЕ МЕНЮ",kicker:"СОЗДАНО ДЛЯ ВАС",title:"Ваша история. Ваш вкус.",cover:"https://images.unsplash.com/photo-1547592180-85f173990554?auto=format&fit=crop&w=800&q=80",caption:"<strong>ИНДИВИДУАЛЬНЫЙ</strong> — стиль, структура и разделы под вашу задачу",bg:"#f1eee5",ink:"#20231e",foods:[[photos.pasta,"Ваше фирменное блюдо","Описание в вашем стиле","—"],[photos.steak,"Выбор шефа","Состав и детали","—"],[photos.dessert,"Сезонное предложение","История блюда","—"]]}
+};
+function renderStyle(key){const d=styles[key];document.getElementById("restaurantName").textContent=d.name;document.getElementById("coverKicker").textContent=d.kicker;document.getElementById("coverTitle").textContent=d.title;const cover=document.getElementById("demoCover");cover.style.transform="scale(1.06)";cover.src=d.cover;cover.alt="Демонстрация стиля "+key;setTimeout(()=>cover.style.transform="",50);const screen=document.getElementById("phoneScreen");screen.style.background=d.bg;screen.style.color=d.ink;document.getElementById("demoCaption").innerHTML=d.caption;document.getElementById("foodList").innerHTML=d.foods.map((f,i)=>`<div class="food" style="${key==="motion"?"animation:stepin .35s "+(i*.08)+"s both":""}"><img src="${f[0]}" alt="${f[1]}" loading="lazy"><div><strong>${f[1]}</strong><small>${f[2]}</small></div><b>${f[3]}</b></div>`).join("");document.querySelectorAll(".tab").forEach(b=>{const active=b.dataset.style===key;b.classList.toggle("active",active);b.setAttribute("aria-selected",String(active));});}
+document.querySelectorAll(".tab").forEach(b=>b.addEventListener("click",()=>renderStyle(b.dataset.style)));renderStyle("classic");
+const navLinks=document.getElementById("navLinks"),toggle=document.getElementById("menuToggle");toggle.addEventListener("click",()=>{const open=navLinks.classList.toggle("open");toggle.setAttribute("aria-expanded",String(open));toggle.textContent=open?"×":"☰";});navLinks.querySelectorAll("a").forEach(a=>a.addEventListener("click",()=>{navLinks.classList.remove("open");toggle.setAttribute("aria-expanded","false");toggle.textContent="☰";}));
+const revealObserver=("IntersectionObserver"in window)?new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add("visible");revealObserver.unobserve(e.target);}}),{threshold:.1}):null;document.querySelectorAll(".reveal").forEach(el=>revealObserver?revealObserver.observe(el):el.classList.add("visible"));
+document.getElementById("year").textContent=new Date().getFullYear();
+let currentStep=0;const steps=[...document.querySelectorAll(".step")],prev=document.getElementById("prevBtn"),next=document.getElementById("nextBtn"),error=document.getElementById("quizError");
+function showStep(n){currentStep=n;steps.forEach((s,i)=>s.classList.toggle("active",i===n));prev.disabled=n===0;next.innerHTML=n===3?"Подготовить заявку":'Далее <span>→</span>';document.getElementById("stepLabel").textContent=`ШАГ 0${n+1} / 04`;document.getElementById("percent").textContent=`${Math.round((n+1)/4*100)}%`;document.getElementById("progressFill").style.width=((n+1)/4*100)+"%";error.style.display="none";}
+function validateStep(){if(currentStep===0&&!document.querySelector('input[name="menuType"]:checked'))return"Выберите направление меню или вариант «Пока не знаю».";if(currentStep===3){if(!document.getElementById("restaurant").value.trim())return"Укажите название ресторана или проекта.";if(!document.getElementById("contact").value.trim())return"Укажите контакт для связи.";if(!document.getElementById("consent").checked)return"Пожалуйста, подтвердите согласие на обработку данных.";const email=document.getElementById("email").value.trim();if(email&&!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email))return"Проверьте адрес электронной почты или оставьте поле пустым.";}return"";}
+prev.addEventListener("click",()=>{if(currentStep>0)showStep(currentStep-1);});next.addEventListener("click",()=>{const problem=validateStep();if(problem){error.textContent=problem;error.style.display="block";return;}if(currentStep<3){showStep(currentStep+1);return;}prepareRequest();});
+function values(name){return [...document.querySelectorAll(`[name="${name}"]:checked`)].map(el=>el.value);}
+function prepareRequest(){const data={menuType:document.querySelector('input[name="menuType"]:checked')?.value||"Не выбрано",count:document.getElementById("count").value,features:values("features"),languages:values("languages"),extras:values("extras"),wishes:document.getElementById("wishes").value.trim(),restaurant:document.getElementById("restaurant").value.trim(),contact:document.getElementById("contact").value.trim(),person:document.getElementById("person").value.trim(),email:document.getElementById("email").value.trim()};const summary=[
+"ЗАЯВКА PARADOX",
+"Ресторан / проект: "+data.restaurant,
+"Контакт: "+data.contact,
+"Имя: "+(data.person||"не указано"),
+"Электронная почта: "+(data.email||"не указана"),
+"Тип меню: "+data.menuType,
+"Количество позиций: "+data.count,
+"Функции: "+(data.features.join(", ")||"не выбраны"),
+"Языки: "+(data.languages.join(", ")||"не выбраны"),
+"Дополнительно: "+(data.extras.join(", ")||"не выбрано"),
+"Пожелания: "+(data.wishes||"не указаны"),
+"Источник: сайт PARADOX"
+].join("\n");document.getElementById("summaryText").textContent=summary;document.getElementById("quizControls").style.display="none";document.getElementById("briefForm").style.display="none";document.getElementById("quizSuccess").style.display="block";document.getElementById("successMessage").textContent=INTEGRATION_CONFIG.enabled?"Отправка настроена. Проверьте результат интеграции.":"Демо готово: интеграции с Telegram, почтой и Google Sheets ещё не подключены. Скопируйте текст заявки для проверки макета.";document.getElementById("quizSuccess").scrollIntoView({behavior:"smooth",block:"center"});}
+document.getElementById("copySummary").addEventListener("click",async()=>{const text=document.getElementById("summaryText").textContent;try{await navigator.clipboard.writeText(text);toast("Заявка скопирована. Сейчас она хранится только в этой странице.");}catch(e){const area=document.createElement("textarea");area.value=text;document.body.appendChild(area);area.select();document.execCommand("copy");area.remove();toast("Текст заявки скопирован.");}});
+document.querySelectorAll("[data-pick-style]").forEach(a=>a.addEventListener("click",()=>{const val=a.dataset.pickStyle;const target=[...document.querySelectorAll('input[name="menuType"]')].find(el=>val.includes("Классический")?el.value==="Классическое":val.includes("Премиальный")?el.value==="Премиальное":val.includes("анимацией")?el.value==="С анимацией":val.includes("Индивидуальная")?el.value==="Нужна консультация":false);if(target)target.checked=true;}));
+let toastTimer;function toast(message){const el=document.getElementById("toast");el.textContent=message;el.classList.add("show");clearTimeout(toastTimer);toastTimer=setTimeout(()=>el.classList.remove("show"),3200);}
+</script>
+</body></html>
