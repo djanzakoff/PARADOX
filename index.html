@@ -400,6 +400,97 @@ body{background:#101114;color:#F4F2EA;background-image:none}
 }
 @media(prefers-reduced-motion:reduce){.paradox-motion-feature>.paradox-motion-video,.paradox-video-float .paradox-motion-video{animation:none!important}}
 </style>
+
+<style id="paradox-six-live-features">
+/* Six consistent animated product demonstrations. Deliberately isolated from forms and app integrations. */
+.features.paradox-feature-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:15px;align-items:stretch}
+.feature.paradox-showcase-card{display:flex;flex-direction:column;min-height:385px;padding:0;border:1px solid #ffffff24!important;border-radius:21px;overflow:hidden;background:#181b18!important;box-shadow:none;position:relative;transition:transform .35s ease,border-color .35s ease}
+.feature.paradox-showcase-card:hover{transform:translateY(-5px);border-color:#D5E66A88!important}
+.paradox-feature-visual{position:relative;isolation:isolate;overflow:hidden;flex:0 0 196px;width:100%;background:#242820}
+.paradox-feature-body{display:flex;flex:1;flex-direction:column;padding:21px 23px 23px}
+.paradox-feature-mark{display:flex;align-items:center;gap:9px;font-size:10px;font-weight:800;color:#D5E66A;letter-spacing:.04em;margin-bottom:13px}
+.paradox-feature-mark span{color:#ADB7A7;font-size:9px;letter-spacing:.11em}
+.feature.paradox-showcase-card h3{font-size:21px;line-height:1.06;margin:0 0 9px;color:#F7F8F2!important;letter-spacing:-.05em}
+.feature.paradox-showcase-card p{max-width:none;margin:0;font-size:12px;line-height:1.68;color:#B7C0B5!important;text-shadow:none}
+/* 1. Automatic dish carousel */
+.paradox-deck-visual{background:#111310}
+.paradox-deck-track{display:flex;width:400%;height:100%;animation:paradoxDishCarousel 17s ease-in-out infinite}
+.paradox-deck-slide{position:relative;flex:0 0 25%;width:25%;height:100%}
+.paradox-deck-slide img{width:100%;height:100%;display:block;object-fit:cover;filter:saturate(1.22) contrast(1.1) brightness(.91)}
+.paradox-deck-slide:after{content:"";position:absolute;inset:35% 0 0;background:linear-gradient(transparent,#050705dc);pointer-events:none}
+.paradox-deck-caption{position:absolute;z-index:1;left:18px;right:18px;bottom:15px;display:flex;gap:10px;justify-content:space-between;align-items:end;color:white}
+.paradox-deck-caption strong{font-size:17px;line-height:1;letter-spacing:-.045em}
+.paradox-deck-caption span{color:#D5E66A;font-size:12px;font-weight:800;white-space:nowrap}
+.paradox-visual-corner{position:absolute;z-index:3;top:13px;left:14px;background:#101410dd;color:#F0F1E9;border:1px solid #ffffff30;padding:8px 10px;border-radius:9px;font-size:9px;font-weight:800;letter-spacing:.08em}
+.paradox-visual-corner span{color:#D5E66A;padding-left:8px}
+@keyframes paradoxDishCarousel{0%,21%{transform:translateX(0)}27%,48%{transform:translateX(-25%)}54%,75%{transform:translateX(-50%)}81%,100%{transform:translateX(-75%)}}
+/* 2. Original drinks video */
+.paradox-live-visual{background:#090b0a}
+.paradox-live-visual .paradox-motion-video,.paradox-live-visual>.paradox-motion-fallback{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;filter:saturate(1.3) contrast(1.06) brightness(.89)}
+.paradox-live-visual:after{content:"";inset:20% 0 0;position:absolute;background:linear-gradient(transparent,#050704ae);pointer-events:none}
+.paradox-live-pill{position:absolute;z-index:2;top:13px;left:14px;display:flex;align-items:center;gap:8px;background:#101410dc;border:1px solid #ffffff25;color:#fff;border-radius:999px;padding:8px 11px;font-size:9px;font-weight:800;letter-spacing:.08em}
+.paradox-live-dot{width:6px;height:6px;background:#D5E66A;border-radius:50%;box-shadow:0 0 0 4px #D5E66A30;animation:paradoxDot 2.2s ease-in-out infinite}
+.paradox-live-foot{position:absolute;bottom:17px;left:17px;z-index:2;color:#F5F5ED;font-size:10px;font-weight:800;letter-spacing:.10em;text-shadow:0 2px 8px #000}
+@keyframes paradoxDot{50%{box-shadow:0 0 0 8px #D5E66A0a}}
+/* 3. Actual toggling of language labels, also autoswitched */
+.paradox-language-visual{padding:16px;background:radial-gradient(circle at 88% 95%,#D5E66A18,transparent 45%),#242b22}
+.paradox-language-top{display:flex;justify-content:space-between;align-items:center;gap:8px;color:#CBD4C6;font-size:9px;letter-spacing:.08em;font-weight:800}
+.paradox-language-tabs{display:flex;padding:3px;border-radius:99px;background:#090d0c;gap:3px}
+.paradox-lang-btn{border:0;border-radius:100px;background:transparent;color:#B1B9AE;font-size:10px;font-weight:800;cursor:pointer;padding:6px 11px}
+.paradox-lang-btn.active{background:#D5E66A;color:#101114}
+.paradox-language-menu{margin-top:19px;transition:opacity .25s ease,transform .25s ease}
+.paradox-language-menu.changing{opacity:.25;transform:translateY(5px)}
+.paradox-language-small{color:#D5E66A;font-size:9px;font-weight:800;letter-spacing:.09em;margin-bottom:7px}
+.paradox-language-menu strong{display:block;color:#FAFDF4;max-width:260px;font-size:22px;line-height:1.05;letter-spacing:-.05em}
+.paradox-language-menu p{margin:6px 0 9px!important;color:#C3CBBE!important;font-size:11px!important}
+.paradox-language-menu>span{font-size:15px;font-weight:800;color:#D5E66A}
+.paradox-language-foot{position:absolute;right:16px;bottom:13px;display:flex;align-items:center;gap:9px;font-size:8px;color:#B7C3B5;font-weight:800;letter-spacing:.04em}
+.paradox-lang-switch-track{height:4px;width:38px;border-radius:99px;background:#47573A;position:relative}
+.paradox-lang-switch-track:after{content:"";width:13px;height:4px;border-radius:99px;background:#D5E66A;position:absolute;left:0;transition:transform .3s}
+.paradox-language-visual[data-lang="en"] .paradox-lang-switch-track:after{transform:translateX(25px)}
+/* 4. Restaurant story */
+.paradox-about-visual{background:#101410}
+.paradox-about-scene{position:absolute;inset:0;opacity:0;animation:paradoxAboutFade 10s ease-in-out infinite}
+.paradox-about-scene.scene-second{animation-delay:-5s}
+.paradox-about-scene img{display:block;width:100%;height:100%;object-fit:cover;filter:saturate(1.18) contrast(1.1) brightness(.85);animation:paradoxAboutZoom 14s ease-in-out infinite alternate}
+.paradox-about-scene:after{content:"";position:absolute;inset:30% 0 0;background:linear-gradient(transparent,#030503db)}
+.paradox-about-copy{position:absolute;left:18px;right:18px;bottom:16px;color:white;z-index:2}
+.paradox-about-copy small{display:block;color:#D5E66A;font-size:9px;font-weight:800;letter-spacing:.12em;margin-bottom:8px}
+.paradox-about-copy strong{display:block;max-width:235px;font-size:20px;line-height:1.08;letter-spacing:-.05em}
+.paradox-about-visual .paradox-visual-corner{top:11px;left:auto;right:12px;font-size:8px}
+@keyframes paradoxAboutFade{0%,43%{opacity:1}51%,92%{opacity:0}100%{opacity:1}}
+@keyframes paradoxAboutZoom{from{transform:scale(1)}to{transform:scale(1.12)}}
+/* 5. Tappable and auto-highlighted contacts */
+.paradox-contact-visual{padding:16px;background:radial-gradient(circle at 50% 115%,#D5E66A24,transparent 60%),#182018}
+.paradox-contact-heading{display:flex;justify-content:space-between;color:#B9C7B3;font-size:9px;font-weight:800;letter-spacing:.08em}
+.paradox-contact-status{color:#D5E66A;display:flex;align-items:center;gap:6px}
+.paradox-contact-status>span{width:5px;height:5px;background:#D5E66A;border-radius:50%}
+.paradox-contact-preview{display:flex;gap:12px;align-items:center;margin:22px 0 18px;transition:opacity .25s}
+.paradox-contact-preview.changing{opacity:.35}
+.paradox-contact-preview-icon{width:45px;height:45px;flex:0 0 45px;border-radius:13px;background:#D5E66A;color:#101114;font-size:22px;display:grid;place-items:center;font-weight:800}
+.paradox-contact-preview small{display:block;color:#AABBA6;font-size:9px;font-weight:800;letter-spacing:.1em;margin-bottom:5px}
+.paradox-contact-preview strong{display:block;color:#FAFDF8;font-size:18px;letter-spacing:-.04em;line-height:1.06}
+.paradox-contact-options{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:5px}
+.paradox-contact-action{min-width:0;border:1px solid #ffffff25;border-radius:9px;background:#262E24;color:#BFCABE;padding:10px 3px;font-size:9px;cursor:pointer;font-weight:700}
+.paradox-contact-action.active{background:#D5E66A;color:#101114;border-color:#D5E66A}
+/* 6. Promotions and add-ons */
+.paradox-extras-visual{padding:16px;background:radial-gradient(circle at 105% 105%,#D5E66A2b,transparent 55%),#202620}
+.paradox-extras-heading{display:flex;justify-content:space-between;align-items:center;color:#BFC8B7;font-size:10px;font-weight:800;letter-spacing:.1em}
+.paradox-extras-heading span{font-size:24px;font-weight:400;color:#D5E66A;line-height:.7}
+.paradox-extras-panel{position:absolute;left:16px;right:16px;top:52px;bottom:24px;border:1px solid #ffffff2c;border-radius:14px;padding:18px 16px;background:linear-gradient(135deg,#343F2F,#1B261A);color:#F5F7F0;opacity:0;transform:translateY(12px) scale(.97);animation:paradoxExtrasLoop 12s ease-in-out infinite}
+.paradox-extras-panel.paradox-extra-b{animation-delay:4s;background:linear-gradient(135deg,#343E26,#1A2219)}
+.paradox-extras-panel.paradox-extra-c{animation-delay:8s;background:linear-gradient(135deg,#3A3729,#22251C)}
+.paradox-extras-panel small{display:block;color:#D5E66A;font-size:9px;font-weight:800;letter-spacing:.1em;margin-bottom:12px}
+.paradox-extras-panel strong{display:block;max-width:250px;font-size:20px;line-height:1.07;letter-spacing:-.04em}
+.paradox-extras-panel span{display:block;margin-top:10px;color:#BEC8B8;font-size:10px}
+.paradox-extras-progress{position:absolute;left:18px;bottom:14px;width:calc(100% - 36px);height:3px;background:#ffffff2b;overflow:hidden;border-radius:99px}
+.paradox-extras-progress i{display:block;width:100%;height:100%;background:#D5E66A;transform-origin:left;animation:paradoxProgress 4s linear infinite}
+@keyframes paradoxExtrasLoop{0%,5%{opacity:0;transform:translateY(10px) scale(.97)}9%,28%{opacity:1;transform:translateY(0) scale(1)}33%,100%{opacity:0;transform:translateY(-8px) scale(.98)}}
+@keyframes paradoxProgress{from{transform:scaleX(0)}to{transform:scaleX(1)}}
+@media(max-width:950px){.features.paradox-feature-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:620px){.features.paradox-feature-grid{grid-template-columns:1fr;gap:13px}.feature.paradox-showcase-card{min-height:347px}.paradox-feature-visual{flex-basis:180px}.paradox-feature-body{padding:18px 19px 21px}.feature.paradox-showcase-card h3{font-size:20px}}
+@media(prefers-reduced-motion:reduce){.paradox-deck-track,.paradox-about-scene,.paradox-about-scene img,.paradox-extras-panel,.paradox-extras-progress i,.paradox-live-dot{animation:none!important}.paradox-about-scene.scene-first,.paradox-extras-panel.paradox-extra-a{opacity:1;transform:none}.paradox-about-scene.scene-second,.paradox-extras-panel.paradox-extra-b,.paradox-extras-panel.paradox-extra-c{opacity:0}}
+</style>
 </head>
 <body>
 <header class="topbar"><div class="wrap nav">
@@ -412,7 +503,7 @@ body{background:#101114;color:#F4F2EA;background-image:none}
 <div><span class="eyebrow">Цифровые меню для ресторанов</span><h1>МЕНЮ,<br>КОТОРОЕ<br><span>ХОЧЕТСЯ</span><br>ОТКРЫТЬ.</h1>
 <p class="herocopy">Создаём индивидуальные цифровые меню, в которых гастрономия встречается с выразительным дизайном. Красивые блюда, удобный просмотр и атмосфера вашего заведения — в одном QR-коде.</p>
 <div class="actions"><a class="btn primary" href="https://djanzakoff.github.io/menu/" target="_blank" rel="noopener noreferrer" data-paradox-menu-open="true">Посмотреть демо</a><a class="btn outline" href="#brief">Собрать своё меню</a></div>
-<div class="heronote"><span class="noteicon" aria-hidden="true"><span class="notecheck"></span></span><span>Только просмотр меню. Без корзины и оформления заказов.</span></div><div class="hero-stats"><div><strong>01</strong><span>Дизайн под бренд</span></div><div><strong>QR</strong><span>Удобно открыть</span></div><div><strong>∞</strong><span>Ваши идеи</span></div></div></div>
+<div class="hero-stats"><div><strong>01</strong><span>Дизайн под бренд</span></div><div><strong>QR</strong><span>Удобно открыть</span></div><div><strong>∞</strong><span>Ваши идеи</span></div></div></div>
 <div class="heroart"><div class="heroimg"><img src="https://images.unsplash.com/photo-1558030006-450675393462?auto=format&fit=crop&w=1200&q=90" alt="Премиальная подача блюда в ресторане" fetchpriority="high"><div class="photolabel"><div><small>ЦИФРОВОЕ МЕНЮ С ХАРАКТЕРОМ</small><br><strong>Вкус начинается<br>с первого взгляда.</strong></div><small>01 / 04</small></div></div><div class="tag">ДИЗАЙН,<br>КОТОРЫЙ ЗАМЕЧАЮТ</div><div class="floatcard paradox-video-float">
   <video class="paradox-motion-video" data-paradox-motion autoplay muted loop playsinline preload="metadata" aria-label="Анимированная подача стейка PARADOX" poster="https://images.unsplash.com/photo-1555939594-58d7cb561ad1?auto=format&fit=crop&w=600&q=90">
     <source src="https://djanzakoff.github.io/menu/steak.mp4" type="video/mp4">
@@ -433,20 +524,69 @@ body{background:#101114;color:#F4F2EA;background-image:none}
 <div class="reveal delay1"><div class="phonestage"><div class="phone"><div class="screen" id="phoneScreen"><div class="phonetop"><span id="restaurantName">CASA · РЕСТОРАН</span><span>•••</span></div><div class="cover"><img id="demoCover" src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=800&q=88" alt="Демонстрационное блюдо"><div class="covertext"><small id="coverKicker">СЕЗОННОЕ МЕНЮ</small><strong id="coverTitle">Попробуйте момент.</strong></div></div><div class="categories"><span>Популярное</span><span>Закуски</span><span>Основное</span><span>Десерты</span></div><div class="foodlist" id="foodList"></div></div></div></div><div class="democaption"><span id="demoCaption"><strong>КЛАССИКА</strong> — простая навигация и акцент на блюдах</span></div></div></div>
 </div></section>
 <section class="section" id="possibilities"><div class="wrap"><div class="section-head reveal"><div><span class="eyebrow">Всё нужное — без лишнего</span><h2>Продумано для<br><em>гостя.</em></h2></div><p>Вы выбираете, что нужно гостям и что отражает характер заведения. Мы соединяем детали в цельный цифровой продукт.</p></div>
-<div class="features">
-<article class="feature reveal"><div class="featureicon"><svg viewBox="0 0 48 48" aria-hidden="true"><path d="M18 30l-4 4a8 8 0 0 1-11-11l9-9a8 8 0 0 1 11 0M30 18l4-4a8 8 0 0 1 11 11l-9 9a8 8 0 0 1-11 0M17 31l14-14" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div><h3>Карточки блюд</h3><p>Компактные, крупные, с фотографией на весь блок или с подробным описанием. Можно открыть блюдо и увидеть состав, вес и другую информацию.</p></article>
-<article class="feature reveal delay1 paradox-motion-feature">
-  <video class="paradox-motion-video" data-paradox-motion autoplay muted loop playsinline preload="metadata" aria-hidden="true" poster="https://images.unsplash.com/photo-1551183053-bf91a1d81141?auto=format&fit=crop&w=800&q=90">
-    <source src="https://djanzakoff.github.io/menu/drink.mp4" type="video/mp4">
-  </video>
-  <div class="featureicon"><svg viewBox="0 0 48 48" aria-hidden="true"><circle cx="24" cy="24" r="17" fill="none" stroke="currentColor" stroke-width="2.5"/><path d="m20 16 13 8-13 8z" fill="currentColor"/></svg></div>
-  <h3>Живой визуал</h3><p>Плавное появление, движение изображений, раскрывающиеся карточки и аккуратные переходы — столько анимации, сколько уместно бренду.</p>
-  <span class="paradox-video-chip" aria-hidden="true">ЖИВОЙ ПРИМЕР</span>
-</article>
-<article class="feature reveal delay2"><div class="featureicon">文</div><h3>Несколько языков</h3><p>Русский, английский и другие языки по согласованию. Переводы предоставляются клиентом или согласуются отдельно.</p></article>
-<article class="feature reveal"><div class="featureicon">◎</div><h3>О ресторане</h3><p>История места, команда, шеф-повар, философия кухни или короткое приветствие гостям.</p></article>
-<article class="feature reveal delay1"><div class="featureicon"><svg viewBox="0 0 48 48" aria-hidden="true"><path d="M19 29l-3 3a8 8 0 0 1-11-11l8-8a8 8 0 0 1 11 0M29 19l3-3a8 8 0 0 1 11 11l-8 8a8 8 0 0 1-11 0M17 31l14-14" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div><h3>Контакты и ссылки</h3><p>Адрес, часы работы, телефон, карта, соцсети, сайт и кнопка поделиться ссылкой на меню.</p></article>
-<article class="feature reveal delay2"><div class="featureicon"><svg viewBox="0 0 48 48" aria-hidden="true"><rect x="9" y="9" width="20" height="20" rx="3" fill="none" stroke="currentColor" stroke-width="2.5"/><path d="M19 36h15a4 4 0 0 0 4-4V17" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/><path d="M24 15v8m-4-4h8" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/></svg></div><h3>Дополнительные блоки</h3><p>Акции, сезонные предложения, КБЖУ, аллергены и другие элементы — по согласованному содержанию и возможностям проекта.</p></article>
+<div class="features paradox-feature-grid" aria-label="Анимированные примеры возможностей PARADOX">
+  <!-- 1: actual food card carousel -->
+  <article class="feature paradox-showcase-card reveal">
+    <div class="paradox-feature-visual paradox-deck-visual" aria-label="Пример перелистывающихся карточек блюд">
+      <div class="paradox-deck-track" aria-hidden="true">
+        <div class="paradox-deck-slide"><img loading="lazy" src="https://images.unsplash.com/photo-1558030006-450675393462?auto=format&fit=crop&w=700&q=85" alt=""><div class="paradox-deck-caption"><strong>Стейк от шефа</strong><span>1 890 ₽</span></div></div>
+        <div class="paradox-deck-slide"><img loading="lazy" src="https://images.unsplash.com/photo-1551183053-bf91a1d81141?auto=format&fit=crop&w=700&q=85" alt=""><div class="paradox-deck-caption"><strong>Паста с травами</strong><span>790 ₽</span></div></div>
+        <div class="paradox-deck-slide"><img loading="lazy" src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?auto=format&fit=crop&w=700&q=85" alt=""><div class="paradox-deck-caption"><strong>Десерт дня</strong><span>650 ₽</span></div></div>
+        <div class="paradox-deck-slide"><img loading="lazy" src="https://images.unsplash.com/photo-1558030006-450675393462?auto=format&fit=crop&w=700&q=85" alt=""><div class="paradox-deck-caption"><strong>Стейк от шефа</strong><span>1 890 ₽</span></div></div>
+      </div>
+      <div class="paradox-visual-corner">01 / 06 <span>ЛИСТАЙТЕ</span></div>
+    </div>
+    <div class="paradox-feature-body"><div class="paradox-feature-mark">01 <span>КАРТОЧКИ</span></div><h3>Карточки блюд</h3><p>Блюда листаются одно за другим: фото, название, цена и описание — в удобном формате.</p></div>
+  </article>
+  <!-- 2: real drink video -->
+  <article class="feature paradox-showcase-card reveal delay1">
+    <div class="paradox-feature-visual paradox-live-visual">
+      <video class="paradox-motion-video" data-paradox-motion autoplay muted loop playsinline preload="metadata" aria-label="Живая карточка с видео напитка" poster="https://images.unsplash.com/photo-1544145945-f90425340c7e?auto=format&fit=crop&w=700&q=85">
+        <source src="https://djanzakoff.github.io/menu/drink.mp4" type="video/mp4">
+      </video>
+      <span class="paradox-live-pill"><span class="paradox-live-dot"></span> LIVE VISUAL</span>
+      <div class="paradox-live-foot">ДВИЖЕНИЕ В КАЖДОЙ ДЕТАЛИ</div>
+    </div>
+    <div class="paradox-feature-body"><div class="paradox-feature-mark">02 <span>АНИМАЦИЯ</span></div><h3>Живой визуал</h3><p>Настоящее видео из меню PARADOX: движение, текстура и подача привлекают внимание.</p></div>
+  </article>
+  <!-- 3: switching language demo -->
+  <article class="feature paradox-showcase-card reveal delay2">
+    <div class="paradox-feature-visual paradox-language-visual" id="paradoxLanguageDemo">
+      <div class="paradox-language-top"><span>PARADOX · MENU</span><div class="paradox-language-tabs"><button type="button" class="paradox-lang-btn active" data-lang="ru" aria-pressed="true">RU</button><button type="button" class="paradox-lang-btn" data-lang="en" aria-pressed="false">EN</button></div></div>
+      <div class="paradox-language-menu"><div class="paradox-language-small" id="paradoxLangCategory">ОСНОВНЫЕ БЛЮДА</div><strong id="paradoxLangTitle">Фирменный стейк</strong><p id="paradoxLangDesc">Мраморная говядина, соус демиглас</p><span>1 890 ₽</span></div>
+      <div class="paradox-language-foot">РУССКИЙ <span class="paradox-lang-switch-track"></span> ENGLISH</div>
+    </div>
+    <div class="paradox-feature-body"><div class="paradox-feature-mark">03 <span>ЛОКАЛИЗАЦИЯ</span></div><h3>Несколько языков</h3><p>Посмотрите, как одним нажатием меняется язык блюда. Переводы согласуются с рестораном.</p></div>
+  </article>
+  <!-- 4: restaurant story slides -->
+  <article class="feature paradox-showcase-card reveal">
+    <div class="paradox-feature-visual paradox-about-visual" aria-label="Анимированная история ресторана">
+      <div class="paradox-about-scene scene-first"><img loading="lazy" src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=750&q=85" alt="Интерьер ресторана"><div class="paradox-about-copy"><small>01 · НАША ИСТОРИЯ</small><strong>Место со своим характером</strong></div></div>
+      <div class="paradox-about-scene scene-second"><img loading="lazy" src="https://images.unsplash.com/photo-1559339352-11d035aa65de?auto=format&fit=crop&w=750&q=85" alt="Атмосфера ресторана"><div class="paradox-about-copy"><small>02 · АТМОСФЕРА</small><strong>Вкус начинается с деталей</strong></div></div>
+      <div class="paradox-visual-corner">ИСТОРИЯ БРЕНДА</div>
+    </div>
+    <div class="paradox-feature-body"><div class="paradox-feature-mark">04 <span>О ЗАВЕДЕНИИ</span></div><h3>О ресторане</h3><p>Расскажите историю заведения, покажите интерьер, команду и философию кухни.</p></div>
+  </article>
+  <!-- 5: contact interactions demo -->
+  <article class="feature paradox-showcase-card reveal delay1">
+    <div class="paradox-feature-visual paradox-contact-visual" id="paradoxContactDemo">
+      <div class="paradox-contact-heading"><span>НА СВЯЗИ</span><span class="paradox-contact-status"><span></span> ОНЛАЙН</span></div>
+      <div class="paradox-contact-preview"><div class="paradox-contact-preview-icon" id="paradoxContactIcon">↗</div><div><small id="paradoxContactCaption">НАВИГАЦИЯ</small><strong id="paradoxContactTitle">Открыть маршрут</strong></div></div>
+      <div class="paradox-contact-options"><button type="button" class="paradox-contact-action active" data-kind="map" aria-pressed="true">Карта</button><button type="button" class="paradox-contact-action" data-kind="call" aria-pressed="false">Звонок</button><button type="button" class="paradox-contact-action" data-kind="chat" aria-pressed="false">Чат</button><button type="button" class="paradox-contact-action" data-kind="share" aria-pressed="false">Поделиться</button></div>
+    </div>
+    <div class="paradox-feature-body"><div class="paradox-feature-mark">05 <span>СВЯЗЬ С ГОСТЕМ</span></div><h3>Контакты и ссылки</h3><p>Покажите маршруты, звонок, сообщения и возможность поделиться меню одним касанием.</p></div>
+  </article>
+  <!-- 6: rotating add-on panels -->
+  <article class="feature paradox-showcase-card reveal delay2">
+    <div class="paradox-feature-visual paradox-extras-visual" aria-label="Анимированные примеры дополнительных блоков">
+      <div class="paradox-extras-heading">ДОПОЛНИТЕЛЬНО <span>+</span></div>
+      <div class="paradox-extras-panel paradox-extra-a"><small>АКЦИИ И СОБЫТИЯ</small><strong>Специальное предложение</strong><span>Сезонный сет · ПРИМЕР</span></div>
+      <div class="paradox-extras-panel paradox-extra-b"><small>СОСТАВ И КБЖУ</small><strong>Информация о блюде</strong><span>Калории · Белки · Жиры · Углеводы</span></div>
+      <div class="paradox-extras-panel paradox-extra-c"><small>ИНФОРМАЦИЯ ДЛЯ ГОСТЯ</small><strong>Аллергены и состав</strong><span>Прозрачность в каждой карточке</span></div>
+      <div class="paradox-extras-progress"><i></i></div>
+    </div>
+    <div class="paradox-feature-body"><div class="paradox-feature-mark">06 <span>МОДУЛИ</span></div><h3>Дополнительные блоки</h3><p>Акции, КБЖУ, аллергены, корзина и оформление заказа — набор функций под задачи клиента.</p></div>
+  </article>
 </div></div></section>
 <section class="section options" id="formats"><div class="wrap"><div class="section-head reveal"><div><span class="eyebrow">Четыре направления</span><h2>Найдём свой<br><em>характер.</em></h2></div><p>Не обязательно выбирать один стиль целиком. Можно объединить премиальные фотографии, компактные карточки и лёгкую анимацию.</p></div>
 <div class="optiongrid">
@@ -467,7 +607,7 @@ body{background:#101114;color:#F4F2EA;background-image:none}
 <div class="step active" data-step="0"><h3>Какое меню вам ближе?</h3><p>Выберите направление. Его можно изменить позже.</p><div class="choices">
 <label class="choice"><input type="radio" name="menuType" value="Классическое"><span>Классическое</span></label><label class="choice"><input type="radio" name="menuType" value="Премиальное"><span>Премиальное</span></label><label class="choice"><input type="radio" name="menuType" value="С анимацией"><span>С анимацией</span></label><label class="choice"><input type="radio" name="menuType" value="Нужна консультация"><span>Пока не знаю</span></label></div><div class="field"><label for="count">Примерное количество позиций</label><select id="count" name="count"><option value="Пока не знаю">Пока не знаю</option><option>До 30</option><option>30–80</option><option>80–150</option><option>Более 150</option></select></div></div>
 <div class="step" data-step="1"><h3>Что должно быть внутри?</h3><p>Отметьте всё подходящее. Можно пропустить этот шаг.</p><div class="choices">
-<label class="choice"><input type="checkbox" name="features" value="Фотографии блюд"><span>Фотографии блюд</span></label><label class="choice"><input type="checkbox" name="features" value="Анимированные карточки"><span>Анимированные карточки</span></label><label class="choice"><input type="checkbox" name="features" value="Компактные карточки"><span>Компактные карточки</span></label><label class="choice"><input type="checkbox" name="features" value="О ресторане"><span>О ресторане</span></label><label class="choice"><input type="checkbox" name="features" value="Акции и предложения"><span>Акции и предложения</span></label><label class="choice"><input type="checkbox" name="features" value="Контакты и карта"><span>Контакты и карта</span></label><label class="choice"><input type="checkbox" name="features" value="КБЖУ и состав"><span>КБЖУ и состав</span></label><label class="choice"><input type="checkbox" name="features" value="Поиск по меню"><span>Поиск по меню</span></label></div></div>
+<label class="choice"><input type="checkbox" name="features" value="Фотографии блюд"><span>Фотографии блюд</span></label><label class="choice"><input type="checkbox" name="features" value="Анимированные карточки"><span>Анимированные карточки</span></label><label class="choice"><input type="checkbox" name="features" value="Компактные карточки"><span>Компактные карточки</span></label><label class="choice"><input type="checkbox" name="features" value="О ресторане"><span>О ресторане</span></label><label class="choice"><input type="checkbox" name="features" value="Акции и предложения"><span>Акции и предложения</span></label><label class="choice"><input type="checkbox" name="features" value="Контакты и карта"><span>Контакты и карта</span></label><label class="choice"><input type="checkbox" name="features" value="КБЖУ и состав"><span>КБЖУ и состав</span></label><label class="choice"><input type="checkbox" name="features" value="Поиск по меню"><span>Поиск по меню</span></label><label class="choice"><input type="checkbox" name="features" value="Корзина и оформление заказа"><span>Корзина и оформление заказа</span></label></div></div>
 <div class="step" data-step="2"><h3>Языки и дополнительные идеи</h3><p>Выберите языки и полезные функции.</p><div class="choices">
 <label class="choice"><input type="checkbox" name="languages" value="Русский"><span>Русский</span></label><label class="choice"><input type="checkbox" name="languages" value="Английский"><span>Английский</span></label><label class="choice"><input type="checkbox" name="languages" value="Другие языки"><span>Другие языки</span></label><label class="choice"><input type="checkbox" name="extras" value="Поделиться меню"><span>Поделиться меню</span></label><label class="choice"><input type="checkbox" name="extras" value="Ссылки на соцсети"><span>Ссылки на соцсети</span></label><label class="choice"><input type="checkbox" name="extras" value="Свои пожелания"><span>Есть особые пожелания</span></label></div><div class="field"><label for="wishes">Что ещё хотите видеть?</label><textarea id="wishes" name="wishes" placeholder="Например: раздел вин, видео блюд, фирменные цвета..."></textarea></div></div>
 <div class="step" data-step="3"><h3>Как с вами связаться?</h3><p>Оставьте контакт — обсудим детали и при необходимости пришлём полный бриф.</p>
@@ -633,6 +773,43 @@ let toastTimer;function toast(message){const el=document.getElementById("toast")
     });
   },{threshold:0.12});
   videos.forEach(function(video){observer.observe(video);});
+})();
+</script>
+
+<script id="paradox-feature-interactions">
+(function(){
+  'use strict';
+  // Every sample is visual-only; no message-sending or backend code is affected.
+  const reduceMotion=window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const languageDemo=document.getElementById('paradoxLanguageDemo');
+  if(languageDemo){
+    const translations={ru:{category:'ОСНОВНЫЕ БЛЮДА',title:'Фирменный стейк',desc:'Мраморная говядина, соус демиглас'},en:{category:'MAIN COURSES',title:'Signature steak',desc:'Marbled beef with demi-glace sauce'}};
+    const menu=languageDemo.querySelector('.paradox-language-menu');
+    function switchLanguage(lang){
+      if(!translations[lang])return;
+      languageDemo.dataset.lang=lang;
+      languageDemo.querySelectorAll('.paradox-lang-btn').forEach(function(b){const active=b.dataset.lang===lang;b.classList.toggle('active',active);b.setAttribute('aria-pressed',String(active));});
+      menu.classList.add('changing');
+      window.setTimeout(function(){document.getElementById('paradoxLangCategory').textContent=translations[lang].category;document.getElementById('paradoxLangTitle').textContent=translations[lang].title;document.getElementById('paradoxLangDesc').textContent=translations[lang].desc;menu.classList.remove('changing');},160);
+    }
+    languageDemo.querySelectorAll('.paradox-lang-btn').forEach(function(b){b.addEventListener('click',function(){switchLanguage(b.dataset.lang);});});
+    if(!reduceMotion)window.setInterval(function(){if(!document.hidden)switchLanguage(languageDemo.dataset.lang==='en'?'ru':'en');},4200);
+  }
+  const contactDemo=document.getElementById('paradoxContactDemo');
+  if(contactDemo){
+    const kinds=['map','call','chat','share'];
+    const examples={map:['НАВИГАЦИЯ','Открыть маршрут','↗'],call:['СВЯЗАТЬСЯ','Позвонить','☎'],chat:['СООБЩЕНИЯ','Написать нам','↗'],share:['ПОДЕЛИТЬСЯ','Ссылка на меню','↗']};
+    const preview=contactDemo.querySelector('.paradox-contact-preview');
+    function setContact(kind){
+      if(!examples[kind])return;
+      contactDemo.dataset.kind=kind;
+      contactDemo.querySelectorAll('.paradox-contact-action').forEach(function(b){const active=b.dataset.kind===kind;b.classList.toggle('active',active);b.setAttribute('aria-pressed',String(active));});
+      preview.classList.add('changing');
+      window.setTimeout(function(){document.getElementById('paradoxContactCaption').textContent=examples[kind][0];document.getElementById('paradoxContactTitle').textContent=examples[kind][1];document.getElementById('paradoxContactIcon').textContent=examples[kind][2];preview.classList.remove('changing');},140);
+    }
+    contactDemo.querySelectorAll('.paradox-contact-action').forEach(function(b){b.addEventListener('click',function(){setContact(b.dataset.kind);});});
+    if(!reduceMotion)window.setInterval(function(){if(!document.hidden)setContact(kinds[(kinds.indexOf(contactDemo.dataset.kind||'map')+1)%kinds.length]);},3900);
+  }
 })();
 </script>
 </body></html>
