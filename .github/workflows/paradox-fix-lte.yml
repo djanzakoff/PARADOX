@@ -1,0 +1,110 @@
+name: PARADOX - make photos and videos work on mobile networks
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - '.github/workflows/paradox-fix-lte.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  move-media-to-this-site:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Get the website files
+        uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+
+      - name: Download media and replace external links
+        shell: bash
+        run: |
+          python3 - <<'PY'
+          import pathlib
+          import re
+          import time
+          import urllib.request
+          
+          root = pathlib.Path('.')
+          html_path = root / 'index.html'
+          source_html = html_path.read_text(encoding='utf-8')
+          img_dir = root / 'assets' / 'photos'
+          video_dir = root / 'assets' / 'videos'
+          img_dir.mkdir(parents=True, exist_ok=True)
+          video_dir.mkdir(parents=True, exist_ok=True)
+
+          def retrieve(url, path, kind):
+              if path.is_file() and path.stat().st_size > 15000:
+                  print('Already available:', path)
+                  return
+              headers = {'User-Agent': 'Mozilla/5.0 (compatible; PARADOX-site-media/1.0)'}
+              error = None
+              for attempt in range(1, 5):
+                  try:
+                      request = urllib.request.Request(url, headers=headers)
+                      with urllib.request.urlopen(request, timeout=75) as response:
+                          data = response.read()
+                          content_type = response.headers.get('Content-Type', '')
+                      if len(data) < 15000:
+                          raise RuntimeError('Downloaded file unexpectedly small: ' + str(len(data)))
+                      if kind == 'jpg' and not data.startswith(b'\xff\xd8\xff'):
+                          raise RuntimeError('Image response was not a JPEG: ' + content_type)
+                      if kind == 'mp4' and b'ftyp' not in data[:40]:
+                          raise RuntimeError('Video response was not an MP4: ' + content_type)
+                      path.write_bytes(data)
+                      print('Saved', path, len(data), 'bytes')
+                      return
+                  except Exception as exc:
+                      error = exc
+                      print('Attempt', attempt, 'failed:', url, str(exc))
+                      time.sleep(attempt * 3)
+              raise RuntimeError('Could not download '+url) from error
+
+          pattern = re.compile(r'https://images\.unsplash\.com/(photo-[a-zA-Z0-9-]+)\?[^\s\"\'<>\\)]+')
+          photos = sorted(set(pattern.findall(source_html)))
+          print('Unique photo files:', len(photos))
+          for photo in photos:
+              url = 'https://images.unsplash.com/'+photo+'?fit=crop&w=1500&q=85&fm=jpg'
+              retrieve(url, img_dir / (photo+'.jpg'), 'jpg')
+
+          for filename in ('steak.mp4', 'drink.mp4'):
+              if 'https://djanzakoff.github.io/menu/'+filename in source_html:
+                  url = 'https://raw.githubusercontent.com/djanzakoff/menu/main/'+filename
+                  retrieve(url, video_dir/filename, 'mp4')
+
+          changed_html = pattern.sub(lambda m: 'assets/photos/'+m.group(1)+'.jpg', source_html)
+          for filename in ('steak.mp4', 'drink.mp4'):
+              changed_html = changed_html.replace('https://djanzakoff.github.io/menu/'+filename, 'assets/videos/'+filename)
+          html_path.write_text(changed_html, encoding='utf-8')
+          print('Updated index.html; remaining Unsplash URLs:', changed_html.count('images.unsplash.com/'))
+          PY
+
+      - name: Verify that all referenced media exist
+        shell: bash
+        run: |
+          python3 - <<'PY'
+          import pathlib
+          import re
+          text = pathlib.Path('index.html').read_text(encoding='utf-8')
+          media = set(re.findall(r'assets/(?:photos|videos)/[A-Za-z0-9._-]+', text))
+          for item in sorted(media):
+              file = pathlib.Path(item)
+              if not file.is_file() or file.stat().st_size < 15000:
+                  raise RuntimeError('Missing or empty media asset: '+item)
+          print('Verified', len(media), 'local media assets')
+          PY
+
+      - name: Publish fixed website
+        shell: bash
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add index.html assets/photos assets/videos
+          if git diff --cached --quiet; then
+            echo 'No changes needed'
+          else
+            git commit -m 'Serve PARADOX photos and videos from the site domain'
+            git push
+          fi
