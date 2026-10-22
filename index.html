@@ -627,6 +627,38 @@ body{background:#101114;color:#F4F2EA;background-image:none}
 @media(prefers-reduced-motion:reduce){.paradox-screen-motion .pv-item{animation:none!important}}
 
 </style>
+
+<style id="paradox-accessible-motion-controls">
+/* Visually consistent controls; retain native motion preferences until the visitor opts in. */
+.paradox-feature-toolbar{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:13px 17px;margin:0 0 18px;border:1px solid #D5E66A3f;border-radius:16px;background:#20251f}
+.paradox-feature-toolbar strong{display:block;color:#f6f6ee;font-size:15px;line-height:1.3}
+.paradox-feature-toolbar small{display:block;color:#b7c3b0;font-size:11px;line-height:1.5;margin-top:3px}
+.paradox-play-all{flex:0 0 auto;background:#D5E66A;color:#121713!important;border:0;border-radius:99px;padding:12px 16px;font:800 11px Onest,sans-serif;cursor:pointer;white-space:nowrap;min-height:42px}
+.paradox-dish-buttons{position:absolute;z-index:5;right:11px;top:11px;display:flex;gap:6px}
+.paradox-dish-buttons button,.paradox-about-next,.paradox-extras-next{display:grid;place-items:center;cursor:pointer;width:33px;height:33px;border:1px solid #ffffff46;border-radius:50%;background:#101410e8;color:#D5E66A!important;font:800 25px Onest,sans-serif;line-height:1}
+.paradox-dish-buttons button:active,.paradox-about-next:active,.paradox-extras-next:active{background:#D5E66A;color:#101410!important}
+.paradox-about-next{position:absolute;z-index:5;left:13px;top:12px}
+.paradox-extras-heading .paradox-extras-next{width:31px;height:31px;position:relative;z-index:6}
+.paradox-video-manual-play{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);z-index:6;padding:12px 17px;min-height:43px;border:1px solid #d5e66a;border-radius:99px;background:#D5E66A;color:#141714!important;font:800 12px Onest,sans-serif;cursor:pointer;white-space:nowrap;box-shadow:0 9px 28px #0007}
+.paradox-video-manual-play[hidden]{display:none!important}
+.paradox-deck-track.paradox-deck-manual{animation:none!important;transition:transform .45s cubic-bezier(.2,.7,.3,1)!important}
+.paradox-about-visual.paradox-about-manual .paradox-about-scene{animation:none!important;opacity:0!important}
+.paradox-about-visual.paradox-about-manual .paradox-about-scene.paradox-scene-active{opacity:1!important}
+.paradox-about-visual.paradox-about-manual .paradox-about-scene img{animation:none!important}
+.paradox-extras-visual.paradox-extras-manual .paradox-extras-panel{animation:none!important;opacity:0!important;transform:none!important}
+.paradox-extras-visual.paradox-extras-manual .paradox-extras-panel.paradox-extra-active{opacity:1!important}
+body.paradox-motion-optin .paradox-deck-track:not(.paradox-deck-manual){animation:paradoxDishCarousel 14s ease-in-out infinite!important}
+body.paradox-motion-optin .paradox-about-scene{animation:paradoxAboutFade 10s ease-in-out infinite!important}
+body.paradox-motion-optin .paradox-about-scene.scene-second{animation-delay:-5s!important}
+body.paradox-motion-optin .paradox-about-scene img{animation:paradoxAboutZoom 14s ease-in-out infinite alternate!important}
+body.paradox-motion-optin .paradox-extras-panel{animation:paradoxExtrasLoop 12s ease-in-out infinite!important}
+body.paradox-motion-optin .paradox-extras-panel.paradox-extra-b{animation-delay:4s!important}
+body.paradox-motion-optin .paradox-extras-panel.paradox-extra-c{animation-delay:8s!important}
+body.paradox-motion-optin .paradox-extras-progress i{animation:paradoxProgress 4s linear infinite!important}
+body.paradox-motion-optin .paradox-live-dot{animation:paradoxDot 2.2s ease-in-out infinite!important}
+.paradox-dish-buttons button:focus-visible,.paradox-about-next:focus-visible,.paradox-extras-next:focus-visible,.paradox-video-manual-play:focus-visible,.paradox-play-all:focus-visible{outline:3px solid white;outline-offset:2px}
+@media(max-width:640px){.paradox-feature-toolbar{align-items:stretch;flex-direction:column;gap:11px}.paradox-play-all{width:100%}.paradox-live-foot{font-size:9px}}
+</style>
 </head>
 <body>
 <header class="topbar"><div class="wrap nav">
@@ -672,6 +704,10 @@ body{background:#101114;color:#F4F2EA;background-image:none}
 </div>
 </div></section>
 <section class="section" id="possibilities"><div class="wrap"><div class="section-head reveal"><div><span class="eyebrow">Всё нужное — без лишнего</span><h2>Продумано для<br><em>гостя.</em></h2></div><p>Вы выбираете, что нужно гостям и что отражает характер заведения. Мы соединяем детали в цельный цифровой продукт.</p></div>
+<div class="paradox-feature-toolbar">
+  <div><strong>Возможности в действии</strong><small>Карточки можно переключать нажатием. Видео запускается отдельно.</small></div>
+  <button type="button" id="paradoxPlayAllDemos" class="paradox-play-all" aria-label="Запустить анимации на всех карточках">▶ Запустить анимации</button>
+</div>
 <div class="features paradox-feature-grid" aria-label="Анимированные примеры возможностей PARADOX">
   <!-- 1: actual food card carousel -->
   <article class="feature paradox-showcase-card reveal">
@@ -683,16 +719,18 @@ body{background:#101114;color:#F4F2EA;background-image:none}
         <div class="paradox-deck-slide"><img loading="lazy" src="assets/photos/photo-1558030006-450675393462.jpg" alt=""><div class="paradox-deck-caption"><strong>Стейк от шефа</strong><span>1 890 ₽</span></div></div>
       </div>
       <div class="paradox-visual-corner">01 / 06 <span>ЛИСТАЙТЕ</span></div>
+      <div class="paradox-dish-buttons" aria-label="Листать блюда"><button type="button" data-dish-nav="prev" aria-label="Предыдущее блюдо">‹</button><button type="button" data-dish-nav="next" aria-label="Следующее блюдо">›</button></div>
     </div>
     <div class="paradox-feature-body"><div class="paradox-feature-mark">01 <span>КАРТОЧКИ</span></div><h3>Карточки блюд</h3><p>Блюда листаются одно за другим: фото, название, цена и описание — в удобном формате.</p></div>
   </article>
   <!-- 2: real drink video -->
   <article class="feature paradox-showcase-card reveal delay1">
     <div class="paradox-feature-visual paradox-live-visual">
-      <video class="paradox-motion-video" data-paradox-motion autoplay muted loop playsinline preload="metadata" aria-label="Живая карточка с видео напитка" poster="assets/photos/photo-1544145945-f90425340c7e.jpg">
+      <video class="paradox-motion-video" data-paradox-motion autoplay muted loop playsinline preload="auto" aria-label="Настоящее видео бокала из меню PARADOX" poster="assets/photos/photo-1544145945-f90425340c7e.jpg">
         <source src="assets/videos/drink.mp4" type="video/mp4">
       </video>
       <span class="paradox-live-pill"><span class="paradox-live-dot"></span> LIVE VISUAL</span>
+      <button type="button" class="paradox-video-manual-play" aria-label="Воспроизвести настоящее видео бокала">▶ Смотреть видео</button>
       <div class="paradox-live-foot">ДВИЖЕНИЕ В КАЖДОЙ ДЕТАЛИ</div>
     </div>
     <div class="paradox-feature-body"><div class="paradox-feature-mark">02 <span>АНИМАЦИЯ</span></div><h3>Живой визуал</h3><p>Настоящее видео из меню PARADOX: движение, текстура и подача привлекают внимание.</p></div>
@@ -712,6 +750,7 @@ body{background:#101114;color:#F4F2EA;background-image:none}
       <div class="paradox-about-scene scene-first"><img loading="lazy" src="assets/photos/photo-1517248135467-4c7edcad34c4.jpg" alt="Интерьер ресторана"><div class="paradox-about-copy"><small>01 · НАША ИСТОРИЯ</small><strong>Место со своим характером</strong></div></div>
       <div class="paradox-about-scene scene-second"><img loading="lazy" src="assets/photos/photo-1559339352-11d035aa65de.jpg" alt="Атмосфера ресторана"><div class="paradox-about-copy"><small>02 · АТМОСФЕРА</small><strong>Вкус начинается с деталей</strong></div></div>
       <div class="paradox-visual-corner">ИСТОРИЯ БРЕНДА</div>
+      <button type="button" class="paradox-about-next" aria-label="Следующий кадр истории ресторана">›</button>
     </div>
     <div class="paradox-feature-body"><div class="paradox-feature-mark">04 <span>О ЗАВЕДЕНИИ</span></div><h3>О ресторане</h3><p>Расскажите историю заведения, покажите интерьер, команду и философию кухни.</p></div>
   </article>
@@ -727,7 +766,7 @@ body{background:#101114;color:#F4F2EA;background-image:none}
   <!-- 6: rotating add-on panels -->
   <article class="feature paradox-showcase-card reveal delay2">
     <div class="paradox-feature-visual paradox-extras-visual" aria-label="Анимированные примеры дополнительных блоков">
-      <div class="paradox-extras-heading">ДОПОЛНИТЕЛЬНО <span>+</span></div>
+      <div class="paradox-extras-heading">ДОПОЛНИТЕЛЬНО <button type="button" class="paradox-extras-next" aria-label="Следующий дополнительный блок">›</button></div>
       <div class="paradox-extras-panel paradox-extra-a"><small>АКЦИИ И СОБЫТИЯ</small><strong>Специальное предложение</strong><span>Сезонный сет · ПРИМЕР</span></div>
       <div class="paradox-extras-panel paradox-extra-b"><small>СОСТАВ И КБЖУ</small><strong>Информация о блюде</strong><span>Калории · Белки · Жиры · Углеводы</span></div>
       <div class="paradox-extras-panel paradox-extra-c"><small>ИНФОРМАЦИЯ ДЛЯ ГОСТЯ</small><strong>Аллергены и состав</strong><span>Прозрачность в каждой карточке</span></div>
@@ -1000,7 +1039,7 @@ let toastTimer;function toast(message){const el=document.getElementById("toast")
       window.setTimeout(function(){document.getElementById('paradoxLangCategory').textContent=translations[lang].category;document.getElementById('paradoxLangTitle').textContent=translations[lang].title;document.getElementById('paradoxLangDesc').textContent=translations[lang].desc;menu.classList.remove('changing');},160);
     }
     languageDemo.querySelectorAll('.paradox-lang-btn').forEach(function(b){b.addEventListener('click',function(){switchLanguage(b.dataset.lang);});});
-    if(!reduceMotion)window.setInterval(function(){if(!document.hidden)switchLanguage(languageDemo.dataset.lang==='en'?'ru':'en');},4200);
+    window.setInterval(function(){if(!document.hidden && (!reduceMotion || document.body.classList.contains('paradox-motion-optin')))switchLanguage(languageDemo.dataset.lang==='en'?'ru':'en');},4200);
   }
   const contactDemo=document.getElementById('paradoxContactDemo');
   if(contactDemo){
@@ -1015,8 +1054,77 @@ let toastTimer;function toast(message){const el=document.getElementById("toast")
       window.setTimeout(function(){document.getElementById('paradoxContactCaption').textContent=examples[kind][0];document.getElementById('paradoxContactTitle').textContent=examples[kind][1];document.getElementById('paradoxContactIcon').textContent=examples[kind][2];preview.classList.remove('changing');},140);
     }
     contactDemo.querySelectorAll('.paradox-contact-action').forEach(function(b){b.addEventListener('click',function(){setContact(b.dataset.kind);});});
-    if(!reduceMotion)window.setInterval(function(){if(!document.hidden)setContact(kinds[(kinds.indexOf(contactDemo.dataset.kind||'map')+1)%kinds.length]);},3900);
+    window.setInterval(function(){if(!document.hidden && (!reduceMotion || document.body.classList.contains('paradox-motion-optin')))setContact(kinds[(kinds.indexOf(contactDemo.dataset.kind||'map')+1)%kinds.length]);},3900);
   }
+})();
+</script>
+
+<script id="paradox-manual-motion-support">
+/* Tap-friendly examples for mobile in-app browsers, including Reduce Motion and autoplay restrictions. */
+(function(){
+  'use strict';
+  const playAll=document.getElementById('paradoxPlayAllDemos');
+  const dish=document.querySelector('.paradox-deck-track');
+  const dishSlides=dish?[...dish.querySelectorAll('.paradox-deck-slide')]:[];
+  const dishButtons=[...document.querySelectorAll('[data-dish-nav]')];
+  let dishIndex=0;
+  function showDish(next){
+    if(!dish || !dishSlides.length)return;
+    dishIndex=(next+dishSlides.length)%dishSlides.length;
+    dish.classList.add('paradox-deck-manual');
+    dish.style.transform='translateX(-'+(dishIndex*25)+'%)';
+  }
+  dishButtons.forEach(button=>button.addEventListener('click',()=>showDish(dishIndex+(button.dataset.dishNav==='prev'?-1:1))));
+  const about=document.querySelector('.paradox-about-visual');
+  const aboutScenes=about?[...about.querySelectorAll('.paradox-about-scene')]:[];
+  let aboutIndex=-1;
+  const aboutButton=document.querySelector('.paradox-about-next');
+  if(aboutButton)aboutButton.addEventListener('click',function(){
+    aboutIndex=(aboutIndex+1)%aboutScenes.length;
+    about.classList.add('paradox-about-manual');
+    aboutScenes.forEach((scene,i)=>scene.classList.toggle('paradox-scene-active',i===aboutIndex));
+  });
+  const extras=document.querySelector('.paradox-extras-visual');
+  const extraPanels=extras?[...extras.querySelectorAll('.paradox-extras-panel')]:[];
+  const extrasButton=document.querySelector('.paradox-extras-next');
+  let extraIndex=-1;
+  if(extrasButton)extrasButton.addEventListener('click',function(){
+    extraIndex=(extraIndex+1)%extraPanels.length;
+    extras.classList.add('paradox-extras-manual');
+    extraPanels.forEach((panel,i)=>panel.classList.toggle('paradox-extra-active',i===extraIndex));
+  });
+  const glassVideo=document.querySelector('.paradox-live-visual video');
+  const videoButton=document.querySelector('.paradox-video-manual-play');
+  function tryPlay(video){
+    if(!video)return;
+    video.muted=true;
+    video.setAttribute('playsinline','');
+    const result=video.play();
+    if(result && typeof result.catch==='function')result.catch(function(){if(video===glassVideo && videoButton){videoButton.hidden=false;videoButton.textContent='▶ Нажмите для просмотра';}});
+  }
+  if(glassVideo && videoButton){
+    glassVideo.addEventListener('playing',()=>{videoButton.hidden=true;});
+    glassVideo.addEventListener('pause',()=>{if(!document.hidden)videoButton.hidden=false;});
+    glassVideo.addEventListener('error',()=>{videoButton.hidden=false;videoButton.textContent='Видео временно недоступно';videoButton.disabled=true;});
+    videoButton.addEventListener('click',()=>tryPlay(glassVideo));
+    glassVideo.addEventListener('click',()=>tryPlay(glassVideo));
+    if(!glassVideo.paused && glassVideo.readyState>=2)videoButton.hidden=true;
+  }
+  if(playAll)playAll.addEventListener('click',function(){
+    const enabled=document.body.classList.toggle('paradox-motion-optin');
+    this.textContent=enabled?'❚❚ Остановить анимации':'▶ Запустить анимации';
+    this.setAttribute('aria-pressed',String(enabled));
+    if(enabled){
+      if(dish){dish.classList.remove('paradox-deck-manual');dish.style.transform='';}
+      if(about){about.classList.remove('paradox-about-manual');aboutScenes.forEach(scene=>scene.classList.remove('paradox-scene-active'));}
+      if(extras){extras.classList.remove('paradox-extras-manual');extraPanels.forEach(panel=>panel.classList.remove('paradox-extra-active'));}
+      document.querySelectorAll('video[data-paradox-motion]').forEach(function(v){
+        if(v.getBoundingClientRect().bottom>0 && v.getBoundingClientRect().top<window.innerHeight)tryPlay(v);
+      });
+    }else{
+      document.querySelectorAll('video[data-paradox-motion]').forEach(v=>v.pause());
+    }
+  });
 })();
 </script>
 </body></html>
