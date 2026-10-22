@@ -491,6 +491,142 @@ body{background:#101114;color:#F4F2EA;background-image:none}
 @media(max-width:620px){.features.paradox-feature-grid{grid-template-columns:1fr;gap:13px}.feature.paradox-showcase-card{min-height:347px}.paradox-feature-visual{flex-basis:180px}.paradox-feature-body{padding:18px 19px 21px}.feature.paradox-showcase-card h3{font-size:20px}}
 @media(prefers-reduced-motion:reduce){.paradox-deck-track,.paradox-about-scene,.paradox-about-scene img,.paradox-extras-panel,.paradox-extras-progress i,.paradox-live-dot{animation:none!important}.paradox-about-scene.scene-first,.paradox-extras-panel.paradox-extra-a{opacity:1;transform:none}.paradox-about-scene.scene-second,.paradox-extras-panel.paradox-extra-b,.paradox-extras-panel.paradox-extra-c{opacity:0}}
 </style>
+<style id="paradox-four-distinct-menu-styles">
+
+/* PARADOX: genuinely different menus for the four style selectors. */
+.paradox-demo-compare .tab{position:relative;min-height:85px;border-radius:15px!important;transition:background .25s,border-color .25s,transform .25s,box-shadow .25s}
+.paradox-demo-compare .tab:hover{transform:translateX(3px)}
+.paradox-demo-compare .tab.active{border-color:#D5E66A!important;box-shadow:inset 4px 0 0 #D5E66A,0 11px 28px #00000022}
+.paradox-demo-compare .tab .paradox-tab-dot{flex-shrink:0;width:11px;height:11px;border-radius:50%;background:#9d9d9a;box-shadow:0 0 0 3px #fff1}
+.paradox-demo-compare .tab[data-style="classic"] .paradox-tab-dot{background:#f3e7c7;border:1px solid #97896e}
+.paradox-demo-compare .tab[data-style="signature"] .paradox-tab-dot{background:#b39b69}
+.paradox-demo-compare .tab[data-style="motion"] .paradox-tab-dot{background:#D5E66A}
+.paradox-demo-compare .tab[data-style="custom"] .paradox-tab-dot{background:#c47858}
+.paradox-style-selected{padding:18px 20px 17px;background:#121713;border:1px solid #ffffff22;border-radius:15px;display:grid;gap:5px;margin-top:4px}
+.paradox-style-selected>span{font-size:9px;font-weight:800;letter-spacing:.16em;color:#D5E66A}
+.paradox-style-selected>strong{font-size:20px;font-weight:800;color:#f7f7ef;letter-spacing:-.04em}
+.paradox-style-selected>p{font-size:12px;line-height:1.55;margin:0;color:#bfc5b8}
+.paradox-demo-compare .tabs>.btn{display:inline-flex;align-items:center;justify-content:center;text-align:center;gap:8px;min-height:48px;border-radius:12px;color:#111714!important}
+.paradox-preview-stage:before{display:none!important}
+.paradox-preview-stage{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px;min-height:635px!important;padding:22px 16px 16px!important;border-radius:22px!important;position:relative;transition:background .35s;overflow:hidden;background:#e9e1ce!important}
+.paradox-preview-stage[data-preview="signature"]{background:#302d28!important}
+.paradox-preview-stage[data-preview="motion"]{background:#D5E66A!important}
+.paradox-preview-stage[data-preview="custom"]{background:#e7c9ad!important}
+.paradox-preview-stage:after{content:"";position:absolute;width:260px;height:260px;border:1px solid #ffffff22;border-radius:50%;right:-110px;top:-100px;pointer-events:none}
+.paradox-stage-corner,.paradox-stage-bottom{width:min(100%,345px);position:relative;z-index:1;display:flex;justify-content:space-between;letter-spacing:.15em;font-size:9px;font-weight:800;color:#2e3029}
+.paradox-preview-stage[data-preview="signature"] .paradox-stage-corner,.paradox-preview-stage[data-preview="signature"] .paradox-stage-bottom{color:#cfb980}
+.paradox-preview-phone{position:relative;z-index:1;width:min(100%,333px)!important;max-width:333px;padding:7px!important;border:2px solid #292923!important;border-radius:32px!important;background:#1c1e1b!important;box-shadow:0 22px 60px #0b0e0b44!important;transform:none!important}
+.paradox-preview-phone:hover{transform:none!important}
+.paradox-preview-phone .screen{height:505px;min-height:505px;overflow:hidden;position:relative;border-radius:24px!important;isolation:isolate}
+.paradox-preview-phone .screen *{box-sizing:border-box}
+.paradox-preview-phone .screen img{display:block;object-fit:cover}
+.paradox-preview-phone .pv-top{display:flex;align-items:center;justify-content:space-between;gap:6px;padding:16px 15px 13px}
+.paradox-preview-phone .pv-logo{font-weight:900;font-size:13px;letter-spacing:-.045em}
+.paradox-preview-phone .pv-top .pv-top-right{font-size:8px;letter-spacing:.11em;font-weight:800}
+.paradox-preview-phone .pv-cover{position:relative;height:169px;overflow:hidden}
+.paradox-preview-phone .pv-cover img,.paradox-preview-phone .pv-cover video{display:block;width:100%;height:100%;object-fit:cover}
+.paradox-preview-phone .pv-cover img{filter:saturate(1.18) contrast(1.04)}
+.paradox-preview-phone .pv-cover:after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,rgba(0,0,0,.78),transparent 85%);pointer-events:none}
+.paradox-preview-phone .pv-cover-txt{position:absolute;bottom:14px;left:17px;right:12px;z-index:1;color:white}
+.paradox-preview-phone .pv-cover-txt small{display:block;font-size:8px;font-weight:800;letter-spacing:.14em;margin-bottom:5px}
+.paradox-preview-phone .pv-cover-txt strong{display:block;font-size:26px;font-weight:800;line-height:1.04;letter-spacing:-.07em}
+.paradox-preview-phone .pv-cats{display:flex;align-items:center;gap:6px;padding:12px 10px;overflow-x:auto;scrollbar-width:none}
+.paradox-preview-phone .pv-cats::-webkit-scrollbar{display:none}
+.paradox-preview-phone .pv-chip{font:inherit;flex-shrink:0;padding:8px 10px;border-radius:999px;line-height:1;font-size:9px;font-weight:800;border:0;cursor:pointer}
+.paradox-preview-phone .pv-items{display:grid;gap:7px;padding:0 10px 12px}
+.paradox-preview-phone .pv-item{display:grid;align-items:center;grid-template-columns:62px 1fr auto;gap:9px;padding:7px;border-radius:12px}
+.paradox-preview-phone .pv-item img{width:62px;height:60px;border-radius:9px}
+.paradox-preview-phone .pv-item strong{display:block;font-size:10px;line-height:1.3;letter-spacing:-.015em}
+.paradox-preview-phone .pv-item small{display:block;margin-top:5px;font-size:8px;line-height:1.3}
+.paradox-preview-phone .pv-item b{font-size:9px;white-space:nowrap;align-self:end;padding-bottom:4px}
+.paradox-preview-phone .pv-prompt{display:flex;align-items:center;justify-content:space-between;padding:11px 13px;margin:3px 10px 0;border-radius:10px;font-size:9px;font-weight:700}
+.paradox-preview-perks{display:flex;gap:7px;flex-wrap:wrap;margin-top:12px}
+.paradox-preview-perks span{font-size:10px;line-height:1.25;font-weight:700;color:#2c4030;border:1px solid #b5c77a;background:#e8f0d1;padding:8px 11px;border-radius:100px}
+.paradox-demo-compare .democaption{margin-top:14px;letter-spacing:normal;text-transform:none;font-size:12px!important;line-height:1.5;color:#41493e!important}
+.paradox-demo-compare .democaption strong{color:#283826!important}
+/* Classic: airy functional list menu. */
+.paradox-preview-phone .paradox-screen-classic{background:#faf8f1!important;color:#222922!important}
+.paradox-screen-classic .pv-top{background:#faf8f1}
+.paradox-screen-classic .pv-logo{letter-spacing:.045em}
+.paradox-screen-classic .pv-top-right{color:#7f8c78}
+.paradox-screen-classic .pv-chip{background:#eaece1;color:#4b5946}
+.paradox-screen-classic .pv-chip.active{background:#202921;color:white}
+.paradox-screen-classic .pv-item{background:white;box-shadow:0 2px 10px #36372b09}
+.paradox-screen-classic .pv-item small{color:#8b8f83}
+.paradox-screen-classic .pv-prompt{background:#e8eee1;color:#52654d}
+/* Premium: gold-on-ink editorial menu, larger hero and two column dishes. */
+.paradox-preview-phone .paradox-screen-signature{background:#111514!important;color:#efe9dc!important}
+.paradox-screen-signature .pv-top{padding:19px 17px 16px;border-bottom:1px solid #cdbb852c}
+.paradox-screen-signature .pv-logo{font-family:Onest,sans-serif;font-weight:500;font-size:22px;letter-spacing:.2em;color:#dbbf88}
+.paradox-screen-signature .pv-top-right{color:#d1bb8c}
+.paradox-screen-signature .pv-cover{height:227px;margin:0 12px;border-radius:2px}
+.paradox-screen-signature .pv-cover:after{background:linear-gradient(0deg,#080c0acb,transparent 90%)}
+.paradox-screen-signature .pv-cover-txt{left:14px;bottom:18px}
+.paradox-screen-signature .pv-cover-txt strong{font-family:Onest,sans-serif;font-weight:500;font-size:29px;line-height:1.08;letter-spacing:-.045em}
+.paradox-screen-signature .pv-cover-txt small{color:#dec592}
+.paradox-screen-signature .pv-cats{padding:13px 12px 11px;gap:12px}
+.paradox-screen-signature .pv-chip{border-radius:0;padding:5px 2px;background:transparent;color:#b4aa99;font-weight:600;font-size:9px;border-bottom:1px solid transparent}
+.paradox-screen-signature .pv-chip.active{color:#d9bd87;border-bottom-color:#d9bd87}
+.paradox-screen-signature .pv-items{grid-template-columns:1fr 1fr;gap:8px;padding:0 12px 8px}
+.paradox-screen-signature .pv-item{display:flex;flex-direction:column;align-items:stretch;padding:0;background:#1b211e;border:1px solid #dac39420;border-radius:3px;overflow:hidden;min-width:0;gap:0}
+.paradox-screen-signature .pv-item img{width:100%;height:77px;border-radius:0;filter:saturate(.92)}
+.paradox-screen-signature .pv-item .pv-item-text{padding:7px 8px 2px}
+.paradox-screen-signature .pv-item strong{font-family:Georgia,serif;font-size:12px;font-weight:400}
+.paradox-screen-signature .pv-item small{color:#b8ac98;font-size:7px;min-height:18px}
+.paradox-screen-signature .pv-item b{font-size:9px;color:#d9bd87;padding:0 8px 9px;align-self:auto}
+.paradox-screen-signature .pv-prompt{background:#c4a66f0f;color:#dac393;border:1px solid #c4a66f30;border-radius:3px;padding:9px 12px;font-size:9px}
+/* Motion: lime/dark brand menu with actual looping food video. */
+.paradox-preview-phone .paradox-screen-motion{background:#131816!important;color:#f7ffe6!important}
+.paradox-screen-motion .pv-top{background:#D5E66A;color:#131816;padding:15px 15px}
+.paradox-screen-motion .pv-logo{font-size:17px;letter-spacing:-.07em}
+.paradox-screen-motion .pv-top-right{font-size:9px}
+.paradox-screen-motion .pv-cover{height:226px}
+.paradox-screen-motion .pv-cover:after{background:linear-gradient(0deg,#0d160edc,#0d160e05 75%)}
+.paradox-screen-motion .pv-cover-txt{left:16px;bottom:13px}
+.paradox-screen-motion .pv-cover-txt small{color:#d5e66a}
+.paradox-screen-motion .pv-cover-txt strong{font-size:29px;line-height:.98}
+.paradox-screen-motion .pv-chip{background:#252e27;color:#e6f3df;border:1px solid #566b5360}
+.paradox-screen-motion .pv-chip.active{background:#D5E66A;color:#111714}
+.paradox-screen-motion .pv-items{grid-template-columns:1fr 1fr;gap:9px}
+.paradox-screen-motion .pv-item{display:flex;flex-direction:column;align-items:stretch;background:#253126;gap:0;padding:0;overflow:hidden;min-width:0;border-radius:10px;animation:paradoxMotionCardIn .44s both}
+.paradox-screen-motion .pv-item:nth-child(2){animation-delay:.13s}
+.paradox-screen-motion .pv-item img{width:100%;height:78px;border-radius:0}
+.paradox-screen-motion .pv-item .pv-item-text{padding:8px 9px 0}
+.paradox-screen-motion .pv-item strong{font-size:10px}
+.paradox-screen-motion .pv-item small{color:#bac8b5;font-size:7px}
+.paradox-screen-motion .pv-item b{padding:3px 9px 9px;color:#D5E66A;align-self:auto}
+.paradox-screen-motion .pv-cover .pv-live-label{position:absolute;z-index:2;top:12px;right:11px;background:#D5E66A;color:#111714;font-size:8px;font-weight:900;letter-spacing:.05em;padding:7px 9px;border-radius:30px;box-shadow:0 0 0 5px #D5E66A20}
+.paradox-screen-motion .pv-prompt{margin-top:9px;background:#D5E66A;color:#16201a;padding:10px 13px}
+@keyframes paradoxMotionCardIn{from{opacity:.2;transform:translateY(14px)}to{opacity:1;transform:translateY(0)}}
+/* Individual: warm editorial identity and special info modules. */
+.paradox-preview-phone .paradox-screen-custom{background:#f5e9d7!important;color:#452f25!important}
+.paradox-screen-custom .pv-top{background:#f5e9d7;padding:17px 15px 15px}
+.paradox-screen-custom .pv-logo{font-family:Onest,sans-serif;font-size:21px;letter-spacing:-.07em;color:#7a412f}
+.paradox-screen-custom .pv-top-right{color:#985d43;border:1px solid #985d4370;border-radius:100px;padding:5px 7px}
+.paradox-screen-custom .pv-cover{height:150px;margin:0 11px;border-radius:105px 105px 5px 5px}
+.paradox-screen-custom .pv-cover-txt{left:26px;right:10px}
+.paradox-screen-custom .pv-cover-txt strong{font-family:Onest,sans-serif;font-size:27px;font-weight:500;letter-spacing:-.045em}
+.paradox-screen-custom .pv-cover-txt small{color:#ffe9cb}
+.paradox-screen-custom .pv-cats{justify-content:center;padding:10px 8px 9px;gap:3px}
+.paradox-screen-custom .pv-chip{background:none!important;color:#855341;border-radius:0!important;border-right:1px solid #a97b6250;padding:3px 8px;font-weight:700}
+.paradox-screen-custom .pv-chip:last-child{border-right:0}
+.paradox-screen-custom .pv-chip.active{color:#bd5e38;text-decoration:underline;text-underline-offset:4px}
+.paradox-screen-custom .pv-items{grid-template-columns:repeat(2,minmax(0,1fr));gap:8px;padding:0 11px}
+.paradox-screen-custom .pv-item{display:flex;flex-direction:column;align-items:stretch;min-width:0;padding:0;background:#fff8eb;overflow:hidden;border:1px solid #c8a99145;border-radius:8px;gap:0}
+.paradox-screen-custom .pv-item img{width:100%;height:79px;border-radius:0}
+.paradox-screen-custom .pv-item .pv-item-text{padding:7px 8px 1px}
+.paradox-screen-custom .pv-item strong{font-family:Georgia,serif;font-size:12px;font-weight:400}
+.paradox-screen-custom .pv-item small{color:#947260;font-size:7px;min-height:17px}
+.paradox-screen-custom .pv-item b{padding:3px 8px 8px;color:#9f4f30;align-self:auto}
+.paradox-screen-custom .pv-special{display:grid;grid-template-columns:1fr auto;align-items:center;gap:6px;margin:9px 11px 0;padding:10px 11px;background:#8c4d35;color:#fff3de;border-radius:7px}
+.paradox-screen-custom .pv-special span{font-size:8px;letter-spacing:.12em;color:#f5d4a7;display:block;margin-bottom:4px}
+.paradox-screen-custom .pv-special strong{font-family:Georgia,serif;font-size:14px;font-weight:400}
+.paradox-screen-custom .pv-special b{font-size:9px;color:#f3d9ab}
+@media(max-width:900px){.paradox-preview-stage{min-height:600px!important}}
+@media(max-width:640px){.paradox-preview-stage{min-height:580px!important;padding:16px 10px 13px!important}.paradox-preview-phone{max-width:323px}.paradox-demo-compare .tab{padding:13px 12px!important;min-height:73px;gap:5px}.paradox-demo-compare .tab strong{font-size:12px}.paradox-demo-compare .tab small{font-size:9px;line-height:1.3}.paradox-demo-compare .tab .paradox-tab-dot{width:9px;height:9px}.paradox-style-selected{grid-column:1/-1}.paradox-demo-compare .tabs>.btn{grid-column:1/-1}.paradox-preview-stage .screen{height:500px;min-height:500px}.paradox-demo-compare .democaption{font-size:11px!important}}
+@media(prefers-reduced-motion:reduce){.paradox-screen-motion .pv-item{animation:none!important}}
+
+</style>
 </head>
 <body>
 <header class="topbar"><div class="wrap nav">
@@ -514,14 +650,26 @@ body{background:#101114;color:#F4F2EA;background-image:none}
 </div></section>
 <div class="marquee" aria-hidden="true"><div class="marqueetrack"><span>Цифровые меню <i aria-hidden="true"></i> Вкус, который говорит <i aria-hidden="true"></i> Ваш стиль — ваши правила <i aria-hidden="true"></i> Создано PARADOX <i aria-hidden="true"></i></span><span>Цифровые меню <i aria-hidden="true"></i> Вкус, который говорит <i aria-hidden="true"></i> Ваш стиль — ваши правила <i aria-hidden="true"></i> Создано PARADOX <i aria-hidden="true"></i></span><span>Цифровые меню <i aria-hidden="true"></i> Вкус, который говорит <i aria-hidden="true"></i> Ваш стиль — ваши правила <i aria-hidden="true"></i> Создано PARADOX <i aria-hidden="true"></i></span></div></div>
 <section class="section demo" id="demo"><div class="wrap">
-<div class="section-head reveal"><div><span class="eyebrow">Живой просмотр</span><h2>Меню в вашем<br><em>стиле.</em></h2></div><p>Не просто картинки на сайте — переключайте варианты и смотрите, как цифровое меню будет выглядеть на экране смартфона. Каждый формат можно адаптировать под ваш бренд.</p></div>
-<div class="demogrid"><div class="tabs reveal" role="tablist" aria-label="Варианты оформления меню">
-<button class="tab active" role="tab" aria-selected="true" data-style="classic"><span><strong>01 / Классика</strong><small>Чисто, понятно, удобно</small></span></button>
-<button class="tab" role="tab" aria-selected="false" data-style="signature"><span><strong>02 / Премиум</strong><small>Премиальная подача</small></span></button>
-<button class="tab" role="tab" aria-selected="false" data-style="motion"><span><strong>03 / Анимация</strong><small>Живые карточки и эффекты</small></span></button>
-<button class="tab" role="tab" aria-selected="false" data-style="custom"><span><strong>04 / Индивидуальный</strong><small>Индивидуальная концепция</small></span></button>
-<a class="btn primary" href="#brief" style="margin-top:8px">Хочу такой вариант</a></div>
-<div class="reveal delay1"><div class="phonestage"><div class="phone"><div class="screen" id="phoneScreen"><div class="phonetop"><span id="restaurantName">CASA · РЕСТОРАН</span><span>•••</span></div><div class="cover"><img id="demoCover" src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=800&q=88" alt="Демонстрационное блюдо"><div class="covertext"><small id="coverKicker">СЕЗОННОЕ МЕНЮ</small><strong id="coverTitle">Попробуйте момент.</strong></div></div><div class="categories"><span>Популярное</span><span>Закуски</span><span>Основное</span><span>Десерты</span></div><div class="foodlist" id="foodList"></div></div></div></div><div class="democaption"><span id="demoCaption"><strong>КЛАССИКА</strong> — простая навигация и акцент на блюдах</span></div></div></div>
+<div class="section-head reveal"><div><span class="eyebrow">Живой просмотр</span><h2>Меню в вашем<br><em>стиле.</em></h2></div><p>Четыре разных подхода — не только цвет, но и структура, подача блюд и возможности. Выберите направление слева и посмотрите, как меняется экран гостя.</p></div>
+<div class="demogrid paradox-demo-compare">
+  <div class="tabs reveal" role="tablist" aria-label="Варианты оформления меню">
+    <button class="tab active" type="button" role="tab" aria-selected="true" data-style="classic"><span><strong>01 / Классика</strong><small>Светлый каталог · цены и категории</small></span><span class="paradox-tab-dot" aria-hidden="true"></span></button>
+    <button class="tab" type="button" role="tab" aria-selected="false" data-style="signature"><span><strong>02 / Премиум</strong><small>Тёмная палитра · эффектная подача</small></span><span class="paradox-tab-dot" aria-hidden="true"></span></button>
+    <button class="tab" type="button" role="tab" aria-selected="false" data-style="motion"><span><strong>03 / Анимация</strong><small>Живое видео · динамичные карточки</small></span><span class="paradox-tab-dot" aria-hidden="true"></span></button>
+    <button class="tab" type="button" role="tab" aria-selected="false" data-style="custom"><span><strong>04 / Индивидуальный</strong><small>Фирменный стиль · особые разделы</small></span><span class="paradox-tab-dot" aria-hidden="true"></span></button>
+    <div class="paradox-style-selected" role="status" aria-live="polite"><span>ВЫБРАННЫЙ ВАРИАНТ</span><strong id="selectedStyleName">Классика</strong><p id="selectedStyleDescription">Простой каталог с фотографиями, ценами и категориями.</p></div>
+    <a id="chooseStyleBtn" class="btn primary" href="#brief" style="margin-top:2px">Хочу такой вариант <span aria-hidden="true">↗</span></a>
+  </div>
+  <div class="reveal delay1">
+    <div class="phonestage paradox-preview-stage" id="demoStage" data-preview="classic">
+      <div class="paradox-stage-corner" aria-hidden="true">PARADOX / 01</div>
+      <div class="phone paradox-preview-phone"><div class="screen paradox-screen-classic" id="phoneScreen" aria-label="Пример оформления меню в смартфоне"></div></div>
+      <div class="paradox-stage-bottom" aria-hidden="true"><span>ЭКРАН ГОСТЯ</span><span id="demoStageNumber">01 — 04</span></div>
+    </div>
+    <div class="democaption"><span id="demoCaption"><strong>КЛАССИКА</strong> — простой каталог, который сразу понятен гостю</span></div>
+    <div class="paradox-preview-perks" id="demoPerks" aria-label="Особенности выбранного стиля"><span>Категории</span><span>Фото и цены</span><span>Быстрый выбор</span></div>
+  </div>
+</div>
 </div></section>
 <section class="section" id="possibilities"><div class="wrap"><div class="section-head reveal"><div><span class="eyebrow">Всё нужное — без лишнего</span><h2>Продумано для<br><em>гостя.</em></h2></div><p>Вы выбираете, что нужно гостям и что отражает характер заведения. Мы соединяем детали в цельный цифровой продукт.</p></div>
 <div class="features paradox-feature-grid" aria-label="Анимированные примеры возможностей PARADOX">
@@ -605,7 +753,7 @@ body{background:#101114;color:#F4F2EA;background-image:none}
 <div class="quiz reveal delay1" id="quiz"><div class="quizprogress"><span id="stepLabel">ШАГ 01 / 04</span><span id="percent">25%</span></div><div class="track"><div class="fill" id="progressFill"></div></div>
 <form id="briefForm" novalidate>
 <div class="step active" data-step="0"><h3>Какое меню вам ближе?</h3><p>Выберите направление. Его можно изменить позже.</p><div class="choices">
-<label class="choice"><input type="radio" name="menuType" value="Классическое"><span>Классическое</span></label><label class="choice"><input type="radio" name="menuType" value="Премиальное"><span>Премиальное</span></label><label class="choice"><input type="radio" name="menuType" value="С анимацией"><span>С анимацией</span></label><label class="choice"><input type="radio" name="menuType" value="Нужна консультация"><span>Пока не знаю</span></label></div><div class="field"><label for="count">Примерное количество позиций</label><select id="count" name="count"><option value="Пока не знаю">Пока не знаю</option><option>До 30</option><option>30–80</option><option>80–150</option><option>Более 150</option></select></div></div>
+<label class="choice"><input type="radio" name="menuType" value="Классическое"><span>Классическое</span></label><label class="choice"><input type="radio" name="menuType" value="Премиальное"><span>Премиальное</span></label><label class="choice"><input type="radio" name="menuType" value="С анимацией"><span>С анимацией</span></label><label class="choice"><input type="radio" name="menuType" value="Индивидуальное"><span>Индивидуальное</span></label><label class="choice"><input type="radio" name="menuType" value="Нужна консультация"><span>Пока не знаю</span></label></div><div class="field"><label for="count">Примерное количество позиций</label><select id="count" name="count"><option value="Пока не знаю">Пока не знаю</option><option>До 30</option><option>30–80</option><option>80–150</option><option>Более 150</option></select></div></div>
 <div class="step" data-step="1"><h3>Что должно быть внутри?</h3><p>Отметьте всё подходящее. Можно пропустить этот шаг.</p><div class="choices">
 <label class="choice"><input type="checkbox" name="features" value="Фотографии блюд"><span>Фотографии блюд</span></label><label class="choice"><input type="checkbox" name="features" value="Анимированные карточки"><span>Анимированные карточки</span></label><label class="choice"><input type="checkbox" name="features" value="Компактные карточки"><span>Компактные карточки</span></label><label class="choice"><input type="checkbox" name="features" value="О ресторане"><span>О ресторане</span></label><label class="choice"><input type="checkbox" name="features" value="Акции и предложения"><span>Акции и предложения</span></label><label class="choice"><input type="checkbox" name="features" value="Контакты и карта"><span>Контакты и карта</span></label><label class="choice"><input type="checkbox" name="features" value="КБЖУ и состав"><span>КБЖУ и состав</span></label><label class="choice"><input type="checkbox" name="features" value="Поиск по меню"><span>Поиск по меню</span></label><label class="choice"><input type="checkbox" name="features" value="Корзина и оформление заказа"><span>Корзина и оформление заказа</span></label></div></div>
 <div class="step" data-step="2"><h3>Языки и дополнительные идеи</h3><p>Выберите языки и полезные функции.</p><div class="choices">
@@ -638,15 +786,74 @@ pizza:"https://images.unsplash.com/photo-1546549032-9571cd6b27df?auto=format&fit
 dessert:"https://images.unsplash.com/photo-1578985545062-69928b1d9587?auto=format&fit=crop&w=250&q=82"
 };
 const styles={
-classic:{name:"CASA · РЕСТОРАН",kicker:"СЕЗОННОЕ МЕНЮ",title:"Вкус момента.",cover:"https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=800&q=88",caption:"<strong>КЛАССИКА</strong> — простая навигация и акцент на блюдах",bg:"#faf9f3",ink:"#242622",foods:[[photos.steak,"Рибай на гриле","Соус демиглас, сезонные овощи","1 890 ₽"],[photos.pasta,"Паста с травами","Пармезан, базилик","790 ₽"],[photos.pizza,"Равиоли ручной работы","Пармезан, зелень, сливочный соус","950 ₽"]]},
-signature:{name:"NOIR · РЕСТОРАН ВЫСОКОЙ КУХНИ",kicker:"ВЫБОР ШЕФ-ПОВАРА",title:"Вечер, который запомнится.",cover:"https://images.unsplash.com/photo-1540189549336-e6e99c3679fe?auto=format&fit=crop&w=800&q=88",caption:"<strong>ПРЕМИУМ</strong> — выразительная подача и большие фотографии",bg:"#20211e",ink:"#f4f0e7",foods:[[photos.steak,"Стейк от шефа","Сезонные ингредиенты","2 400 ₽"],[photos.dessert,"Десерт дня","Авторская подача","690 ₽"],[photos.pasta,"Паста ручной работы","Соус из трав","1 150 ₽"]]},
-motion:{name:"КУХНЯ · В ДВИЖЕНИИ",kicker:"СВЕЖЕСТЬ И ДВИЖЕНИЕ",title:"Создано, чтобы наслаждаться.",cover:"https://images.unsplash.com/photo-1546549032-9571cd6b27df?auto=format&fit=crop&w=800&q=88",caption:"<strong>АНИМАЦИЯ</strong> — лёгкая анимация и интерактивные карточки",bg:"#f7f4eb",ink:"#242622",foods:[[photos.pizza,"Паста с авторским соусом","Пармезан, зелень, сливочный соус","950 ₽"],[photos.steak,"Горячая подача","Соус от шефа","1 890 ₽"],[photos.dessert,"Сладкий финал","Ягоды и крем","650 ₽"]]},
-custom:{name:"ВАШ БРЕНД · ВАШЕ МЕНЮ",kicker:"СОЗДАНО ДЛЯ ВАС",title:"Ваша история. Ваш вкус.",cover:"https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=800&q=88",caption:"<strong>ИНДИВИДУАЛЬНЫЙ</strong> — стиль, структура и разделы под вашу задачу",bg:"#f1eee5",ink:"#20231e",foods:[[photos.pasta,"Ваше фирменное блюдо","Описание в вашем стиле","—"],[photos.steak,"Выбор шефа","Состав и детали","—"],[photos.dessert,"Сезонное предложение","История блюда","—"]]}
+  classic:{label:"Классика",formValue:"Классическое",summary:"Простой каталог с фотографиями, ценами и категориями.",caption:"<strong>КЛАССИКА</strong> — светлое меню: категории, небольшие карточки и цены на виду",perks:["Быстрая навигация","Карточки и цены","Удобно с телефона"],number:"01 — 04"},
+  signature:{label:"Премиум",formValue:"Премиальное",summary:"Крупные фотографии, тёмный дизайн и особая подача авторских блюд.",caption:"<strong>ПРЕМИУМ</strong> — крупные фотографии, ресторанная типографика и меню высокой кухни",perks:["Большая фотография","Авторская подача","Тёмная палитра"],number:"02 — 04"},
+  motion:{label:"Анимация",formValue:"С анимацией",summary:"Настоящее видео блюда, динамичные карточки и заметные визуальные акценты.",caption:"<strong>АНИМАЦИЯ</strong> — настоящее видео блюда, живые карточки и динамичная навигация",perks:["Видео блюд","Живые карточки","Плавные переходы"],number:"03 — 04"},
+  custom:{label:"Индивидуальный",formValue:"Индивидуальное",summary:"Фирменная палитра, нестандартная сетка, история ресторана и дополнительные разделы.",caption:"<strong>ИНДИВИДУАЛЬНЫЙ</strong> — собственный характер бренда, необычная компоновка и спецблоки",perks:["Фирменный стиль","Особые разделы","Своя структура"],number:"04 — 04"}
 };
 // PARADOX_IMAGE_FALLBACK: recover gracefully if a photo host fails.
 document.querySelectorAll("img").forEach(img=>{if(!img.dataset.fallbackBound){img.dataset.fallbackBound="1";img.addEventListener("error",()=>{if(img.dataset.fallbackTried)return;img.dataset.fallbackTried="1";img.src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=900&q=85";});}});
-function renderStyle(key){const d=styles[key];document.getElementById("restaurantName").textContent=d.name;document.getElementById("coverKicker").textContent=d.kicker;document.getElementById("coverTitle").textContent=d.title;const cover=document.getElementById("demoCover");cover.style.transform="scale(1.06)";cover.onerror=()=>{cover.onerror=null;cover.src=photos.steak;};cover.src=d.cover;cover.alt="Демонстрация стиля "+key;setTimeout(()=>cover.style.transform="",50);const screen=document.getElementById("phoneScreen");screen.style.background=d.bg;screen.style.color=d.ink;document.getElementById("demoCaption").innerHTML=d.caption;document.getElementById("foodList").innerHTML=d.foods.map((f,i)=>`<div class="food" style="${key==="motion"?"animation:stepin .35s "+(i*.08)+"s both":""}"><img src="${f[0]}" alt="${f[1]}" loading="lazy"><div><strong>${f[1]}</strong><small>${f[2]}</small></div><b>${f[3]}</b></div>`).join("");document.querySelectorAll(".tab").forEach(b=>{const active=b.dataset.style===key;b.classList.toggle("active",active);b.setAttribute("aria-selected",String(active));});}
-document.querySelectorAll(".tab").forEach(b=>b.addEventListener("click",()=>renderStyle(b.dataset.style)));renderStyle("classic");
+function previewFoodCard(f,i){
+  return '<article class="pv-item" style="--card-n:'+i+'"><img src="'+f[0]+'" alt="'+f[1]+'" loading="lazy"><div class="pv-item-text"><strong>'+f[1]+'</strong><small>'+f[2]+'</small></div><b>'+f[3]+'</b></article>';
+}
+const previewDishes={
+  classic:[[photos.steak,'Рибай на гриле','Сезонные овощи','1 890 ₽'],[photos.pasta,'Паста с травами','Пармезан, базилик','790 ₽'],[photos.dessert,'Чизкейк','Ягоды и крем','590 ₽']],
+  signature:[[photos.steak,'Стейк от шефа','Смок и редукция','2 400 ₽'],[photos.dessert,'Авторский десерт','Шоколад и ягоды','890 ₽']],
+  motion:[[photos.steak,'Живой рибай','Видео блюда','1 890 ₽'],[photos.dessert,'Фондан','Тёплый шоколад','690 ₽']],
+  custom:[[photos.pasta,'Паста Casa','Фирменный рецепт','1 190 ₽'],[photos.dessert,'Фондан','Выбор шефа','690 ₽']]
+};
+const demoBrandTop={
+  classic:'<div class="pv-top"><strong class="pv-logo">CASA · РЕСТОРАН</strong><span class="pv-top-right">МЕНЮ ≡</span></div>',
+  signature:'<div class="pv-top"><strong class="pv-logo">NOIR</strong><span class="pv-top-right">FINE DINING · ✦</span></div>',
+  motion:'<div class="pv-top"><strong class="pv-logo">MOVE / FOOD</strong><span class="pv-top-right">LIVE ●</span></div>',
+  custom:'<div class="pv-top"><strong class="pv-logo">terra.</strong><span class="pv-top-right">НАША ИСТОРИЯ ↗</span></div>'
+};
+const previewHero={
+  classic:{img:'https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=800&q=88',kicker:'ПОПУЛЯРНОЕ СЕГОДНЯ',title:'Любимые блюда'},
+  signature:{img:'https://images.unsplash.com/photo-1540189549336-e6e99c3679fe?auto=format&fit=crop&w=800&q=88',kicker:'ДЕГУСТАЦИОННОЕ МЕНЮ',title:'Искусство вкуса.'},
+  motion:{img:'https://images.unsplash.com/photo-1558030006-450675393462?auto=format&fit=crop&w=800&q=88',kicker:'ДОСТАТОЧНО ОДНОГО ВЗГЛЯДА',title:'Почувствуй вкус.'},
+  custom:{img:'https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=800&q=88',kicker:'КУХНЯ С ХАРАКТЕРОМ',title:'Место со вкусом.'}
+};
+const previewNav={
+  classic:['Популярное','Основное','Десерты'],
+  signature:['Авторское','Винная карта','Десерты'],
+  motion:['LIVE','Горячее','Сладкое'],
+  custom:['Меню','О нас','События']
+};
+let activePreviewStyle='classic';
+function renderStyle(key){
+ const d=styles[key]; if(!d)return;
+ activePreviewStyle=key;
+ const stage=document.getElementById('demoStage');
+ const screen=document.getElementById('phoneScreen');
+ const hero=previewHero[key];
+ stage.dataset.preview=key;
+ screen.className='screen paradox-screen-'+key;
+ const videoMarkup=key==='motion' ? '<video id="paradoxStyleMotionVideo" autoplay muted loop playsinline preload="metadata" poster="'+hero.img+'"><source src="https://djanzakoff.github.io/menu/steak.mp4" type="video/mp4"></video><span class="pv-live-label">● ВИДЕО БЛЮДА</span>' : '<img src="'+hero.img+'" alt="Красивая подача блюда" loading="lazy">';
+ const navHtml=previewNav[key].map((name,i)=>'<button type="button" class="pv-chip'+(i===0?' active':'')+'" data-preview-nav="'+i+'" aria-pressed="'+(i===0)+'">'+name+'</button>').join('');
+ const foodHtml=previewDishes[key].map(previewFoodCard).join('');
+ const extra=key==='custom' ? '<div class="pv-special"><div><span>О НАШЕМ РЕСТОРАНЕ</span><strong>История в каждой детали</strong></div><b>УЗНАТЬ ↗</b></div>' : key==='signature' ? '<div class="pv-prompt"><span>✦ УЖИН ОТ ШЕФ-ПОВАРА</span><span>ПОДРОБНЕЕ ↗</span></div>' : key==='motion' ? '<div class="pv-prompt"><span>● ЖИВОЕ МЕНЮ</span><span>СМОТРЕТЬ ↗</span></div>' : '<div class="pv-prompt"><span>✓ Состав и вес внутри карточек</span><span>↗</span></div>';
+ screen.innerHTML=demoBrandTop[key]+'<div class="pv-cover">'+videoMarkup+'<div class="pv-cover-txt"><small>'+hero.kicker+'</small><strong>'+hero.title+'</strong></div></div><div class="pv-cats" role="group" aria-label="Примеры разделов меню">'+navHtml+'</div><div class="pv-items">'+foodHtml+'</div>'+extra;
+ document.getElementById('selectedStyleName').textContent=d.label;
+ document.getElementById('selectedStyleDescription').textContent=d.summary;
+ document.getElementById('demoCaption').innerHTML=d.caption;
+ document.getElementById('demoStageNumber').textContent=d.number;
+ document.getElementById('demoPerks').innerHTML=d.perks.map(p=>'<span>'+p+'</span>').join('');
+ document.querySelectorAll('.tab[data-style]').forEach(b=>{const active=b.dataset.style===key;b.classList.toggle('active',active);b.setAttribute('aria-selected',String(active));});
+ const motionVid=document.getElementById('paradoxStyleMotionVideo');
+ if(motionVid){motionVid.muted=true;const p=motionVid.play();if(p&&typeof p.catch==='function')p.catch(()=>{});}
+ // The miniature categories are actionable, but remain only illustrative.
+ screen.querySelectorAll('[data-preview-nav]').forEach(b=>b.addEventListener('click',()=>{
+   screen.querySelectorAll('[data-preview-nav]').forEach(c=>{const isCurrent=c===b;c.classList.toggle('active',isCurrent);c.setAttribute('aria-pressed',String(isCurrent));});
+ }));
+}
+document.querySelectorAll('.tab[data-style]').forEach(b=>b.addEventListener('click',()=>renderStyle(b.dataset.style)));
+const chooseStyleBtn=document.getElementById('chooseStyleBtn');
+chooseStyleBtn.addEventListener('click',()=>{
+ const radio=document.querySelector('input[name="menuType"][value="'+styles[activePreviewStyle].formValue+'"]');
+ if(radio){radio.checked=true;radio.dispatchEvent(new Event('change',{bubbles:true}));}
+});
+renderStyle('classic');
 const navLinks=document.getElementById("navLinks"),toggle=document.getElementById("menuToggle");toggle.addEventListener("click",()=>{const open=navLinks.classList.toggle("open");toggle.setAttribute("aria-expanded",String(open));toggle.textContent=open?"×":"☰";});navLinks.querySelectorAll("a").forEach(a=>a.addEventListener("click",()=>{navLinks.classList.remove("open");toggle.setAttribute("aria-expanded","false");toggle.textContent="☰";}));
 const revealObserver=("IntersectionObserver"in window)?new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add("visible");revealObserver.unobserve(e.target);}}),{threshold:.1}):null;document.querySelectorAll(".reveal").forEach(el=>revealObserver?revealObserver.observe(el):el.classList.add("visible"));
 document.getElementById("year").textContent=new Date().getFullYear();
