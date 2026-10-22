@@ -365,6 +365,45 @@ body{background:#101114;color:#F4F2EA;background-image:none}
 .paradox-demo-body-open{overflow:hidden!important}
 @media(max-width:650px){.paradox-demo-header{min-height:62px;padding:9px 12px;padding-top:max(9px,env(safe-area-inset-top));gap:8px}.paradox-demo-mark{width:33px;height:33px;font-size:17px}.paradox-demo-title{font-size:13px}.paradox-demo-subtitle{font-size:10px}.paradox-demo-actions{gap:7px}.paradox-demo-link{display:none}.paradox-demo-close{min-height:42px;padding:0 12px;font-size:12px}.paradox-demo-stage{padding:0}.paradox-demo-frame{max-width:none;border:0;border-radius:0;box-shadow:none}}
 </style>
+
+<style id="paradox-interactive-menu-preview">
+/* The former non-interactive phone mockup is now the real menu, loaded inside an iframe. */
+.paradox-live-demo-grid{grid-template-columns:minmax(0,.85fr) minmax(0,1.15fr);gap:26px;align-items:stretch}
+.paradox-live-demo-aside{display:flex;flex-direction:column;align-items:flex-start;gap:16px;padding:clamp(24px,3.1vw,38px);background:#141715;color:#F4F2EA;border:1px solid #ffffff19;border-radius:22px}
+.paradox-live-demo-aside h3{font-size:clamp(32px,3.6vw,48px);line-height:1.02;letter-spacing:-.07em;margin:8px 0 2px}
+.paradox-live-demo-aside>p{color:#BFC5BA;line-height:1.75;font-size:13px;margin:0 0 9px}
+.paradox-live-demo-aside .eyebrow{color:#D5E66A}
+.paradox-live-demo-detail{display:flex;align-items:start;gap:14px;width:100%;padding:13px 0;border-top:1px solid #ffffff1b}
+.paradox-live-demo-detail>span{flex:0 0 24px;color:#D5E66A;font-size:12px;font-weight:800}
+.paradox-live-demo-detail strong{display:block;font-size:14px;letter-spacing:-.025em}
+.paradox-live-demo-detail small{display:block;color:#BFC5BA;font-size:12px;line-height:1.6;margin-top:5px}
+.paradox-live-demo-actions{margin-top:auto;padding-top:12px;display:flex;flex-direction:column;gap:11px;width:100%}
+.paradox-live-demo-actions .btn{width:100%;justify-content:center}
+.paradox-live-demo-stage{min-height:0;padding:28px 16px;background:#D5E66A;border-radius:22px}
+.paradox-live-demo-phone{display:block;overflow:hidden;width:min(100%,370px);height:clamp(540px,74vh,720px);padding:7px;border-radius:32px;background:#141614;box-shadow:0 22px 55px #10111438;transform:none!important}
+.paradox-live-demo-iframe{display:block;width:100%;height:100%;border:0;border-radius:25px;background:#080808}
+.paradox-live-demo-phone:hover{transform:none!important}
+.paradox-live-demo-grid .democaption{color:#68715d}
+.paradox-live-demo-grid .democaption strong{color:#1a2a10}
+@media(max-width:900px){.paradox-live-demo-grid{grid-template-columns:1fr}.paradox-live-demo-aside{gap:12px}.paradox-live-demo-stage{min-height:0}}
+@media(max-width:640px){.paradox-live-demo-stage{padding:15px 9px;border-radius:18px}.paradox-live-demo-phone{height:580px;max-width:360px;width:100%;border-radius:28px}.paradox-live-demo-iframe{border-radius:21px}.paradox-live-demo-grid .democaption{font-size:9px;letter-spacing:0;flex-wrap:wrap}}
+</style>
+
+<style id="paradox-final-readable-label">
+/* Keep lime brand color but guarantee dark, high-contrast lettering on the hero badge. */
+.hero .heroart .tag,
+.hero .heroart .tag * {
+  background-color: #D5E66A !important;
+  color: #101114 !important;
+  font-weight: 900 !important;
+  text-shadow: none !important;
+}
+.hero .heroart .tag {
+  line-height: 1.3 !important;
+  letter-spacing: .01em;
+  box-shadow: 0 10px 30px rgba(0,0,0,.28) !important;
+}
+</style>
 </head>
 <body>
 <header class="topbar"><div class="wrap nav">
@@ -382,15 +421,24 @@ body{background:#101114;color:#F4F2EA;background-image:none}
 </div></section>
 <div class="marquee" aria-hidden="true"><div class="marqueetrack"><span>Цифровые меню <i aria-hidden="true"></i> Вкус, который говорит <i aria-hidden="true"></i> Ваш стиль — ваши правила <i aria-hidden="true"></i> Создано PARADOX <i aria-hidden="true"></i></span><span>Цифровые меню <i aria-hidden="true"></i> Вкус, который говорит <i aria-hidden="true"></i> Ваш стиль — ваши правила <i aria-hidden="true"></i> Создано PARADOX <i aria-hidden="true"></i></span><span>Цифровые меню <i aria-hidden="true"></i> Вкус, который говорит <i aria-hidden="true"></i> Ваш стиль — ваши правила <i aria-hidden="true"></i> Создано PARADOX <i aria-hidden="true"></i></span></div></div>
 <section class="section demo" id="demo"><div class="wrap">
-<div class="section-head reveal"><div><span class="eyebrow">Живой просмотр</span><h2>Меню в вашем<br><em>стиле.</em></h2></div><p>Не просто картинки на сайте — переключайте варианты и смотрите, как цифровое меню будет выглядеть на экране смартфона. Каждый формат можно адаптировать под ваш бренд.</p></div>
-<div class="demogrid"><div class="tabs reveal" role="tablist" aria-label="Варианты оформления меню">
-<button class="tab active" role="tab" aria-selected="true" data-style="classic"><span><strong>01 / Классика</strong><small>Чисто, понятно, удобно</small></span></button>
-<button class="tab" role="tab" aria-selected="false" data-style="signature"><span><strong>02 / Премиум</strong><small>Премиальная подача</small></span></button>
-<button class="tab" role="tab" aria-selected="false" data-style="motion"><span><strong>03 / Анимация</strong><small>Живые карточки и эффекты</small></span></button>
-<button class="tab" role="tab" aria-selected="false" data-style="custom"><span><strong>04 / Индивидуальный</strong><small>Индивидуальная концепция</small></span></button>
-<a class="btn primary" href="#brief" style="margin-top:8px">Хочу такой вариант</a></div>
-<div class="reveal delay1"><div class="phonestage"><div class="phone"><div class="screen" id="phoneScreen"><div class="phonetop"><span id="restaurantName">CASA · РЕСТОРАН</span><span>•••</span></div><div class="cover"><img id="demoCover" src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=800&q=88" alt="Демонстрационное блюдо"><div class="covertext"><small id="coverKicker">СЕЗОННОЕ МЕНЮ</small><strong id="coverTitle">Попробуйте момент.</strong></div></div><div class="categories"><span>Популярное</span><span>Закуски</span><span>Основное</span><span>Десерты</span></div><div class="foodlist" id="foodList"></div></div></div></div><div class="democaption"><span id="demoCaption"><strong>КЛАССИКА</strong> — простая навигация и акцент на блюдах</span><span>ПРЕДПРОСМОТР</span></div></div></div>
-</div></section>
+<div class="section-head reveal"><div><span class="eyebrow">Живое демо PARADOX</span><h2>Попробуйте<br><em>сами.</em></h2></div><p>Перед вами не картинка, а настоящее цифровое меню PARADOX. Нажимайте на категории, листайте блюда и изучайте оформление прямо на этой странице.</p></div>
+<div class="demogrid paradox-live-demo-grid">
+  <div class="paradox-live-demo-aside reveal">
+    <span class="eyebrow">Без имитации</span>
+    <h3>Меню, которое<br>работает.</h3>
+    <p>Это тот самый продукт, который получает гость после сканирования QR-кода. Внутри телефона справа можно пользоваться меню как на обычном смартфоне.</p>
+    <div class="paradox-live-demo-detail"><span>01</span><div><strong>Настоящие разделы</strong><small>Выбирайте категории и прокручивайте блюда.</small></div></div>
+    <div class="paradox-live-demo-detail"><span>02</span><div><strong>Живые карточки</strong><small>Посмотрите движение и оформление меню.</small></div></div>
+    <div class="paradox-live-demo-detail"><span>03</span><div><strong>На любом устройстве</strong><small>Можно открыть меню на весь экран.</small></div></div>
+    <div class="paradox-live-demo-actions"><a class="btn primary" href="https://djanzakoff.github.io/menu/" target="_blank" rel="noopener noreferrer" data-paradox-menu-open="true">Открыть меню крупно <span aria-hidden="true">↗</span></a><a class="btn outline" href="#brief">Заказать своё меню</a></div>
+  </div>
+  <div class="reveal delay1">
+    <div class="phonestage paradox-live-demo-stage">
+      <div class="phone paradox-live-demo-phone"><iframe class="paradox-live-demo-iframe" title="Настоящее интерактивное цифровое меню PARADOX — нажимайте на категории и блюда" src="https://djanzakoff.github.io/menu/" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" allow="autoplay"></iframe></div>
+    </div>
+    <div class="democaption"><span>НАСТОЯЩЕЕ МЕНЮ · МОЖНО НАЖИМАТЬ</span><span><strong>ИНТЕРАКТИВНОЕ ДЕМО</strong></span></div>
+  </div>
+</div></div></section>
 <section class="section" id="possibilities"><div class="wrap"><div class="section-head reveal"><div><span class="eyebrow">Всё нужное — без лишнего</span><h2>Продумано для<br><em>гостя.</em></h2></div><p>Вы выбираете, что нужно гостям и что отражает характер заведения. Мы соединяем детали в цельный цифровой продукт.</p></div>
 <div class="features">
 <article class="feature reveal"><div class="featureicon"><svg viewBox="0 0 48 48" aria-hidden="true"><path d="M18 30l-4 4a8 8 0 0 1-11-11l9-9a8 8 0 0 1 11 0M30 18l4-4a8 8 0 0 1 11 11l-9 9a8 8 0 0 1-11 0M17 31l14-14" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div><h3>Карточки блюд</h3><p>Компактные, крупные, с фотографией на весь блок или с подробным описанием. Можно открыть блюдо и увидеть состав, вес и другую информацию.</p></article>
@@ -443,22 +491,8 @@ const INTEGRATION_CONFIG={
 enabled:true,
 endpoint:"https://script.google.com/macros/s/AKfycbw7FFHPfulM_qOOhG6AGX2tHDpMGUk48s8mkEYOOK1CxJiG8C8YdItGGuN6Drv8Wz71/exec"
 };
-const photos={
-steak:"https://images.unsplash.com/photo-1558030006-450675393462?auto=format&fit=crop&w=250&q=82",
-pasta:"https://images.unsplash.com/photo-1551183053-bf91a1d81141?auto=format&fit=crop&w=250&q=82",
-pizza:"https://images.unsplash.com/photo-1546549032-9571cd6b27df?auto=format&fit=crop&w=250&q=82",
-dessert:"https://images.unsplash.com/photo-1578985545062-69928b1d9587?auto=format&fit=crop&w=250&q=82"
-};
-const styles={
-classic:{name:"CASA · РЕСТОРАН",kicker:"СЕЗОННОЕ МЕНЮ",title:"Вкус момента.",cover:"https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=800&q=88",caption:"<strong>КЛАССИКА</strong> — простая навигация и акцент на блюдах",bg:"#faf9f3",ink:"#242622",foods:[[photos.steak,"Рибай на гриле","Соус демиглас, сезонные овощи","1 890 ₽"],[photos.pasta,"Паста с травами","Пармезан, базилик","790 ₽"],[photos.pizza,"Равиоли ручной работы","Пармезан, зелень, сливочный соус","950 ₽"]]},
-signature:{name:"NOIR · РЕСТОРАН ВЫСОКОЙ КУХНИ",kicker:"ВЫБОР ШЕФ-ПОВАРА",title:"Вечер, который запомнится.",cover:"https://images.unsplash.com/photo-1540189549336-e6e99c3679fe?auto=format&fit=crop&w=800&q=88",caption:"<strong>ПРЕМИУМ</strong> — выразительная подача и большие фотографии",bg:"#20211e",ink:"#f4f0e7",foods:[[photos.steak,"Стейк от шефа","Сезонные ингредиенты","2 400 ₽"],[photos.dessert,"Десерт дня","Авторская подача","690 ₽"],[photos.pasta,"Паста ручной работы","Соус из трав","1 150 ₽"]]},
-motion:{name:"КУХНЯ · В ДВИЖЕНИИ",kicker:"СВЕЖЕСТЬ И ДВИЖЕНИЕ",title:"Создано, чтобы наслаждаться.",cover:"https://images.unsplash.com/photo-1546549032-9571cd6b27df?auto=format&fit=crop&w=800&q=88",caption:"<strong>АНИМАЦИЯ</strong> — лёгкая анимация и интерактивные карточки",bg:"#f7f4eb",ink:"#242622",foods:[[photos.pizza,"Паста с авторским соусом","Пармезан, зелень, сливочный соус","950 ₽"],[photos.steak,"Горячая подача","Соус от шефа","1 890 ₽"],[photos.dessert,"Сладкий финал","Ягоды и крем","650 ₽"]]},
-custom:{name:"ВАШ БРЕНД · ВАШЕ МЕНЮ",kicker:"СОЗДАНО ДЛЯ ВАС",title:"Ваша история. Ваш вкус.",cover:"https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=800&q=88",caption:"<strong>ИНДИВИДУАЛЬНЫЙ</strong> — стиль, структура и разделы под вашу задачу",bg:"#f1eee5",ink:"#20231e",foods:[[photos.pasta,"Ваше фирменное блюдо","Описание в вашем стиле","—"],[photos.steak,"Выбор шефа","Состав и детали","—"],[photos.dessert,"Сезонное предложение","История блюда","—"]]}
-};
 // PARADOX_IMAGE_FALLBACK: recover gracefully if a photo host fails.
 document.querySelectorAll("img").forEach(img=>{if(!img.dataset.fallbackBound){img.dataset.fallbackBound="1";img.addEventListener("error",()=>{if(img.dataset.fallbackTried)return;img.dataset.fallbackTried="1";img.src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=900&q=85";});}});
-function renderStyle(key){const d=styles[key];document.getElementById("restaurantName").textContent=d.name;document.getElementById("coverKicker").textContent=d.kicker;document.getElementById("coverTitle").textContent=d.title;const cover=document.getElementById("demoCover");cover.style.transform="scale(1.06)";cover.onerror=()=>{cover.onerror=null;cover.src=photos.steak;};cover.src=d.cover;cover.alt="Демонстрация стиля "+key;setTimeout(()=>cover.style.transform="",50);const screen=document.getElementById("phoneScreen");screen.style.background=d.bg;screen.style.color=d.ink;document.getElementById("demoCaption").innerHTML=d.caption;document.getElementById("foodList").innerHTML=d.foods.map((f,i)=>`<div class="food" style="${key==="motion"?"animation:stepin .35s "+(i*.08)+"s both":""}"><img src="${f[0]}" alt="${f[1]}" loading="lazy"><div><strong>${f[1]}</strong><small>${f[2]}</small></div><b>${f[3]}</b></div>`).join("");document.querySelectorAll(".tab").forEach(b=>{const active=b.dataset.style===key;b.classList.toggle("active",active);b.setAttribute("aria-selected",String(active));});}
-document.querySelectorAll(".tab").forEach(b=>b.addEventListener("click",()=>renderStyle(b.dataset.style)));renderStyle("classic");
 const navLinks=document.getElementById("navLinks"),toggle=document.getElementById("menuToggle");toggle.addEventListener("click",()=>{const open=navLinks.classList.toggle("open");toggle.setAttribute("aria-expanded",String(open));toggle.textContent=open?"×":"☰";});navLinks.querySelectorAll("a").forEach(a=>a.addEventListener("click",()=>{navLinks.classList.remove("open");toggle.setAttribute("aria-expanded","false");toggle.textContent="☰";}));
 const revealObserver=("IntersectionObserver"in window)?new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add("visible");revealObserver.unobserve(e.target);}}),{threshold:.1}):null;document.querySelectorAll(".reveal").forEach(el=>revealObserver?revealObserver.observe(el):el.classList.add("visible"));
 document.getElementById("year").textContent=new Date().getFullYear();
