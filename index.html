@@ -369,6 +369,37 @@ body{background:#101114;color:#F4F2EA;background-image:none}
 /* Make the first lime badge readable, overriding older !important theme rules. */
 .heroart .tag{color:#101114!important;-webkit-text-fill-color:#101114!important;text-shadow:none!important;font-weight:900!important}
 </style>
+
+<style id="paradox-subtle-motion-design">
+/* PARADOX: two restrained video highlights from the user's existing menu. */
+.paradox-video-float{overflow:hidden;isolation:isolate}
+.paradox-video-float .paradox-motion-video,
+.paradox-video-float>img{display:block;width:100%;height:104px;object-fit:cover;border-radius:4px;filter:saturate(1.22) contrast(1.06) brightness(1.04)}
+.paradox-video-float strong,.paradox-video-float small{position:relative;z-index:1}
+.paradox-motion-feature{position:relative;isolation:isolate;overflow:hidden;min-height:255px;border-color:#D5E66A44!important;background:#191d17!important}
+.paradox-motion-feature>.paradox-motion-video,
+.paradox-motion-feature>.paradox-motion-fallback{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;filter:saturate(1.2) contrast(1.07) brightness(.85)}
+.paradox-motion-feature:before{content:"";position:absolute;inset:0;z-index:1;background:linear-gradient(90deg,rgba(12,14,12,.90) 0%,rgba(12,14,12,.70) 58%,rgba(12,14,12,.26) 100%);pointer-events:none}
+.paradox-motion-feature .featureicon,
+.paradox-motion-feature h3,
+.paradox-motion-feature p,
+.paradox-video-chip{position:relative;z-index:2}
+.paradox-motion-feature .featureicon{background:#D5E66A24!important;color:#D5E66A!important}
+.paradox-motion-feature h3{color:#fff!important}
+.paradox-motion-feature p{color:#eff2e7!important;text-shadow:0 1px 5px #0009;max-width:26ch}
+.paradox-video-chip{display:inline-block;margin-top:12px;color:#D5E66A;font-weight:800;font-size:9px;letter-spacing:.1em}
+/* Enhance colour on the existing food photography without changing layout or text contrast. */
+.heroimg>img{filter:saturate(1.2) contrast(1.09) brightness(1.04)!important}
+.optionart img{filter:saturate(1.26) contrast(1.09) brightness(1.06)!important}
+.optionart{opacity:.95!important}
+.cover img,.food img{filter:saturate(1.22) contrast(1.08) brightness(1.035)}
+@media(max-width:640px){
+  .paradox-video-float .paradox-motion-video,.paradox-video-float>img{height:76px}
+  .paradox-motion-feature{min-height:220px}
+  .paradox-motion-feature:before{background:linear-gradient(90deg,rgba(12,14,12,.88),rgba(12,14,12,.50) 85%)}
+}
+@media(prefers-reduced-motion:reduce){.paradox-motion-feature>.paradox-motion-video,.paradox-video-float .paradox-motion-video{animation:none!important}}
+</style>
 </head>
 <body>
 <header class="topbar"><div class="wrap nav">
@@ -382,7 +413,13 @@ body{background:#101114;color:#F4F2EA;background-image:none}
 <p class="herocopy">Создаём индивидуальные цифровые меню, в которых гастрономия встречается с выразительным дизайном. Красивые блюда, удобный просмотр и атмосфера вашего заведения — в одном QR-коде.</p>
 <div class="actions"><a class="btn primary" href="https://djanzakoff.github.io/menu/" target="_blank" rel="noopener noreferrer" data-paradox-menu-open="true">Посмотреть демо</a><a class="btn outline" href="#brief">Собрать своё меню</a></div>
 <div class="heronote"><span class="noteicon" aria-hidden="true"><span class="notecheck"></span></span><span>Только просмотр меню. Без корзины и оформления заказов.</span></div><div class="hero-stats"><div><strong>01</strong><span>Дизайн под бренд</span></div><div><strong>QR</strong><span>Удобно открыть</span></div><div><strong>∞</strong><span>Ваши идеи</span></div></div></div>
-<div class="heroart"><div class="heroimg"><img src="https://images.unsplash.com/photo-1558030006-450675393462?auto=format&fit=crop&w=1200&q=90" alt="Премиальная подача блюда в ресторане" fetchpriority="high"><div class="photolabel"><div><small>ЦИФРОВОЕ МЕНЮ С ХАРАКТЕРОМ</small><br><strong>Вкус начинается<br>с первого взгляда.</strong></div><small>01 / 04</small></div></div><div class="tag">ДИЗАЙН,<br>КОТОРЫЙ ЗАМЕЧАЮТ</div><div class="floatcard"><img src="https://images.unsplash.com/photo-1555939594-58d7cb561ad1?auto=format&fit=crop&w=500&q=88" alt="Мясо на гриле с аппетитной корочкой"><strong>Рибай на гриле</strong><small>Подача, которую замечают</small></div></div>
+<div class="heroart"><div class="heroimg"><img src="https://images.unsplash.com/photo-1558030006-450675393462?auto=format&fit=crop&w=1200&q=90" alt="Премиальная подача блюда в ресторане" fetchpriority="high"><div class="photolabel"><div><small>ЦИФРОВОЕ МЕНЮ С ХАРАКТЕРОМ</small><br><strong>Вкус начинается<br>с первого взгляда.</strong></div><small>01 / 04</small></div></div><div class="tag">ДИЗАЙН,<br>КОТОРЫЙ ЗАМЕЧАЮТ</div><div class="floatcard paradox-video-float">
+  <video class="paradox-motion-video" data-paradox-motion autoplay muted loop playsinline preload="metadata" aria-label="Анимированная подача стейка PARADOX" poster="https://images.unsplash.com/photo-1555939594-58d7cb561ad1?auto=format&fit=crop&w=600&q=90">
+    <source src="https://djanzakoff.github.io/menu/steak.mp4" type="video/mp4">
+    Ваш браузер не поддерживает видео.
+  </video>
+  <strong>Рибай на гриле</strong><small>Живая подача PARADOX</small>
+</div></div>
 </div></section>
 <div class="marquee" aria-hidden="true"><div class="marqueetrack"><span>Цифровые меню <i aria-hidden="true"></i> Вкус, который говорит <i aria-hidden="true"></i> Ваш стиль — ваши правила <i aria-hidden="true"></i> Создано PARADOX <i aria-hidden="true"></i></span><span>Цифровые меню <i aria-hidden="true"></i> Вкус, который говорит <i aria-hidden="true"></i> Ваш стиль — ваши правила <i aria-hidden="true"></i> Создано PARADOX <i aria-hidden="true"></i></span><span>Цифровые меню <i aria-hidden="true"></i> Вкус, который говорит <i aria-hidden="true"></i> Ваш стиль — ваши правила <i aria-hidden="true"></i> Создано PARADOX <i aria-hidden="true"></i></span></div></div>
 <section class="section demo" id="demo"><div class="wrap">
@@ -398,7 +435,14 @@ body{background:#101114;color:#F4F2EA;background-image:none}
 <section class="section" id="possibilities"><div class="wrap"><div class="section-head reveal"><div><span class="eyebrow">Всё нужное — без лишнего</span><h2>Продумано для<br><em>гостя.</em></h2></div><p>Вы выбираете, что нужно гостям и что отражает характер заведения. Мы соединяем детали в цельный цифровой продукт.</p></div>
 <div class="features">
 <article class="feature reveal"><div class="featureicon"><svg viewBox="0 0 48 48" aria-hidden="true"><path d="M18 30l-4 4a8 8 0 0 1-11-11l9-9a8 8 0 0 1 11 0M30 18l4-4a8 8 0 0 1 11 11l-9 9a8 8 0 0 1-11 0M17 31l14-14" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div><h3>Карточки блюд</h3><p>Компактные, крупные, с фотографией на весь блок или с подробным описанием. Можно открыть блюдо и увидеть состав, вес и другую информацию.</p></article>
-<article class="feature reveal delay1"><div class="featureicon"><svg viewBox="0 0 48 48" aria-hidden="true"><circle cx="24" cy="24" r="17" fill="none" stroke="currentColor" stroke-width="2.5"/><path d="m20 16 13 8-13 8z" fill="currentColor"/></svg></div><h3>Живой визуал</h3><p>Плавное появление, движение изображений, раскрывающиеся карточки и аккуратные переходы — столько анимации, сколько уместно бренду.</p></article>
+<article class="feature reveal delay1 paradox-motion-feature">
+  <video class="paradox-motion-video" data-paradox-motion autoplay muted loop playsinline preload="metadata" aria-hidden="true" poster="https://images.unsplash.com/photo-1551183053-bf91a1d81141?auto=format&fit=crop&w=800&q=90">
+    <source src="https://djanzakoff.github.io/menu/drink.mp4" type="video/mp4">
+  </video>
+  <div class="featureicon"><svg viewBox="0 0 48 48" aria-hidden="true"><circle cx="24" cy="24" r="17" fill="none" stroke="currentColor" stroke-width="2.5"/><path d="m20 16 13 8-13 8z" fill="currentColor"/></svg></div>
+  <h3>Живой визуал</h3><p>Плавное появление, движение изображений, раскрывающиеся карточки и аккуратные переходы — столько анимации, сколько уместно бренду.</p>
+  <span class="paradox-video-chip" aria-hidden="true">ЖИВОЙ ПРИМЕР</span>
+</article>
 <article class="feature reveal delay2"><div class="featureicon">文</div><h3>Несколько языков</h3><p>Русский, английский и другие языки по согласованию. Переводы предоставляются клиентом или согласуются отдельно.</p></article>
 <article class="feature reveal"><div class="featureicon">◎</div><h3>О ресторане</h3><p>История места, команда, шеф-повар, философия кухни или короткое приветствие гостям.</p></article>
 <article class="feature reveal delay1"><div class="featureicon"><svg viewBox="0 0 48 48" aria-hidden="true"><path d="M19 29l-3 3a8 8 0 0 1-11-11l8-8a8 8 0 0 1 11 0M29 19l3-3a8 8 0 0 1 11 11l-8 8a8 8 0 0 1-11 0M17 31l14-14" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div><h3>Контакты и ссылки</h3><p>Адрес, часы работы, телефон, карта, соцсети, сайт и кнопка поделиться ссылкой на меню.</p></article>
@@ -557,6 +601,38 @@ let toastTimer;function toast(message){const el=document.getElementById("toast")
       else if(!event.shiftKey && document.activeElement===last){event.preventDefault();first.focus();}
     }
   });
+})();
+</script>
+
+<script id="paradox-motion-optimization">
+/* Pause offscreen videos to reduce CPU/battery, and preserve a still image as a fallback. */
+(function(){
+  var videos=Array.from(document.querySelectorAll('video[data-paradox-motion]'));
+  var reducedMotion=window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  videos.forEach(function(video){
+    video.muted=true;
+    video.addEventListener('error',function(){
+      var poster=video.getAttribute('poster');
+      if(!poster)return;
+      var image=document.createElement('img');
+      image.src=poster;
+      image.alt=video.getAttribute('aria-label')||'';
+      image.className='paradox-motion-fallback';
+      video.replaceWith(image);
+    });
+    if(reducedMotion){video.pause();return;}
+  });
+  if(reducedMotion || !('IntersectionObserver' in window))return;
+  var observer=new IntersectionObserver(function(entries){
+    entries.forEach(function(entry){
+      var video=entry.target;
+      if(entry.isIntersecting){
+        var playPromise=video.play();
+        if(playPromise && typeof playPromise.catch==='function')playPromise.catch(function(){});
+      }else{video.pause();}
+    });
+  },{threshold:0.12});
+  videos.forEach(function(video){observer.observe(video);});
 })();
 </script>
 </body></html>
