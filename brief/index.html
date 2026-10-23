@@ -430,7 +430,7 @@ document.getElementById('showPdfPreview').addEventListener('click',()=>{
 
 // DEPLOYMENT SETTING: After Apps Script is deployed, insert its published Web App URL below.
 // Do NOT put the bot token, Telegram chat ID or email address in this public HTML file.
-const PARADOX_DELIVERY_URL = 'PASTE_APPS_SCRIPT_WEB_APP_URL_HERE';
+const PARADOX_DELIVERY_URL = 'https://script.google.com/macros/s/AKfycbwvGGMDi--QqqJ3h8swjCt5ONkbTCImy-lKzPsx7dp-vxozfL44as4rCQrD5RGqwNef/exec';
 const briefOpenedAt = Date.now();
 let deliveryId = null, sendingBrief = false;
 function endpointReady(){return /^https:\/\/script\.google\.com\/macros\/s\/[A-Za-z0-9_-]+\/exec$/.test(PARADOX_DELIVERY_URL);}
