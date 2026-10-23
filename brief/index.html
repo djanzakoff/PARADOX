@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+
+<html lang="ru"><head><meta charset="utf-8"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Onest:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/><meta content="width=device-width, initial-scale=1, viewport-fit=cover" name="viewport"/><meta content="#0d100d" name="theme-color"/><title>PARADOX — Клиентский бриф и PDF</title><style>
+:root{--ink:#131712;--black:#0d100d;--dark:#1b201b;--lime:#d1f56b;--lime2:#e5ff9b;--muted:#657064;--grey:#f3f5ef;--line:#e1e6d9;--white:#fff;--radius:21px}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:#f5f7f0;color:var(--ink);font:16px/1.48 Onest,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;-webkit-font-smoothing:antialiased}button,input,select,textarea{font:inherit}button{cursor:pointer}button:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible{outline:3px solid #a2cf39;outline-offset:2px}a{color:inherit}.hero{background:#f4f2ea;color:var(--ink);padding:0;border-bottom:1px solid #d9ddd2}.topbar{max-width:1228px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;gap:16px;padding:18px 20px;min-height:84px}.brand{display:inline-flex;align-items:flex-start;font-weight:800;letter-spacing:-.065em;font-size:clamp(34px,5vw,58px);line-height:.92;color:#101114}.brand .mark{color:#95b737;font-size:.32em;line-height:1;position:relative;top:.18em;margin-left:2px;font-weight:800}.brand span{color:inherit}.edition{display:flex;align-items:center;justify-content:center;width:58px;height:58px;border-radius:50%;border:1.5px solid #d6d6ce;background:transparent;color:#d4d4ce}.edition b{display:block;width:18px;height:2px;background:#d4d4ce;border-radius:99px;box-shadow:0 6px 0 #d4d4ce,0 -6px 0 #d4d4ce}.eyebrow{font-size:12px;font-weight:800;letter-spacing:.18em;color:var(--lime);text-transform:uppercase;margin:46px 0 8px}.hero h1{font-size:clamp(38px,5.6vw,70px);line-height:.99;margin:0;letter-spacing:-.055em;font-weight:850;max-width:830px}.hero h1 em{font-style:normal;color:var(--lime)}.hero p{font-size:16px;color:#5b6357;max-width:670px;line-height:1.65;margin:20px 0 24px}.hero-bottom{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:12px;border-top:1px solid #d9ddd2;padding-top:18px;color:#5e675d;font-size:13px}.hero-pill{background:#eef1e5;color:#3c452f;border-radius:100px;padding:9px 13px;font-weight:700}.main{max-width:1228px;margin:28px auto 80px;padding:0 20px;display:grid;grid-template-columns:240px minmax(0,1fr);gap:22px;align-items:start}.sidebar{position:sticky;top:24px;background:white;border:1px solid var(--line);border-radius:var(--radius);padding:18px}.side-caption{color:var(--muted);font-size:11px;font-weight:800;letter-spacing:.15em;text-transform:uppercase;padding:7px 8px 13px}.side-link{width:100%;border:0;background:transparent;color:#313a2f;display:flex;gap:12px;align-items:center;text-align:left;padding:12px 10px;border-radius:12px;font-size:13px;font-weight:700}.side-link span{color:#7d8c73;font-variant-numeric:tabular-nums}.side-link.active,.side-link:hover{background:#eef6dd}.side-link.active span{color:#3a5520}.side-note{font-size:12px;color:#697365;border-top:1px solid var(--line);margin-top:12px;padding:16px 8px 2px;line-height:1.55}.workspace{min-width:0}.toolbar{background:white;border:1px solid var(--line);border-radius:18px;padding:12px;display:flex;gap:12px;flex-wrap:wrap;align-items:center;justify-content:space-between;margin-bottom:16px}.toggle{background:#e9ede2;border-radius:999px;display:flex;padding:4px;gap:4px}.toggle button{border:0;background:transparent;border-radius:999px;font-size:13px;font-weight:800;padding:10px 14px;color:#606b5b}.toggle button.active{background:var(--black);color:var(--lime);box-shadow:0 2px 8px #0002}.tool-buttons{display:flex;gap:7px;flex-wrap:wrap}.tool-buttons button,.small-action{border:1px solid #d7dfcc;background:white;border-radius:999px;padding:10px 13px;color:#25301d;font-size:13px;font-weight:750}.tool-buttons button:hover,.small-action:hover{background:#eef8d6}.form-section{background:white;border-radius:var(--radius);border:1px solid var(--line);padding:29px 32px;margin-bottom:17px;scroll-margin-top:18px}.form-section.is-hidden{display:none}.section-title{display:flex;gap:16px;border-bottom:1px solid var(--line);padding-bottom:20px;margin-bottom:10px}.section-index{background:var(--lime);align-self:flex-start;border-radius:9px;padding:9px 10px;font-size:12px;white-space:nowrap;font-weight:900}.section-title h2{font-size:clamp(23px,3vw,32px);line-height:1.1;letter-spacing:-.035em;margin:2px 0 8px}.section-title p{margin:0;color:var(--muted);font-size:13px}.question{padding:19px 0;border-bottom:1px solid #edf0e9}.question:last-child{border-bottom:0;padding-bottom:5px}.question.compact{padding:12px 0}.q-label{display:flex;align-items:baseline;gap:12px;font-size:15px;font-weight:750;line-height:1.4;margin-bottom:11px}.q-num{min-width:26px;font-size:12px;color:#799363;letter-spacing:.04em;font-weight:900}.question input:not([type=checkbox]):not([type=radio]),.question select,.question textarea,.cat-row input{border:1px solid #dce3d3;background:#f8faf5;width:100%;border-radius:13px;padding:13px 14px;color:#20281d;outline:none;max-width:720px}.question input:focus,.question select:focus,.question textarea:focus,.cat-row input:focus{border-color:#a6d24b;background:white;box-shadow:0 0 0 3px #dcf5aa}.question textarea{resize:vertical;min-height:88px}.question input::placeholder,.question textarea::placeholder{color:#96a38c}.question input[type=number]{max-width:260px}.choices{display:flex;gap:9px;flex-wrap:wrap;padding-left:38px}.choice{cursor:pointer;display:inline-flex;align-items:center;position:relative;gap:9px;font-size:13px;background:#f6f8f2;border:1px solid #e0e7d6;border-radius:12px;padding:11px 13px;max-width:100%}.choice input{accent-color:#6e8e26;width:17px;height:17px;flex:none}.choice:has(input:checked){background:#eaf8cb;border-color:#a1c954}.inline-hint{margin-left:38px;color:#677561;font-size:13px}.builder-wrap{padding-left:38px}.category-rows{display:grid;gap:9px;margin-bottom:12px}.cat-row{background:#f8faf5;border:1px solid #e1e8d8;padding:10px;border-radius:12px;display:grid;grid-template-columns:1.1fr 1.1fr .58fr auto;gap:8px;align-items:end}.cat-row label{font-size:11px;color:#687a5b;font-weight:800;display:grid;gap:6px}.cat-row input{padding:10px 9px;font-size:12px;min-width:0}.cat-row button{border:0;background:#e5ebe1;height:40px;width:40px;border-radius:10px;font-size:21px;color:#4a5942}.total{border-top:1px solid #dde4d3;margin-top:13px;padding:12px 2px 0;font-size:13px}.total b{font-size:19px;color:#517520;margin-left:5px}.two-fields{padding-left:38px;display:grid;grid-template-columns:1fr 1fr;gap:12px}.subfield{font-size:12px;color:#63715c;font-weight:750;display:grid;gap:6px}.footer-nav{display:none;background:var(--black);color:white;border-radius:18px;padding:13px 14px;align-items:center;gap:12px;justify-content:space-between;position:sticky;bottom:12px;box-shadow:0 16px 35px #0e170e29}.footer-nav.visible{display:flex}.footer-nav button,.primary{border:0;border-radius:100px;padding:12px 21px;font-size:14px;font-weight:800}.footer-nav button{background:#323b2f;color:white}.footer-nav button.primary,.primary{background:var(--lime);color:var(--ink)}.footer-nav button:disabled{opacity:.35;cursor:not-allowed}.step-indicator{font-size:13px;font-weight:800;color:#bcd8a8}.privacy{font-size:12px;line-height:1.6;color:#63715b;padding:13px 18px}.privacy b{color:#33402f}.summary-actions{background:#1b2219;border-radius:var(--radius);padding:24px 26px;color:white;margin:17px 0}.summary-actions h2{font-size:24px;line-height:1.2;margin:0 0 9px}.summary-actions p{font-size:13px;color:#b8c5af;margin:0 0 17px;max-width:660px}.summary-actions button{border:0;border-radius:100px;background:var(--lime);color:#172012;padding:12px 18px;font-weight:850;margin:0 7px 8px 0;font-size:13px}.summary-actions button.secondary{background:#364431;color:#eef6e8}.notice{font-size:12px;color:#bfd3ad;margin-top:9px}.overlay[hidden]{display:none}.overlay{position:fixed;inset:0;z-index:10;background:#0c0e0cbf;display:grid;place-items:center;padding:18px}.modal{background:white;border-radius:22px;padding:24px;width:min(750px,100%);max-height:88vh;overflow:auto}.modal-header{display:flex;gap:12px;justify-content:space-between;align-items:center}.modal h2{font-size:24px;letter-spacing:-.04em;margin:0}.modal pre{font:13px/1.55 ui-monospace,SFMono-Regular,Menlo,monospace;white-space:pre-wrap;overflow-wrap:anywhere;background:#f3f6ee;border-radius:13px;padding:16px;max-height:57vh;overflow:auto}.modal-header button{width:36px;height:36px;border:0;background:#ecf0e8;border-radius:100%;font-size:20px}.modal-foot{display:flex;gap:8px;justify-content:flex-end}.modal-foot button{border:0;border-radius:100px;padding:11px 16px;background:var(--black);color:white;font-weight:750}.sr-only{position:absolute;width:1px;height:1px;padding:0;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+@media (max-width:930px){.main{grid-template-columns:1fr}.sidebar{display:none}.hero{padding:25px 22px 28px}.eyebrow{margin-top:35px}.hero h1{font-size:48px}.toolbar{position:sticky;top:0;z-index:2;border-radius:0 0 16px 16px;box-shadow:0 10px 25px #141d1017}.form-section{scroll-margin-top:104px}}
+@media (max-width:600px){body{font-size:14px}.main{padding:0 12px;margin:12px auto 36px;gap:9px}.hero{padding:22px 20px 25px}.brand{font-size:18px}.edition{font-size:9px}.hero h1{font-size:43px;line-height:1.01}.hero p{font-size:14px;line-height:1.55}.eyebrow{font-size:10px;margin:29px 0 12px}.hero-bottom{font-size:11px}.toolbar{margin-bottom:11px;gap:7px;padding:9px}.toggle{width:100%}.toggle button{flex:1}.tool-buttons{width:100%;justify-content:space-between}.tool-buttons button{flex:1;padding:9px 7px;font-size:11px}.form-section{padding:20px 16px;border-radius:18px;margin-bottom:11px;scroll-margin-top:125px}.section-title{gap:12px}.section-index{font-size:10px;padding:8px}.section-title h2{font-size:25px}.section-title p{font-size:12px}.question{padding:17px 0}.q-label{font-size:14px;gap:8px}.q-num{min-width:23px}.choices,.builder-wrap,.inline-hint,.two-fields{padding-left:0;margin-left:0}.choice{font-size:12px;padding:10px}.cat-row{grid-template-columns:1fr 1fr 68px 33px;gap:5px;padding:7px}.cat-row label{font-size:10px}.cat-row input{font-size:11px;padding:9px 5px}.cat-row button{width:31px;height:37px}.two-fields{grid-template-columns:1fr}.footer-nav{bottom:6px}.summary-actions{padding:22px 18px}.summary-actions button{margin:0 6px 7px 0}}
+@page{size:A4;margin:13mm 13mm 13mm 13mm}
+@media print{html{scroll-behavior:auto}body{font-size:10px;background:white;-webkit-print-color-adjust:exact;print-color-adjust:exact}.hero{padding:16px 21px;margin-bottom:8px;break-after:avoid}.topbar .edition{display:none}.hero h1{font-size:30px}.eyebrow{margin:14px 0 5px}.hero p{font-size:10px;margin:8px 0}.hero-bottom{font-size:9px;padding-top:7px}.main{display:block;max-width:none;margin:0;padding:0}.sidebar,.toolbar,.footer-nav,.summary-actions,.privacy,.small-action,.cat-row button{display:none!important}.workspace{display:block}.form-section,.form-section.is-hidden{display:block!important;break-inside:auto;border:0;border-radius:0;padding:10px 6px;margin:0}.section-title{break-after:avoid;padding:8px 0 9px;margin-bottom:4px}.section-title h2{font-size:17px;margin:0 0 3px}.section-title p{font-size:9px}.section-index{font-size:9px;padding:6px}.question{break-inside:avoid;padding:7px 0}.q-label{font-size:10.5px;margin-bottom:5px}.q-num{font-size:9px}.question input:not([type=checkbox]):not([type=radio]),.question select,.question textarea{font-size:10px;padding:8px;max-width:none}.question textarea{min-height:40px}.choice{padding:5px 7px;font-size:9px}.choices{gap:5px}.choice input{width:10px;height:10px}.cat-row{grid-template-columns:1fr 1fr 90px;gap:5px}.cat-row input{font-size:9px;padding:5px}.cat-row label{font-size:8px}.builder-wrap{padding-left:29px}.inline-hint{font-size:9px}.total{font-size:9px;padding:5px}.total b{font-size:11px}.two-fields{gap:6px}.subfield{font-size:9px}.subfield input,.subfield select{font-size:9px;padding:5px!important}}
+
+
+/* Клиентский путь: страницы открываются по якорям, работают даже без JavaScript */
+html{scroll-behavior:auto} body{background:#f5f6f1}
+.hero{padding:21px max(20px,calc((100vw - 820px)/2));box-shadow:0 8px 23px #161b0e12}
+.hero .topbar{max-width:800px;margin:auto}.hero .edition{font-size:10px}
+.shell{width:min(840px,100%);margin:0 auto;padding:24px 16px 96px}
+.wizard-screen{display:none;scroll-margin-top:105px}.wizard-screen#welcome{display:block}
+body:has(.wizard-screen:target) #welcome{display:none}
+.wizard-screen:target{display:block}
+body:has(.wizard-screen:target) .wizard-screen:target{display:block}
+.intro{background:var(--black);color:white;padding:clamp(26px,7vw,55px);border-radius:28px;min-height:540px;display:flex;flex-direction:column;justify-content:center;overflow:hidden;position:relative}
+.intro::after{content:"";position:absolute;right:-100px;top:-140px;width:340px;height:340px;border-radius:50%;border:70px solid #d1f56b19;pointer-events:none}
+.intro-kicker{color:var(--lime);letter-spacing:.12em;font-size:12px;font-weight:850;margin-bottom:20px}
+.intro h1{font-weight:900;font-size:clamp(37px,7vw,67px);line-height:1;letter-spacing:-.05em;max-width:680px;margin:0}
+.intro h1 em{font-style:normal;color:var(--lime)}.intro p{line-height:1.7;color:#bdc8b6;max-width:580px;font-size:16px;margin:22px 0 28px}
+.intro-facts{display:flex;gap:11px;flex-wrap:wrap;margin-bottom:32px}.intro-facts span{border:1px solid #384332;color:#d7decf;padding:9px 12px;border-radius:999px;font-size:12px;font-weight:750}
+.intro .next-link{align-self:flex-start}.next-link,.back-link,.finish-btn{border-radius:999px;display:inline-flex;align-items:center;justify-content:center;min-height:49px;text-decoration:none;padding:12px 22px;font-weight:850;font-size:14px;white-space:nowrap;border:0}
+.next-link,.finish-btn{background:var(--lime);color:#182010}.back-link{background:#eef1e9;color:#374432}
+.section-top{display:flex;align-items:center;justify-content:space-between;gap:14px;margin:2px 0 13px;padding:0 5px;font-size:12px;color:#697365;font-weight:800}
+.progress{height:7px;background:#e0e6d5;border-radius:99px;overflow:hidden;margin-bottom:18px}
+.progress>i{height:100%;display:block;background:linear-gradient(90deg,#b5e352,#dcfc86);border-radius:99px}
+.form-section{padding:25px 26px 18px;border-radius:22px;margin-bottom:0;box-shadow:0 12px 35px #0c170c0a}
+.form-section .section-title{margin-bottom:0}
+.step-actions{display:flex;justify-content:space-between;align-items:center;gap:10px;border-top:1px solid #e5eadf;padding-top:20px;margin-top:22px}
+.step-counter{color:#7b8873;font-weight:750;font-size:12px}.step-actions .next-link{max-width:48%}
+.form-section .q-num{color:#71914c}
+.summary-screen{background:white;padding:28px;border-radius:22px;border:1px solid #e1e6d9;box-shadow:0 12px 35px #0c170c0a}
+.summary-screen h2{font-size:clamp(27px,5vw,39px);letter-spacing:-.05em;line-height:1.15;margin:2px 0 9px}.summary-screen>p{color:#677365;font-size:14px;line-height:1.7}
+.summary-group{border:1px solid #dfe6d8;padding:17px 17px 8px;border-radius:16px;margin:14px 0;background:#fbfcf9}
+.summary-group h3{font-size:17px;margin:0 0 12px}.summary-pair{border-top:1px solid #ebeee7;padding:10px 0}
+.summary-q{font-size:12px;color:#6e7b66;font-weight:700}.summary-v{font-size:14px;font-weight:700;white-space:pre-wrap;overflow-wrap:anywhere;margin-top:3px}
+.ending{background:#0d100d;color:white;padding:40px 32px;border-radius:22px;text-align:center}.ending .circle{border-radius:50%;width:76px;height:76px;background:var(--lime);color:#15200f;display:grid;place-items:center;font-size:40px;font-weight:850;margin:10px auto 23px}
+.ending h2{font-size:34px;line-height:1.1;letter-spacing:-.045em;margin:0 0 12px}.ending p{max-width:510px;margin:0 auto 22px;line-height:1.7;color:#bac9b5}
+.notice-demo{padding:11px 14px;background:#e9f3d5;border:1px solid #d3e5b7;color:#364828;border-radius:13px;font-size:12px;line-height:1.5;margin:18px 0}
+.notice-dark{background:#242b21;border-color:#444e3b;color:#c9dac2}
+.section-title h2{font-weight:850}.question input:not([type=radio]):not([type=checkbox]), .question textarea, .question select{min-height:45px}
+@media(max-width:600px){.hero{padding:17px 19px}.shell{padding:12px 11px 90px}.intro{min-height:72vh;border-radius:20px;padding:29px 23px}.intro h1{font-size:clamp(36px,10vw,52px)}.intro p{font-size:14px}.form-section{padding:20px 14px 15px}.step-actions{flex-wrap:wrap;gap:8px}.step-counter{order:-1;width:100%;text-align:center}.next-link,.back-link{min-height:47px;padding:11px 18px}.summary-screen{padding:20px 15px}.ending{padding:34px 20px}.cat-row{grid-template-columns:1fr 1fr 65px 31px}}
+@media print {.hero,.step-actions,.intro{display:none!important}.wizard-screen{display:block!important;break-inside:avoid}.shell{width:100%}.form-section{box-shadow:none}.summary-screen{display:none}}
+
+/* Изменение структуры меню: простые отметки разделов вместо сложного конструктора */
+.section-options{display:flex;flex-wrap:wrap;gap:10px;align-items:stretch}
+.section-options .choice{margin:0}
+.section-options .choice:has(input:checked){background:#ebf9d1;border-color:#a9cb6b;color:#19270e;box-shadow:inset 0 0 0 1px #a9cb6b}
+.section-help{margin:-2px 0 13px;line-height:1.55}
+@media(max-width:600px){.section-options{gap:8px}.section-options .choice{min-height:48px;padding:11px 12px}}
+
+/* PARADOX site typography; all-white title is intentional, per client request. */
+:root{--lime:#D5E66A;--black:#101114;--ink:#101114}
+body,button,input,select,textarea{font-family:Onest,-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif}
+.hero .brand{font-size:25px;letter-spacing:-.065em;font-weight:800;color:#fff}
+.hero .brand span{color:#fff}
+.info-extra-label{margin:15px 0 7px 38px}
+.question#question-35 textarea{display:block;margin-left:38px;max-width:calc(100% - 38px)}
+.translation-hint{margin-top:10px;margin-bottom:12px;line-height:1.55}
+@media(max-width:600px){.hero .brand{font-size:23px}.info-extra-label{margin-left:0}.question#question-35 textarea{margin-left:0;max-width:100%}}
+
+/* FINAL BRIEF HEADER — compact brand bar, no welcome page */
+.hero {background:#e5e2da!important; color:#101114!important; padding:0!important; margin:0!important; border-bottom:1px solid #d6d2ca; box-shadow:none!important;}
+.hero .topbar {box-sizing:border-box; width:100%; max-width:840px!important; min-height:65px!important; padding:11px 18px!important; margin:0 auto!important; display:flex; align-items:center; justify-content:flex-start;}
+.hero .brand {display:inline-flex; align-items:flex-start; color:#101114!important; font-family:Onest,Arial,sans-serif; font-weight:800!important; font-size:29px!important; letter-spacing:-.072em!important; line-height:1.05!important;}
+.hero .brand .mark {color:#8fae2f!important; font-weight:800!important; font-size:10px!important; line-height:1!important; margin:0 0 0 2px!important; position:relative; top:-1px;}
+#welcome {display:none!important;}
+#step-1 {display:block;}
+body:has(.wizard-screen:target) #step-1:not(:target) {display:none;}
+@media (max-width:600px) {
+ .hero .topbar {min-height:62px!important; padding:11px 16px!important;}
+ .hero .brand {font-size:27px!important;}
+ .shell {padding-top:12px;}
+}
+</style><style>
+/* PDF client pilot: respect previous layout & compact header */
+.must-note{margin:13px 0 0;padding:10px 12px;background:#eff6df;border-radius:11px;color:#4d603c;font-size:12px;line-height:1.5}
+.question.validation-error{background:#fff9f6;border-radius:12px;padding-left:9px;padding-right:9px;outline:1px solid #e8aaa4}
+.field-error{font-size:12px;color:#a43c2f;font-weight:750;margin-top:9px;line-height:1.45}
+.no-wishes{margin:7px 0 0 38px;border:1px solid #d2dec2;border-radius:999px;background:white;padding:7px 11px;color:#496b2d;font-size:11px;font-weight:700}
+.unknown-date{display:flex;align-items:center;gap:7px;margin:12px 0 0 38px;font-size:12px;font-weight:700;color:#46583e}
+.unknown-date input{width:17px;height:17px;accent-color:#70913b}
+.finish-symbol{background:#D5E66A;color:#101114;border-radius:50%;width:74px;height:74px;margin:20px auto 22px;display:grid;place-items:center;font-size:36px;font-weight:850}
+.summary-screen#step-7{text-align:center;border-color:#d7e4bd}
+.summary-screen#step-7 h2{font-size:clamp(29px,6vw,42px);margin-bottom:14px}
+.summary-screen#step-7>p{max-width:565px;margin:10px auto 18px}
+.download-pdf{display:block;width:100%;max-width:430px;margin:27px auto 8px;background:#D5E66A;border:0;border-radius:999px;color:#101114;min-height:59px;font-weight:850;font-size:16px;cursor:pointer}
+.download-pdf:disabled{opacity:.5;cursor:wait}
+.pdf-status{font-size:13px;font-weight:750;color:#38672d;min-height:16px;margin:5px 0 12px}
+.finish-hint{font-size:12px!important;color:#62715f!important}
+.finish-links{display:flex;justify-content:center;gap:14px;align-items:center;flex-wrap:wrap;border-top:1px solid #e4e9dc;padding-top:21px;margin-top:25px}
+.reset-btn{background:transparent;border:0;color:#7a8376;font-size:12px;text-decoration:underline;cursor:pointer}
+@media(max-width:600px){.no-wishes,.unknown-date{margin-left:0}.finish-links .back-link{font-size:12px}.shell{padding-bottom:65px}}
+@media print{.must-note,.download-pdf,.reset-btn{display:none}}
+
+/* v2: mobile layout + clear action feedback */
+.no-wishes.selected {background:#eaf8cb;border-color:#98be4b;color:#283f12;box-shadow:inset 0 0 0 1px #98be4b}
+.step-actions .next-link {white-space:normal!important;max-width:none!important;min-width:0;line-height:1.25;text-align:center;overflow-wrap:break-word;}
+@media(max-width:600px){
+ .step-actions{display:grid;grid-template-columns:minmax(0, .75fr) minmax(0, 1.25fr);grid-template-areas:"counter counter" "back next";gap:9px;align-items:stretch}
+ .step-actions .step-counter{grid-area:counter;width:auto;order:0}
+ .step-actions .back-link{grid-area:back}
+ .step-actions .next-link{grid-area:next}
+ .step-actions .back-link,.step-actions .next-link{max-width:none!important;width:100%;min-width:0;display:flex;align-items:center;justify-content:center;padding:12px 8px;font-size:clamp(11px,3.25vw,14px);line-height:1.25;white-space:normal;}
+ .download-pdf{font-size:clamp(13px,3.7vw,16px);padding:15px 12px;white-space:normal;line-height:1.3}
+}
+.pdf-fallback {max-width:650px;margin:16px auto 22px;padding:16px;background:#f1f5e9;border:1px solid #dae5ca;border-radius:16px;text-align:left}
+.pdf-fallback[hidden],.pdf-preview[hidden]{display:none!important}
+.pdf-fallback p {font-size:13px!important;color:#465741!important;line-height:1.5!important;margin:0 0 10px!important}
+.pdf-actions {display:flex;flex-wrap:wrap;gap:9px}
+.pdf-actions a,.pdf-actions button{display:inline-flex;align-items:center;justify-content:center;min-height:42px;padding:10px 13px;border-radius:999px;border:1px solid #c8d6b8;color:#25361d;background:white;text-decoration:none;font-weight:750;font-size:12px;cursor:pointer}
+.pdf-actions a:first-child{background:#101114;color:white;border-color:#101114}
+.pdf-preview{margin-top:12px}
+.pdf-preview iframe{display:block;width:100%;height:min(70vh,600px);border:1px solid #dce6d0;border-radius:12px;background:white}
+
+/* PARADOX PDF delivery (email + Telegram) */
+.brief-submit-panel{max-width:560px;margin:18px auto 16px;text-align:left}
+.brief-consent{display:flex;align-items:flex-start;gap:12px;padding:15px 16px;border:1px solid #dce5ce;border-radius:15px;background:#f9fbf5;font-size:13px;line-height:1.55;color:#404b3a;cursor:pointer}
+.brief-consent input{flex:none;width:20px;height:20px;margin:1px 0 0;accent-color:#7c9d30}
+.send-pdf{border:0;border-radius:999px;padding:16px 22px;background:#131712;color:white;font-size:15px;font-weight:800;width:100%;margin-top:12px;line-height:1.35;cursor:pointer}
+.send-pdf:disabled{opacity:.5;cursor:wait}
+.brief-delivery-status{min-height:32px;font-size:13px;line-height:1.5;margin:10px 4px;color:#38562b}
+.brief-honey{position:absolute!important;left:-10000px!important;opacity:0;pointer-events:none;height:1px;width:1px}
+.summary-screen#step-7 .download-pdf{font-size:15px;padding:15px 17px;line-height:1.35;margin-top:12px;background:#D5E66A;color:#101114}
+@media(max-width:600px){.send-pdf{min-height:54px}.summary-screen#step-7 .download-pdf{min-height:54px}}
+</style></head><body>
+<header class="hero"><div class="topbar"><div aria-label="PARADOX" class="brand">PARADOX<span aria-hidden="true" class="mark">®</span></div></div></header>
+<div class="shell">
+<form id="briefForm" novalidate="">
+<section class="form-section wizard-screen" data-step="1" id="step-1"><div class="step-header"><div class="section-top"><span>PARADOX · БРИФ</span><span>ШАГ 1 / 7</span></div><div aria-label="Прогресс: шаг 1 из 7" class="progress"><i style="width:14%"></i></div></div><div class="section-title"><div class="section-index">01 / 07</div><div><h2>О заведении</h2><p>Начнём с основного: кто вы и как с вами связаться.</p></div></div><div class="must-note">Заполните обязательные вопросы. Если что-то не относится к вашему заведению, можно указать «Нет».</div><div class="questions"><div class="question" id="question-1"><div class="q-label"><span class="q-num">01</span><label for="q1">Название заведения</label></div><input autocomplete="off" data-question="1" id="q1" name="q1" placeholder="Например, ресторан «Север»" type="text"/></div><div class="question" id="question-2"><div class="q-label"><span class="q-num">02</span><label for="q2">Тип заведения</label></div><select data-question="2" id="q2" name="q2"><option value="">Выберите вариант</option><option value="Ресторан">Ресторан</option><option value="Кафе">Кафе</option><option value="Кофейня">Кофейня</option><option value="Бар">Бар</option><option value="Кальянная">Кальянная</option><option value="Магазин / гастромаркет">Магазин / гастромаркет</option><option value="Другое">Другое</option></select></div><div class="question" id="question-3"><div class="q-label"><span class="q-num">03</span><label for="q3">Город</label></div><input autocomplete="off" data-question="3" id="q3" name="q3" placeholder="Город, где работает заведение" type="text"/></div><div class="question" id="question-4"><div class="q-label"><span class="q-num">04</span><label for="q4">Сколько заведений будет использовать меню?</label></div><input data-question="4" id="q4" inputmode="numeric" min="0" name="q4" placeholder="Количество точек" step="1" type="number"/></div><div class="question" id="question-5"><div class="q-label"><span class="q-num">05</span><label for="q5">Сайт или социальные сети</label></div><input autocomplete="off" data-question="5" id="q5" name="q5" placeholder="Ссылка на сайт, Telegram или соцсети" type="text"/></div><div class="question" id="question-6"><div class="q-label"><span class="q-num">06</span><label for="q6">Контактное лицо</label></div><input autocomplete="off" data-question="6" id="q6" name="q6" placeholder="Как к вам обращаться?" type="text"/></div><div class="question" id="question-7"><div class="q-label"><span class="q-num">07</span><label for="q7">Telegram или другой мессенджер</label></div><input autocomplete="off" data-question="7" id="q7" name="q7" placeholder="@username или ссылка" type="text"/></div><div class="question" id="question-8"><div class="q-label"><span class="q-num">08</span><label for="q8">Контактный телефон</label></div><input autocomplete="off" data-question="8" id="q8" name="q8" placeholder="+7 ..." type="tel"/></div><div class="question" id="question-9"><div class="q-label"><span class="q-num">09</span><label for="q9">Электронная почта</label></div><input autocomplete="off" data-question="9" id="q9" name="q9" placeholder="name@example.com" type="text"/></div></div><nav aria-label="Переход между шагами" class="step-actions"><span class="step-counter">Шаг 1 из 7</span><a class="next-link" href="#step-2">Далее →</a></nav></section>
+<section class="form-section wizard-screen" data-step="2" id="step-2"><div class="step-header"><div class="section-top"><span>PARADOX · БРИФ</span><span>ШАГ 2 / 7</span></div><div aria-label="Прогресс: шаг 2 из 7" class="progress"><i style="width:29%"></i></div></div><div class="section-title"><div class="section-index">02 / 07</div><div><h2>Структура меню</h2><p>Соберём разделы и поймём объём будущего проекта.</p></div></div><div class="must-note">Заполните обязательные вопросы. Если что-то не относится к вашему заведению, можно указать «Нет».</div><div class="questions"><div class="question" id="question-10"><div class="q-label"><span class="q-num">10</span><label for="q10">Есть ли готовое меню?</label></div><div class="choices"><label class="choice"><input data-question="10" name="q10" type="radio" value="Да, готово полностью"/><span>Да, готово полностью</span></label><label class="choice"><input data-question="10" name="q10" type="radio" value="Есть черновик / частично"/><span>Есть черновик / частично</span></label><label class="choice"><input data-question="10" name="q10" type="radio" value="Пока нет, нужна помощь со структурой"/><span>Пока нет, нужна помощь со структурой</span></label></div></div><div class="question" id="question-11">
+<div class="q-label"><span class="q-num">11</span><label>Какие разделы нужны в меню?</label></div>
+<div class="inline-hint section-help">Выберите все подходящие варианты. Можно отметить несколько.</div>
+<div class="choices section-options"><label class="choice"><input data-question="11" name="q11" type="checkbox" value="Горячие блюда"/><span>Горячие блюда</span></label><label class="choice"><input data-question="11" name="q11" type="checkbox" value="Супы"/><span>Супы</span></label><label class="choice"><input data-question="11" name="q11" type="checkbox" value="Салаты"/><span>Салаты</span></label><label class="choice"><input data-question="11" name="q11" type="checkbox" value="Закуски"/><span>Закуски</span></label><label class="choice"><input data-question="11" name="q11" type="checkbox" value="Завтраки"/><span>Завтраки</span></label><label class="choice"><input data-question="11" name="q11" type="checkbox" value="Гарниры"/><span>Гарниры</span></label><label class="choice"><input data-question="11" name="q11" type="checkbox" value="Десерты"/><span>Десерты</span></label><label class="choice"><input data-question="11" name="q11" type="checkbox" value="Выпечка"/><span>Выпечка</span></label><label class="choice"><input data-question="11" name="q11" type="checkbox" value="Напитки"/><span>Напитки</span></label><label class="choice"><input data-question="11" name="q11" type="checkbox" value="Кофе и чай"/><span>Кофе и чай</span></label><label class="choice"><input data-question="11" name="q11" type="checkbox" value="Коктейли"/><span>Коктейли</span></label><label class="choice"><input data-question="11" name="q11" type="checkbox" value="Кальяны"/><span>Кальяны</span></label></div>
+</div><div class="question" id="question-12">
+<div class="q-label"><span class="q-num">12</span><label for="q12">Какие ещё разделы хотите добавить?</label></div>
+<div class="inline-hint section-help">Если нужного раздела нет выше, напишите свои варианты через запятую.</div>
+<textarea data-question="12" id="q12" name="q12" placeholder="Например: пицца, табачные смеси, фирменные блюда" rows="2"></textarea>
+</div><div class="question" id="question-13">
+<div class="q-label"><span class="q-num">13</span><label for="q13">Сколько всего позиций планируется в меню?</label></div>
+<div class="inline-hint section-help">Примерное количество всех блюд и товаров. Точную цифру уточним позже.</div>
+<input data-question="13" id="q13" inputmode="numeric" min="0" name="q13" placeholder="Например, 45" type="number"/>
+</div><div class="question" id="question-14"><div class="q-label"><span class="q-num">14</span><label for="q14">Нужны ли особые разделы?</label></div><div class="choices"><label class="choice"><input data-question="14" name="q14" type="checkbox" value="Акции"/><span>Акции</span></label><label class="choice"><input data-question="14" name="q14" type="checkbox" value="Новинки"/><span>Новинки</span></label><label class="choice"><input data-question="14" name="q14" type="checkbox" value="Хиты продаж"/><span>Хиты продаж</span></label><label class="choice"><input data-question="14" name="q14" type="checkbox" value="Сезонное меню"/><span>Сезонное меню</span></label><label class="choice"><input data-question="14" name="q14" type="checkbox" value="Нет"/><span>Нет</span></label></div></div><div class="question" id="question-15"><div class="q-label"><span class="q-num">15</span><label for="q15">Пожелания по структуре меню</label></div><textarea data-question="15" id="q15" name="q15" placeholder="Что важно учесть?" rows="3"></textarea></div></div><nav aria-label="Переход между шагами" class="step-actions"><a class="back-link" href="#step-1">← Назад</a><span class="step-counter">Шаг 2 из 7</span><a class="next-link" href="#step-3">Далее →</a></nav></section>
+<section class="form-section wizard-screen" data-step="3" id="step-3"><div class="step-header"><div class="section-top"><span>PARADOX · БРИФ</span><span>ШАГ 3 / 7</span></div><div aria-label="Прогресс: шаг 3 из 7" class="progress"><i style="width:43%"></i></div></div><div class="section-title"><div class="section-index">03 / 07</div><div><h2>Карточки и визуал</h2><p>Фото и анимации PARADOX создаёт на основе материалов клиента.</p></div></div><div class="must-note">Заполните обязательные вопросы. Если что-то не относится к вашему заведению, можно указать «Нет».</div><div class="questions"><div class="question" id="question-16"><div class="q-label"><span class="q-num">16</span><label for="q16">Какие карточки вам нужны?</label></div><div class="choices"><label class="choice"><input data-question="16" name="q16" type="radio" value="Статичные"/><span>Статичные</span></label><label class="choice"><input data-question="16" name="q16" type="radio" value="Анимированные"/><span>Анимированные</span></label><label class="choice"><input data-question="16" name="q16" type="radio" value="И те и другие"/><span>И те и другие</span></label><label class="choice"><input data-question="16" name="q16" type="radio" value="Нужна консультация"/><span>Нужна консультация</span></label></div></div><div class="question" id="question-17"><div class="q-label"><span class="q-num">17</span><label for="q17">Количество статичных карточек</label></div><input data-question="17" id="q17" inputmode="numeric" min="0" name="q17" placeholder="Пример: 25" step="1" type="number"/></div><div class="question" id="question-18"><div class="q-label"><span class="q-num">18</span><label for="q18">Количество анимированных карточек</label></div><input data-question="18" id="q18" inputmode="numeric" min="0" name="q18" placeholder="Пример: 10" step="1" type="number"/></div><div class="question" id="question-19"><div class="q-label"><span class="q-num">19</span><label for="q19">Какие исходные материалы у вас есть?</label></div><div class="choices"><label class="choice"><input data-question="19" name="q19" type="checkbox" value="Фото блюд"/><span>Фото блюд</span></label><label class="choice"><input data-question="19" name="q19" type="checkbox" value="Видео блюд"/><span>Видео блюд</span></label><label class="choice"><input data-question="19" name="q19" type="checkbox" value="Логотип"/><span>Логотип</span></label><label class="choice"><input data-question="19" name="q19" type="checkbox" value="Готовые материалы / макеты"/><span>Готовые материалы / макеты</span></label><label class="choice"><input data-question="19" name="q19" type="checkbox" value="Пока ничего"/><span>Пока ничего</span></label></div></div><div class="question" id="question-20"><div class="q-label"><span class="q-num">20</span><label for="q20">Что показывать в карточке блюда?</label></div><div class="choices"><label class="choice"><input data-question="20" name="q20" type="checkbox" value="Название"/><span>Название</span></label><label class="choice"><input data-question="20" name="q20" type="checkbox" value="Цена"/><span>Цена</span></label><label class="choice"><input data-question="20" name="q20" type="checkbox" value="Описание"/><span>Описание</span></label><label class="choice"><input data-question="20" name="q20" type="checkbox" value="Состав"/><span>Состав</span></label><label class="choice"><input data-question="20" name="q20" type="checkbox" value="Вес / объём"/><span>Вес / объём</span></label><label class="choice"><input data-question="20" name="q20" type="checkbox" value="КБЖУ"/><span>КБЖУ</span></label><label class="choice"><input data-question="20" name="q20" type="checkbox" value="Аллергены"/><span>Аллергены</span></label><label class="choice"><input data-question="20" name="q20" type="checkbox" value="Отметки («острое», «веган» и т. д.)"/><span>Отметки («острое», «веган» и т. д.)</span></label></div></div><div class="question" id="question-21"><div class="q-label"><span class="q-num">21</span><label for="q21">Есть ли разные размеры, объёмы или цены у одной позиции?</label></div><div class="choices"><label class="choice"><input data-question="21" name="q21" type="radio" value="Да"/><span>Да</span></label><label class="choice"><input data-question="21" name="q21" type="radio" value="Нет"/><span>Нет</span></label><label class="choice"><input data-question="21" name="q21" type="radio" value="Пока не знаю"/><span>Пока не знаю</span></label></div></div><div class="question" id="question-22"><div class="q-label"><span class="q-num">22</span><label for="q22">Пожелания по анимации и эффектам</label></div><textarea data-question="22" id="q22" name="q22" placeholder="Например, лёгкое движение пара или плавное появление ингредиентов" rows="3"></textarea></div></div><nav aria-label="Переход между шагами" class="step-actions"><a class="back-link" href="#step-2">← Назад</a><span class="step-counter">Шаг 3 из 7</span><a class="next-link" href="#step-4">Далее →</a></nav></section>
+<section class="form-section wizard-screen" data-step="4" id="step-4"><div class="step-header"><div class="section-top"><span>PARADOX · БРИФ</span><span>ШАГ 4 / 7</span></div><div aria-label="Прогресс: шаг 4 из 7" class="progress"><i style="width:57%"></i></div></div><div class="section-title"><div class="section-index">04 / 07</div><div><h2>Дизайн</h2><p>Настроение меню: от спокойного минимализма до яркого характера.</p></div></div><div class="must-note">Заполните обязательные вопросы. Если что-то не относится к вашему заведению, можно указать «Нет».</div><div class="questions"><div class="question" id="question-23"><div class="q-label"><span class="q-num">23</span><label for="q23">Есть ли логотип и фирменный стиль?</label></div><div class="choices"><label class="choice"><input data-question="23" name="q23" type="radio" value="Да, есть всё"/><span>Да, есть всё</span></label><label class="choice"><input data-question="23" name="q23" type="radio" value="Есть только логотип"/><span>Есть только логотип</span></label><label class="choice"><input data-question="23" name="q23" type="radio" value="Фирменного стиля пока нет"/><span>Фирменного стиля пока нет</span></label></div></div><div class="question" id="question-24"><div class="q-label"><span class="q-num">24</span><label for="q24">Какой стиль предпочитаете?</label></div><select data-question="24" id="q24" name="q24"><option value="">Выберите вариант</option><option value="Минимализм">Минимализм</option><option value="Премиум">Премиум</option><option value="Яркий / эмоциональный">Яркий / эмоциональный</option><option value="Тёмный">Тёмный</option><option value="Светлый">Светлый</option><option value="Индивидуальный / необычный">Индивидуальный / необычный</option><option value="Пока не определились">Пока не определились</option></select></div><div class="question" id="question-25"><div class="q-label"><span class="q-num">25</span><label for="q25">Основной цвет меню</label></div><input autocomplete="off" data-question="25" id="q25" name="q25" placeholder="Например, графитовый" type="text"/></div><div class="question" id="question-26"><div class="q-label"><span class="q-num">26</span><label for="q26">Дополнительный цвет</label></div><input autocomplete="off" data-question="26" id="q26" name="q26" placeholder="Например, молочный" type="text"/></div><div class="question" id="question-27"><div class="q-label"><span class="q-num">27</span><label for="q27">Акцентный цвет</label></div><input autocomplete="off" data-question="27" id="q27" name="q27" placeholder="Например, лаймовый" type="text"/></div><div class="question" id="question-28"><div class="q-label"><span class="q-num">28</span><label for="q28">Пожелания по шрифтам и оформлению</label></div><textarea data-question="28" id="q28" name="q28" placeholder="Форма, настроение, детали интерфейса" rows="3"></textarea></div><div class="question" id="question-29"><div class="q-label"><span class="q-num">29</span><label for="q29">Нужен приветственный экран с логотипом?</label></div><div class="choices"><label class="choice"><input data-question="29" name="q29" type="radio" value="Да, сначала приветственный экран"/><span>Да, сначала приветственный экран</span></label><label class="choice"><input data-question="29" name="q29" type="radio" value="Нет, сразу открывать меню"/><span>Нет, сразу открывать меню</span></label><label class="choice"><input data-question="29" name="q29" type="radio" value="Пока не знаю"/><span>Пока не знаю</span></label></div></div><div class="question" id="question-30"><div class="q-label"><span class="q-num">30</span><label for="q30">Примеры меню или сайтов, которые нравятся</label></div><textarea data-question="30" id="q30" name="q30" placeholder="Ссылки или краткое описание" rows="3"></textarea></div></div><nav aria-label="Переход между шагами" class="step-actions"><a class="back-link" href="#step-3">← Назад</a><span class="step-counter">Шаг 4 из 7</span><a class="next-link" href="#step-5">Далее →</a></nav></section>
+<section class="form-section wizard-screen" data-step="5" id="step-5"><div class="step-header"><div class="section-top"><span>PARADOX · БРИФ</span><span>ШАГ 5 / 7</span></div><div aria-label="Прогресс: шаг 5 из 7" class="progress"><i style="width:71%"></i></div></div><div class="section-title"><div class="section-index">05 / 07</div><div><h2>Языки и функции</h2><p>Что сможет сделать гость помимо просмотра блюд?</p></div></div><div class="must-note">Заполните обязательные вопросы. Если что-то не относится к вашему заведению, можно указать «Нет».</div><div class="questions"><div class="question" id="question-31"><div class="q-label"><span class="q-num">31</span><label for="q31">Какие языки нужны?</label></div><div class="choices"><label class="choice"><input data-question="31" name="q31" type="checkbox" value="Русский"/><span>Русский</span></label><label class="choice"><input data-question="31" name="q31" type="checkbox" value="Английский"/><span>Английский</span></label><label class="choice"><input data-question="31" name="q31" type="checkbox" value="Китайский"/><span>Китайский</span></label><label class="choice"><input data-question="31" name="q31" type="checkbox" value="Турецкий"/><span>Турецкий</span></label><label class="choice"><input data-question="31" name="q31" type="checkbox" value="Другие (укажите ниже)"/><span>Другие (укажите ниже)</span></label></div></div><div class="question" id="question-32"><div class="q-label"><span class="q-num">32</span><label for="q32">Другие языки</label></div><input autocomplete="off" data-question="32" id="q32" name="q32" placeholder="Перечислите через запятую" type="text"/></div><div class="inline-hint translation-hint">Перевод выбранных языков подготовит команда PARADOX — вам не нужно присылать готовые переводы.</div><div class="question" id="question-33"><div class="q-label"><span class="q-num">33</span><label for="q33">Какие кнопки нужны в меню?</label></div><div class="choices"><label class="choice"><input data-question="33" name="q33" type="checkbox" value="Позвонить"/><span>Позвонить</span></label><label class="choice"><input data-question="33" name="q33" type="checkbox" value="Построить маршрут"/><span>Построить маршрут</span></label><label class="choice"><input data-question="33" name="q33" type="checkbox" value="Telegram"/><span>Telegram</span></label><label class="choice"><input data-question="33" name="q33" type="checkbox" value="WhatsApp"/><span>WhatsApp</span></label><label class="choice"><input data-question="33" name="q33" type="checkbox" value="Сайт"/><span>Сайт</span></label><label class="choice"><input data-question="33" name="q33" type="checkbox" value="Социальные сети"/><span>Социальные сети</span></label><label class="choice"><input data-question="33" name="q33" type="checkbox" value="Бронирование столика"/><span>Бронирование столика</span></label><label class="choice"><input data-question="33" name="q33" type="checkbox" value="Пока без кнопок"/><span>Пока без кнопок</span></label></div></div><div class="question" id="question-34"><div class="q-label"><span class="q-num">34</span><label for="q34">Другие функции и пожелания</label></div><textarea data-question="34" id="q34" name="q34" placeholder="Каких возможностей не хватает в списке?" rows="3"></textarea></div><div class="question" id="question-35"><div class="q-label"><span class="q-num">35</span><label for="q35">Какую информацию показывать о заведении?</label></div><div class="choices"><label class="choice"><input data-question="35" name="q35" type="checkbox" value="Адрес"/><span>Адрес</span></label><label class="choice"><input data-question="35" name="q35" type="checkbox" value="Часы работы"/><span>Часы работы</span></label><label class="choice"><input data-question="35" name="q35" type="checkbox" value="Телефон"/><span>Телефон</span></label><label class="choice"><input data-question="35" name="q35" type="checkbox" value="Ссылки на соцсети"/><span>Ссылки на соцсети</span></label><label class="choice"><input data-question="35" name="q35" type="checkbox" value="Информация о заведении"/><span>Информация о заведении</span></label><label class="choice"><input data-question="35" name="q35" type="checkbox" value="Условия обслуживания"/><span>Условия обслуживания</span></label><label class="choice"><input data-question="35" name="q35" type="checkbox" value="Не нужно"/><span>Не нужно</span></label></div><div class="inline-hint section-help info-extra-label">Свои варианты — если нужной информации нет в списке:</div><textarea aria-label="Другая информация о заведении" data-question="35extra" id="q35extra" name="q35extra" placeholder="Например: правила посещения, история заведения, условия доставки" rows="2"></textarea></div><div class="question" id="question-36"><div class="q-label"><span class="q-num">36</span><label for="q36">Как сейчас организовано бронирование?</label></div><select data-question="36" id="q36" name="q36"><option value="">Выберите вариант</option><option value="По телефону">По телефону</option><option value="Через мессенджер">Через мессенджер</option><option value="Через отдельный сервис / сайт">Через отдельный сервис / сайт</option><option value="Бронирования нет">Бронирования нет</option><option value="Другое">Другое</option></select></div></div><nav aria-label="Переход между шагами" class="step-actions"><a class="back-link" href="#step-4">← Назад</a><span class="step-counter">Шаг 5 из 7</span><a class="next-link" href="#step-6">Далее →</a></nav></section>
+<section class="form-section wizard-screen" data-step="6" id="step-6"><div class="step-header"><div class="section-top"><span>PARADOX · БРИФ</span><span>ШАГ 6 / 7</span></div><div aria-label="Прогресс: шаг 6 из 7" class="progress"><i style="width:86%"></i></div></div><div class="section-title"><div class="section-index">06 / 07</div><div><h2>Материалы и запуск</h2><p>Финальные детали перед оценкой проекта.</p></div></div><div class="must-note">Заполните обязательные вопросы. Если что-то не относится к вашему заведению, можно указать «Нет».</div><div class="questions"><div class="question" id="question-37"><div class="q-label"><span class="q-num">37</span><label for="q37">Какие материалы сможете предоставить?</label></div><div class="choices"><label class="choice"><input data-question="37" name="q37" type="checkbox" value="Логотип"/><span>Логотип</span></label><label class="choice"><input data-question="37" name="q37" type="checkbox" value="Готовое меню (PDF / фото)"/><span>Готовое меню (PDF / фото)</span></label><label class="choice"><input data-question="37" name="q37" type="checkbox" value="Тексты и цены"/><span>Тексты и цены</span></label><label class="choice"><input data-question="37" name="q37" type="checkbox" value="Фото блюд"/><span>Фото блюд</span></label><label class="choice"><input data-question="37" name="q37" type="checkbox" value="Видео блюд"/><span>Видео блюд</span></label><label class="choice"><input data-question="37" name="q37" type="checkbox" value="Фирменные цвета / брендбук"/><span>Фирменные цвета / брендбук</span></label><label class="choice"><input data-question="37" name="q37" type="checkbox" value="Другое"/><span>Другое</span></label><label class="choice"><input data-question="37" name="q37" type="checkbox" value="Пока нет материалов"/><span>Пока нет материалов</span></label></div></div><div class="question" id="question-38"><div class="q-label"><span class="q-num">38</span><label for="q38">Когда хотите запустить меню?</label></div><div class="two-fields"><label class="subfield">Желаемая дата<input data-question="38" name="q38date" type="date"/></label><label class="subfield">Срочность<select data-question="38" name="q38priority"><option value="">Выберите</option><option>Обычные сроки</option><option>Срочно</option><option>Сроки гибкие</option></select></label></div><label class="unknown-date"><input id="dateUnknown" name="dateUnknown" type="checkbox" value="Срок пока не определён"/> Срок пока не определён</label></div><div class="question" id="question-39"><div class="q-label"><span class="q-num">39</span><label for="q39">Особые требования и дополнительные пожелания</label></div><textarea data-question="39" id="q39" name="q39" placeholder="Расскажите всё, что ещё важно" rows="3"></textarea></div></div><nav aria-label="Переход между шагами" class="step-actions"><a class="back-link" href="#step-5">← Назад</a><span class="step-counter">Шаг 6 из 7</span><a class="next-link" href="#step-7">Завершить →</a></nav></section></form>
+<div class="wizard-screen summary-screen" id="step-7">
+<div class="section-top"><span>PARADOX · БРИФ</span><span>ШАГ 7 / 7</span></div>
+<div class="progress"><i style="width:100%"></i></div>
+<div aria-hidden="true" class="finish-symbol">✓</div>
+<h2>Ваш бриф готов!</h2>
+<p>Готово! Отправьте заполненный PDF в PARADOX. Нам придёт один и тот же файл на почту и в Telegram-бот. Вы также можете сохранить PDF себе.</p>
+<div class="brief-submit-panel">
+  <label class="brief-consent"><input id="briefConsent" type="checkbox"/><span>Я согласен(на) отправить указанные в брифе данные и контактную информацию команде PARADOX для рассмотрения заявки.</span></label>
+  <input class="brief-honey" id="briefHoney" type="text" autocomplete="off" tabindex="-1" aria-hidden="true" placeholder="Оставьте пустым"/>
+  <button class="send-pdf" id="sendPdf" type="button">Отправить PDF в PARADOX</button>
+  <div class="brief-delivery-status" role="status" aria-live="polite" id="deliveryStatus"></div>
+</div>
+
+<button class="download-pdf" id="downloadPdf" type="button">↓ Сохранить PDF себе</button>
+<div aria-live="polite" class="pdf-status" id="pdfStatus"></div>
+<div id="pdfFallback" class="pdf-fallback" hidden>
+ <p>Если скачивание не открылось, нажмите «Открыть PDF». На iPhone его можно сохранить через «Поделиться» → «Сохранить в Файлы».</p>
+ <div class="pdf-actions"><a id="openPdf" href="#" target="_blank" rel="noopener">Открыть PDF ↗</a><a id="savePdf" href="#" download>Скачать ещё раз ↓</a><button type="button" id="showPdfPreview">Посмотреть здесь</button></div>
+ <div class="pdf-preview" id="pdfPreview" hidden><iframe id="pdfFrame" title="Просмотр сформированного PDF"></iframe></div>
+</div>
+<p class="finish-hint">Отправка не удаляет бриф с вашего телефона. Черновик сохраняется в этом браузере. Если отправка не подтвердилась, сохраните PDF себе и отправьте нам в переписке.</p>
+<div class="finish-links"><a class="back-link" href="#step-6">← Вернуться к анкете</a><button class="reset-btn" id="clearDraft" type="button">Очистить мои ответы</button></div>
+</div>
+
+<p class="privacy" style="text-align:center;margin-top:16px">PARADOX · Ответы сохраняются на устройстве до отправки. После отправки PDF поступает на почту и в Telegram PARADOX.</p>
+</div>
+<script>(function(){'use strict';
+const form = document.getElementById('briefForm');
+const key = 'paradox_brief_pdf_pilot_v4';
+const sections=[...document.querySelectorAll('#briefForm .form-section')];
+const questions=[...document.querySelectorAll('#briefForm .question')];
+const labels={};for(const q of questions){const i=Number(q.id.replace('question-',''));const t=q.querySelector('.q-label');labels[i]=t?t.textContent.replace(/^\s*\d+\s*/,'').trim():('Вопрос '+i);}
+const clean=s=>String(s||'').trim();
+function readFields(){const result={};for(const el of form.querySelectorAll('input[name], select[name], textarea[name]')){
+ if(el.type==='checkbox'||el.type==='radio'){if(!Array.isArray(result[el.name]))result[el.name]=[];if(el.checked)result[el.name].push(el.value);}else result[el.name]=el.value;}
+ return result;}
+function save(){try{localStorage.setItem(key,JSON.stringify({fields:readFields(),savedAt:Date.now()}));}catch(e){}}
+function restore(){try{const raw=localStorage.getItem(key);if(!raw)return;const data=JSON.parse(raw);for(const el of form.querySelectorAll('input[name],select[name],textarea[name]')){const v=data.fields?.[el.name];if(el.type==='checkbox'||el.type==='radio')el.checked=Array.isArray(v)&&v.includes(el.value);else if(typeof v==='string')el.value=v;}}catch(e){}}
+function field(i){return form.elements.namedItem('q'+i);}
+function error(q,txt){q.classList.add('validation-error');let div=q.querySelector('.field-error');if(!div){div=document.createElement('div');div.className='field-error';q.append(div);}div.textContent=txt;}
+function clearError(q){q.classList.remove('validation-error');q.querySelector('.field-error')?.remove();}
+function shouldSkip(n,f){
+ // Free-text ideas and preferences are optional; the client may leave them blank.
+ if([15,22,28,30,34,39].includes(n))return true;
+ if(n===12)return !!(f.q11?.length); // custom sections only when needed
+ if(n===17)return f.q16?.includes('Анимированные')||f.q16?.includes('Нужна консультация');
+ if(n===18)return f.q16?.includes('Статичные')||f.q16?.includes('Нужна консультация');
+ if(n===22)return f.q16?.includes('Статичные')||f.q16?.includes('Нужна консультация');
+ if(n===32)return !f.q31?.includes('Другие (укажите ниже)');
+ if(n===35)return !!clean(f.q35extra);
+ return false;}
+function validateSection(section,moveToBad=true){let first=null;const f=readFields();for(const q of section.querySelectorAll('.question')){
+ const n=Number(q.id.split('-')[1]);clearError(q);
+ if(shouldSkip(n,f))continue;
+ let val = f['q'+n];
+ if(n===38)val=f.q38priority && (f.q38date||f.dateUnknown?.length)?'ok':'';
+ if(n===35)val=(f.q35?.length||clean(f.q35extra))?'ok':'';
+ if(n===11)val=(f.q11?.length||clean(f.q12))?'ok':'';
+ if(n===7)val=(clean(f.q7)||clean(f.q8)||clean(f.q9))?'ok':'';
+ if(n===8||n===9)val=(clean(f.q7)||clean(f.q8)||clean(f.q9))?'ok':'';
+ let missing=Array.isArray(val)?val.length===0:!clean(val);
+ if((n===4||n===13||n===17||n===18)&&!missing){const x=Number(val);if(!Number.isInteger(x)||x<(n===4||n===13?1:0))missing=true;}
+ if(n===9&&clean(f.q9) && !/^(нет|не требуется|отсутствует)$/i.test(clean(f.q9)) && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(f.q9)){
+ error(q,'Укажите корректную почту или напишите «Нет».');first??=q;continue;}
+ if(missing){let t='Ответьте на вопрос. Если не актуально, укажите «Нет».';
+ if(n===7||n===8||n===9)t='Оставьте хотя бы один контакт: Telegram, телефон или почту.';
+ if(n===11)t='Отметьте разделы или впишите свои в следующем поле.';
+ if(n===38)t='Укажите срочность и дату либо отметьте, что срок пока неизвестен.';
+ if(n===17||n===18)t='Укажите количество карточек.';
+ error(q,t);first??=q;
+ }
+ }
+ if(first&&moveToBad){first.scrollIntoView({behavior:'smooth',block:'center'});const el=first.querySelector('input,select,textarea');if(el)el.focus({preventScroll:true});}
+ return !first;}
+function validateAll(){for(let i=0;i<sections.length;i++){if(!validateSection(sections[i],false)){location.hash='#step-'+(i+1);setTimeout(()=>validateSection(sections[i],true),60);return false;}}return true;}
+function setup(){
+ restore();
+ form.addEventListener('input',e=>{save();const q=e.target.closest('.question');if(q)clearError(q);});
+ form.addEventListener('change',e=>{save();const q=e.target.closest('.question');if(q)clearError(q);});
+ form.addEventListener('submit',e=>e.preventDefault());
+ for(const a of document.querySelectorAll('a.next-link[href^="#step-"]'))a.addEventListener('click',e=>{
+ const screen=a.closest('.form-section');if(screen&&!validateSection(screen)){e.preventDefault();return;}
+ });
+ const dateUnknown=form.elements.namedItem('dateUnknown');const date=form.elements.namedItem('q38date');
+ function syncDate(){date.disabled=dateUnknown.checked;if(dateUnknown.checked)date.value='';}
+ dateUnknown.addEventListener('change',()=>{syncDate();save();});syncDate();
+ for(const name of ['q14','q19','q33','q35','q37']){
+ const targets=[...form.querySelectorAll('input[type=checkbox][name='+name+']')];
+ const noneVal={q14:'Нет',q19:'Пока ничего',q33:'Пока без кнопок',q35:'Не нужно',q37:'Пока нет материалов'}[name];
+ for(const input of targets)input.addEventListener('change',()=>{if(!input.checked)return;for(const other of targets){if(other!==input && (input.value===noneVal||other.value===noneVal))other.checked=false;}save();});
+ }
+ document.getElementById('downloadPdf').addEventListener('click',download);
+ document.getElementById('clearDraft').addEventListener('click',()=>{if(confirm('Очистить все ответы и начать заново?')){form.reset();localStorage.removeItem(key);location.hash='#step-1';window.scrollTo(0,0);}});
+ window.addEventListener('hashchange',()=>requestAnimationFrame(()=>window.scrollTo({top:0,behavior:'instant'})));
+ if(!location.hash||location.hash==='#welcome'||location.hash==='#complete')location.hash='#step-1';
+ }
+function getAnswer(n,f){
+ if(n===38)return [f.q38date||((f.dateUnknown||[]).length?'Срок пока не определён':''),f.q38priority].filter(Boolean).join(' · ');
+ let raw=f['q'+n];let str=Array.isArray(raw)?raw.join(', '):clean(raw);
+
+ if(n===35&&clean(f.q35extra))str+=(str?'\n':'')+'Дополнительно: '+clean(f.q35extra);
+ if(n===32&&!f.q31?.includes('Другие (укажите ниже)'))str='Не требуется';
+ if((n===17||n===18)&&!clean(str))str='0';
+ if(!str)str='Не требуется';
+ return str;
+}
+// PDF is assembled locally from high-resolution canvas pages; no network services or uploads.
+const PAGE_W=595.28, PAGE_H=841.89, LEFT=42, RIGHT=42, BOTTOM=44;
+function wrap(ctx,text,maxWidth){
+ const lines=[];for(const para of String(text||'').replace(/\r/g,'').split('\n')){
+ if(!para.trim()){lines.push('');continue;}
+ let line='';for(const word of para.trim().split(/\s+/)){
+  const trial=line?line+' '+word:word;
+  if(ctx.measureText(trial).width<=maxWidth){line=trial;continue;}
+  if(line){lines.push(line);line='';}
+  let part='';for(const c of word){if(ctx.measureText(part+c).width>maxWidth&&part){lines.push(part);part=c;}else part+=c;}
+  line=part;
+ }
+ if(line)lines.push(line);
+ }
+ return lines.length?lines:[''];
+}
+function rgbColor(ctx,hex){ctx.fillStyle=hex;}
+function makeCanvas(){const c=document.createElement('canvas');const dpr=2.45;c.width=Math.round(PAGE_W*dpr);c.height=Math.round(PAGE_H*dpr);const ctx=c.getContext('2d',{alpha:false});ctx.scale(dpr,dpr);return {c,ctx};}
+const officialLogoImage=new Image();
+officialLogoImage.src='data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAO0AAAA6CAIAAADTFElPAAABWGlDQ1BJQ0MgUHJvZmlsZQAAeJx9kLFLw1AQxr9WpaB1EB0cHDKJQ5SSCro4tBVEcQhVweqUvqapkMZHkiIFN/+Bgv+BCs5uFoc6OjgIopPo5uSk4KLleS+JpCJ6j+N+fO+74zggOW5wbvcDqDu+W1zKK5ulLSX1jAS9IAzm8Zyur0r+rj/j/T703k7LWb///43Biukxqp+UGcZdH0ioxPqezyXvE4+5tBRxS7IV8onkcsjngWe9WCC+JlZYzagQvxCr5R7d6uG63WDRDnL7tOlsrMk5lBNYxA48cNgw0IQCHdk//LOBv4BdcjfhUp+FGnzqyZEiJ5jEy3DAMAOVWEOGUpN3ju53F91PjbWDJ2ChI4S4iLWVDnA2Rydrx9rUPDAyBFy1ueEagdRHmaxWgddTYLgEjN5Qz7ZXzWrh9uk8MPAoxNskkDoEui0hPo6E6B5T8wNw6XwBA6diE8HYWhMAAEB2SURBVHic7b13tB3FlTe6Q1V3n3OvcgBJBIkgIbKEyAgQIDAYjE1wxEGAMcbgHGb85pt5b8Z4bI8zwQEcZzDGOAkZkAhCJIESIKIEKGcU7706obuq9v7+qD5HVwJhYDzL33uPWlp3XZ17Tnedql07/PZv78ZlLz8Hb4+3x99nCKCAUq9XCIB2fU982y5DCYBAuf2xt8fb4+868FViqgiKO79JAXTXT5WDAMD8j83u7fH2+KuDdhHOnYYiYPvPCACgBgAAfetFASRQAaC35fjt8Xcc0YuImrXXT4SdPYUo7i2XQ6mXMhYABpC3/Yq3x99rkAqoEKEVASIDAAoB0Cs4Yi9SAHgiAgBVRGQJqEJEiQoiIqAgqoKHt/3jt8ffcRARoooIEamqCCAwIiKiiBCDiIiIqhIZFbDWEpH3nohCCKqqEBAVUN/2K94ef68hCoKEIQQmq4IIiEASQoDAjAAgGIw1IQRA8sGJE+Io5YGIEFE1OtDythy/Pf5eQxQCIpUxHAAiKohqIBPYgKiXkPfUtiJitdphU2awReGYbAjKaESEiEXlbTl+e/w9R/R9o1MBgIAqWFASFOvLVr60dPkLr2xc28gblUpl4IBBB+w3dt/hY5K0r3cFcxKChgBZZkLIERHfzoO8Pf5OQ4gheEXkGKepOk4hd9vmLZi18JnHg9QHD+ln06TI/ZYt2xCSIw45/vijT2HsBE1VrEbYTQO+7R+/Pf5+gySIKiKSqhIRoCq4l5e88MSTcwYOrg7fa6Sx1FHt16/vwGYuTy546qmFcwf1HzB2zLEShNECk/dNYgbwb+MV/8cNfJ3UwP+3hioaYwi5lb3TvKg9+9wTxtCJJ51U7cgWLlz49NNP33PPzC0be0468VTi8NwLC0JwMbwLIRhTKmJCRACIfyBgVEIFVIivgygjgSAqtf6VC62qAERkVDHaBRGJ70BUER8VfgiBmQHiBQVRVRWRiUz01lGJgDWAKooAsxURRG0B41Bm2EEABEEQBEQJULwyGkYDguWce/3b/eIFQmUCCQ40IIiIJyrvEhVDDISZOf4SlyKCRIganI9rwmgIGKRcwABBULwKGtbWYGYEiTci1Nb0CCM9AHZaVYL4RRSkfKdqiP/iavQK0klEEFHEowIjxb0DIERWQkEIEABExDMBKsRrEmD8F6153Lu2ZUdEEAVRJojTVvFMABoIUIMwGg1AgIZYfLBsQgiIGC8V/d14nYj4lqvH5FUEJUAol1RJg8RrRuwNABC13ujasmVzv/6D995n/7zwJuHjjz9+yJAhy5atHDZs2MDBHZu71m/t3krGiDpmDeIBBJVMC7kARFRRZlYlk3CzWTAbthycjzuKiKqiSorARBHk8963/kREIEGJoTQTACJijBGRKM2qKiLGZM65xKaVrCoiqkKISZbGQ5nnuU2sczkzt6ZGvWQaEFhBjEmMAREBQLYIosgEojGXuUtyHhFDCPF4IBkJouCTJClFQTWE0JISagGW5L1vfxFV9d7H91QqFVVUjVsCJikPnhI654gwAqJxfYqiSBMTr6mqRFzuenuGiggKwPEuRBhFTFUVhVqviwgAOOcAIEmSqIBUAxGBQgih9YqKSICQJIlzHq1BpxIAVYlZREIUZcOGGREJGQkkqILEzyqp94UrAlsyzN77iIuFENI0LQpfrVaLogDANK0ElSyreu+ZKYTgnIurKiJExnufJMZ7r4DMHIIjMohobYoKiFbEK4IEySodQQplbjQaAqGzbz9mC0B5082ZM6enu5hw5MTEWjKoqCGoKhKqD44ZRRSBTXunETl3RffmLSEEJ57ZxECSNGZTSq2jqoLCzERUrVb79esXl5gUgngy5FxOxPF4GMNx9Vu6DYiImYvcrV//SgguHlYUJaI8d9Zyv379iJMkyfK8gcbGK7fzNQoACEC8bv2GeDxUkRNGUSfBIAkCaVSRO0ZnZ2dnZ2dayYqiYGNMinmeK1CQQlWibJUhM4D33lrbluYojohIRAE0L8K6dRsImYjibsUzJqj9+/dPUoOIzjlLHEJQQmByXkII1azSbDY9hq6uLld4pfYUiXQnlkxL4smkSZZlaZoYY2yaighb0BDyvIjrCQCIDAiggKoiAZmYiZC898zWeyEgZBOcN0A2TbxoXm+sW7Nm3bp13d3dzWaR5400rVQqab9+/QYNGrTXXnv16dPp8lwACuetTbz3igQEK1evid8aERGImYvg44Hv7Ozs37+/JfLelRpBxTJFNacA0QgjYiN3mzatt8QAgCQuqKXEq4g4kzhjrLVZV9fWEBwCZVlnv74DG7XNgwYNREQVlsDWpFHnErU0pvTiCSHikiXLvvDlL3nv0zQVkcK5xKRRCgGAgQMEVQXCuMHVajWx3L9//yOPPHLcuHEHjBo5ePBgKjkbQVWLogCAeLX4/ZmtBH3ggQe///3vK8XjIdEkee9R9EMf+tCll320KJrMVkpG3y6cPXKF+853vjdnzpy0WiE0XhwqWWujytwhEC3dXEkzmyZ7DBnab0D/EcP3PPzwww888MChQwcbk0QlEYJrL0KaplEzxbMapx3/mqXVn9184x9v/6MxBhFdUEYMEOIkv/KVr5x++mlxDsaYoiiMMSEEawwiNpvNJKt0dXV95R+/umrVqripCoC92QJa6ulojo0xaWqttcOHDTvkkLEHH3zwqFGjRuw5rKOjI8/zaANVJb4ZEZlZEaKhL028EgAgUKXasXnz5oXPPvfo7NkL5s/fuGlLfXtte73mCyegBIhMA/r1z6rp0CFDxh911MkTJx5xxGF9+vTJ8xzJxFvcdtttM2bMIGRELIIgcDzwuStGH7j/N7/57336dLatLiO1DySKoOGo13/4w+/NnDlLRHorCxEJoTjjzIlf+PKn+vYZuLVr9bLlL/bp069vnwFHH33svLlPvLzk+dx1vbJh8/Bh+3d29otLxMwhBCLSNt8tLkQ9b65etZaIggoAIBNB6epB1DkocfXLZRdRDcz8wKyHkiTZa8SwyZMnf/jDHxo8eLD3gKBpmuZ5I4TgXG6MiV5d7vyf7pi6bMWqtJI555gxyrGquryY+pdp519w/sD+/ZzL4116K1cEVgAl3LBp47oNG9NKJgJAiho1EO8kxxBVFaiIAryAi4MIExHRyJH7TJo06aILz99vv1GNRjMIpGnabDZTy21PKSY/o1B67wFow4ZX7p5+z/KVq7Msy/O80tEJoi54RGw263feNf3EE080hlOTurxgw94JABbBG2PQsvdegq5bt2HNmnVIBhEVAbXtNZG2whWA6BmXK/3884vuu/8BERk1at+TJ06cPPn0cePGAaiEgGggBIDo8ikzR6EWHxTZWotIReH/8OffT5s27YknFzaLnADZJIRobJokWRAxzD6Enlq9q9azefPWp5559ne/+/2hhx564YUXnn/+eYVrqoIxfNF733vX9BnLVy7P0s6ggsilvwSwdu3a3952+1Wf/ESttj0xBpFFAgBYQz54IpMXRZ/Ofg8/+uif/nxHT0/NGCMChBYAFIq8qO01fMS7z7/YUp8jjzj6rnuefeSR+/bff+wJJ5zUv9+goyaMf3nJMw/PvgfVHHnoMdZUJAATRO0jgoCEy5c8H1WOMcnceQuvuPKTIQRADCEYk0ThQIX2mgIhAARQVWVAQo3eJzM3m3VDPHrMAZ/4xCcmTTolYeODi2IfTQAACdCiRS9NufTyELQoCmutF8cYfanEe48q19/ww5NPOj4EF6J2wp2cYwDMc3fVp66ZO3e+tTZOi4hUsXd419tFjjNs4e0AAM451bDH0IFf+uLnzz77bGZuNptJYglKuxHfGT3dePorHX1mzLjvmk9/noistSEECQAAZKILGxLLt9zynwfsP8oXeZbYEAIQC4DucL5xW3dtypQpLy9ZRmzbERuiIoAoApNKudRI8atra/6OEAGkWW8MGjzggx/84JQpH61Wq0To8pyZDWE0BfF4qCIyE/Err2z6zne+M2P6vc3CZZVK9IXigkArE9FyAo33hSoSgXNBxGdpesEF777mmk8NHNQ/bzTSNL3rrru/+tV/8gGZbKllQJm5KJoDB/X9yY9vPOyQQxq1WpqmvsiJSCEAAJLxAs75az792UcffcyYBACsSYOw94Ux3ofmP331q5d8+IMhBBe2Pf38vbPnzFIxadqBwEihVt+SZdWjx51y+KHHofRDtChBIYCWQepOuFvpbSgRGWYbFBRJAIEImePPUldh1GukQKLIJhHFNKuaJH32uRe+/JV/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';
+function newPage(index,venue){const {c,ctx}=makeCanvas();
+ ctx.fillStyle='#f7f7f3';ctx.fillRect(0,0,PAGE_W,PAGE_H);
+ ctx.fillStyle='#DFDCD5';ctx.fillRect(0,0,PAGE_W,82);
+ ctx.strokeStyle='#C2C2BC';ctx.lineWidth=.55;ctx.beginPath();ctx.moveTo(0,82.8);ctx.lineTo(PAGE_W,82.8);ctx.stroke();
+ ctx.textBaseline='top';
+ if(officialLogoImage.naturalWidth){ctx.drawImage(officialLogoImage,37,17,185,45.27);}
+ else{ctx.fillStyle='#101114';ctx.font='800 26px Onest,Arial,sans-serif';ctx.fillText('PARADOX',LEFT,23);const nameW=ctx.measureText('PARADOX').width;ctx.font='800 10px Onest,Arial,sans-serif';ctx.fillStyle='#99B53D';ctx.fillText('®',LEFT+nameW+3,20);}
+ ctx.font='700 12px Onest,Arial,sans-serif';ctx.fillStyle='#495348';ctx.fillText('БРИФ НА РАЗРАБОТКУ QR-МЕНЮ',LEFT,93);
+ ctx.fillStyle='#606A61';ctx.font='11px Onest,Arial,sans-serif';ctx.fillText('Заведение: '+venue.slice(0,66),LEFT,111);
+ ctx.strokeStyle='#D7DED1';ctx.lineWidth=.8;ctx.beginPath();ctx.moveTo(LEFT,PAGE_H-BOTTOM+6);ctx.lineTo(PAGE_W-RIGHT,PAGE_H-BOTTOM+6);ctx.stroke();
+ ctx.fillStyle='#6D766D';ctx.font='10px Onest,Arial,sans-serif';ctx.fillText('PARADOX  ·  Клиентский бриф',LEFT,PAGE_H-31);ctx.fillText('Стр. '+index,PAGE_W-RIGHT-46,PAGE_H-31);
+ return {c,ctx,y:144};}
+function drawSection(pg,caption){let {ctx}=pg;pg.y+=9;ctx.fillStyle='#D5E66A';ctx.fillRect(LEFT,pg.y+1,6,20);
+ ctx.font='800 16px Onest,Arial,sans-serif';ctx.fillStyle='#101114';ctx.fillText(caption,LEFT+15,pg.y);
+ pg.y+=38;}
+function measureCard(ctx,title,value){ctx.font='700 10px Onest,Arial,sans-serif';const head=wrap(ctx,title,PAGE_W-LEFT-RIGHT-28);ctx.font='500 11px Onest,Arial,sans-serif';const valueLines=wrap(ctx,value,PAGE_W-LEFT-RIGHT-28);
+ const height=12+head.length*14+6+valueLines.length*15+14;
+ return {head,valueLines,height};}
+function drawCard(pg,number,label,value,layout){const ctx=pg.ctx,top=pg.y;ctx.fillStyle='#fbfbf8';ctx.fillRect(LEFT,top,PAGE_W-LEFT-RIGHT,layout.height);
+ ctx.strokeStyle='#e1e7db';ctx.lineWidth=.7;ctx.strokeRect(LEFT+.3,top+.3,PAGE_W-LEFT-RIGHT-.6,layout.height-.6);
+ let y=top+12;ctx.textBaseline='top';ctx.font='700 10px Onest,Arial,sans-serif';ctx.fillStyle='#596a50';
+ for(const line of layout.head){ctx.fillText((y===top+12?String(number).padStart(2,'0')+'  ':'')+line,LEFT+13,y);y+=14;}
+ y+=6;ctx.fillStyle='#172017';ctx.font='500 11px Onest,Arial,sans-serif';for(const line of layout.valueLines){ctx.fillText(line,LEFT+13,y);y+=15;}
+ pg.y+=layout.height+8;}
+async function renderPdfPages(){try{await document.fonts?.ready;}catch(e){}try{if(!officialLogoImage.complete)await new Promise(done=>{officialLogoImage.onload=done;officialLogoImage.onerror=done;});}catch(e){}const f=readFields();const venue=clean(f.q1)||'Заведение';const pages=[];
+ let pg=newPage(1,venue);const flush=()=>{pages.push(pg.c.toDataURL('image/jpeg',.85).split(',')[1]);pg.c.width=1;pg.c.height=1;};
+ for(let ix=0;ix<sections.length;ix++){
+  const section=sections[ix];const caption=(ix+1)+'. '+section.querySelector('h2').textContent;
+  if(pg.y>PAGE_H-BOTTOM-100){flush();pg=newPage(pages.length+1,venue);}
+  drawSection(pg,caption);
+  for(const q of section.querySelectorAll('.question')){
+   const n=Number(q.id.replace('question-',''));const val=getAnswer(n,f);const label=labels[n];const layout=measureCard(pg.ctx,label,val);
+   if(pg.y+layout.height>PAGE_H-BOTTOM-9){flush();pg=newPage(pages.length+1,venue);}
+   drawCard(pg,n,label,val,layout);
+  }
+ }
+ flush();return {pages,venue};}
+function decode64(s){const raw=atob(s),bytes=new Uint8Array(raw.length);for(let i=0;i<raw.length;i++)bytes[i]=raw.charCodeAt(i);return bytes;}
+function createPdf(jpegs){const encoder=new TextEncoder();const objs=[],parts=[];let pos=0;const offsets=[0];
+ function write(st){const b=typeof st==='string'?encoder.encode(st):st;parts.push(b);pos+=b.byteLength;}
+ function obj(n,contents){offsets[n]=pos;write(n+' 0 obj\n');for(const part of contents)write(part);write('\nendobj\n');}
+ write('%PDF-1.4\n%PARADOX\n');const count=jpegs.length;obj(1,['<< /Type /Catalog /Pages 2 0 R >>']);
+ const kids=Array.from({length:count},(_,i)=>(3+i*3)+' 0 R').join(' ');
+ obj(2,['<< /Type /Pages /Kids [',kids,'] /Count ',String(count),' >>']);
+ for(let i=0;i<count;i++){
+  const pageId=3+i*3,contentId=pageId+1,imageId=pageId+2;
+  obj(pageId,['<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595.28 841.89] /Resources << /XObject << /Im0 ',imageId,' 0 R >> >> /Contents ',contentId,' 0 R >>']);
+  const data='q\n595.28 0 0 841.89 0 0 cm\n/Im0 Do\nQ\n';
+  obj(contentId,['<< /Length ',String(encoder.encode(data).length),' >>\nstream\n',data,'endstream']);
+  const jpg=decode64(jpegs[i]);
+  const d= new DataView(jpg.buffer,jpg.byteOffset,jpg.byteLength);
+  // dimensions are fixed and match the canvas above
+  const width=Math.round(PAGE_W*2.45),height=Math.round(PAGE_H*2.45);
+  obj(imageId,['<< /Type /XObject /Subtype /Image /Width ',String(width),' /Height ',String(height),' /ColorSpace /DeviceRGB /BitsPerComponent 8 /Filter /DCTDecode /Length ',String(jpg.byteLength),' >>\nstream\n',jpg,'\nendstream']);
+ }
+ const start=pos;write('xref\n0 '+(3+count*3)+'\n0000000000 65535 f \n');for(let i=1;i<3+count*3;i++)write(String(offsets[i]).padStart(10,'0')+' 00000 n \n');
+ write('trailer\n<< /Size '+(3+count*3)+' /Root 1 0 R >>\nstartxref\n'+start+'\n%%EOF');
+ return new Blob(parts,{type:'application/pdf'});
+}
+// Keep PDF available for a second tap (open/share), even if the first download is blocked by a web viewer.
+let prepared=null,preparing=null,pdfBlobUrl=null;
+function pdfSignature(){return JSON.stringify(readFields());}
+function displayPdfLinks(pdf){
+  const box=document.getElementById('pdfFallback');
+  const open=document.getElementById('openPdf'),save=document.getElementById('savePdf');
+  open.href=save.href=pdf.url;save.download=pdf.filename;
+  box.hidden=false;
+}
+async function preparePdf(){
+ const sig=pdfSignature();if(prepared&&prepared.signature===sig)return prepared;
+ if(preparing&&preparing.signature===sig)return preparing.promise;
+ const status=document.getElementById('pdfStatus'),btn=document.getElementById('downloadPdf');
+ status.textContent='Подготавливаем ваш PDF…';
+ btn.disabled=true;
+ const task=(async()=>{
+  try{
+   await new Promise(resolve=>requestAnimationFrame(resolve));
+   const {pages,venue}=await renderPdfPages();
+   const blob=createPdf(pages);
+   const safe=venue.normalize('NFKD').replace(/[^\p{L}\p{N} _-]+/gu,'').trim().replace(/\s+/g,'_').slice(0,56)||'Client';
+   const url=URL.createObjectURL(blob);
+   if(pdfBlobUrl)URL.revokeObjectURL(pdfBlobUrl);
+   pdfBlobUrl=url;
+   prepared={signature:sig,blob,url,filename:'PARADOX_Brief_'+safe+'.pdf'};
+   status.textContent='PDF готов. Нажмите кнопку, чтобы сохранить или отправить файл.';
+   return prepared;
+  }catch(err){console.error('PDF error:',err);status.textContent='Не удалось подготовить PDF. Попробуйте открыть анкету в Safari или Chrome.';throw err;}
+  finally{btn.disabled=false;preparing=null;}
+ })();
+ preparing={signature:sig,promise:task};
+ return task;
+}
+async function download(){
+ const status=document.getElementById('pdfStatus');
+ if(!validateAll()){status.textContent='Заполните пропущенные обязательные вопросы.';return;}
+ let pdf;
+ try{pdf=prepared?.signature===pdfSignature()?prepared:await preparePdf();}
+ catch(e){return;}
+ displayPdfLinks(pdf);
+ // Native iOS share sheet is more dependable than a blob download inside an embedded browser.
+ if(navigator.share && window.File){
+  try{
+   const file=new File([pdf.blob],pdf.filename,{type:'application/pdf'});
+   if(!navigator.canShare || navigator.canShare({files:[file]})){
+    await navigator.share({files:[file],title:'Бриф PARADOX'});
+    status.textContent='PDF готов. Отправьте его представителю PARADOX.';
+    return;
+   }
+  }catch(err){
+   if(err?.name==='AbortError'){
+    status.textContent='Отправка отменена. PDF готов — можно открыть или скачать ниже.';
+    return;
+   }
+   console.warn('Share unavailable:',err);
+  }
+ }
+ // Desktop browsers will download. Embedded iPhone viewers may block this action;
+ // explicit links below stay available as an accessible fallback.
+ const a=document.getElementById('savePdf');a.click();
+ status.textContent='PDF готов. Если скачивание не началось, нажмите «Открыть PDF» ниже и сохраните через «Поделиться».';
+}
+document.getElementById('showPdfPreview').addEventListener('click',()=>{
+ const wrap=document.getElementById('pdfPreview'),frame=document.getElementById('pdfFrame');
+ wrap.hidden=!wrap.hidden;
+ if(!wrap.hidden && prepared){frame.src=prepared.url+'#toolbar=1';}
+});
+window.addEventListener('hashchange',()=>{
+ if(location.hash==='#step-7')setTimeout(()=>{if(validateAll())preparePdf().catch(()=>{});},80);
+});
+
+
+// DEPLOYMENT SETTING: After Apps Script is deployed, insert its published Web App URL below.
+// Do NOT put the bot token, Telegram chat ID or email address in this public HTML file.
+const PARADOX_DELIVERY_URL = 'PASTE_APPS_SCRIPT_WEB_APP_URL_HERE';
+const briefOpenedAt = Date.now();
+let deliveryId = null, sendingBrief = false;
+function endpointReady(){return /^https:\/\/script\.google\.com\/macros\/s\/[A-Za-z0-9_-]+\/exec$/.test(PARADOX_DELIVERY_URL);}
+function makeDeliveryId(){
+  if(window.crypto && crypto.randomUUID)return crypto.randomUUID();
+  return 'brief_'+Math.random().toString(36).slice(2)+Date.now().toString(36)+Math.random().toString(36).slice(2);
+}
+function blobToBase64(blob){return new Promise((resolve,reject)=>{
+  const reader=new FileReader();reader.onerror=()=>reject(new Error('Не удалось прочитать PDF'));
+  reader.onload=()=>resolve(String(reader.result).split(',')[1]||'');
+  reader.readAsDataURL(blob);
+});}
+function fetchDeliveryStatus(id){
+ return new Promise((resolve,reject)=>{
+   const cb='paradoxReceipt_'+Math.random().toString(36).slice(2);
+   const script=document.createElement('script');
+   let done=false;
+   const finish=(result,error)=>{if(done)return;done=true;delete window[cb];script.remove();clearTimeout(timeout);error?reject(error):resolve(result);};
+   window[cb]=value=>finish(value);
+   script.onerror=()=>finish(null,new Error('Не удалось связаться с сервером'));
+   const timeout=setTimeout(()=>finish(null,new Error('Не удалось подтвердить ответ сервера')),12000);
+   script.src=PARADOX_DELIVERY_URL+'?action=status&id='+encodeURIComponent(id)+'&callback='+cb+'&_='+Date.now();
+   document.head.append(script);
+ });
+}
+async function waitForReceipt(id,notify){
+ for(let i=0;i<24;i++){
+   await new Promise(resolve=>setTimeout(resolve,i===0?2500:3000));
+   try{
+     const status=await fetchDeliveryStatus(id);
+     if(status.state==='sent'||status.state==='partial'||status.state==='failed')return status;
+     notify('PDF отправляется. Ждём подтверждения почты и Telegram…');
+   }catch(error){console.warn('Receipt check:',error);}
+ }
+ return {state:'unconfirmed'};
+}
+async function sendBriefToParadox(){
+ const statusEl=document.getElementById('deliveryStatus');
+ const btn=document.getElementById('sendPdf');
+ if(sendingBrief)return;
+ if(!validateAll()){statusEl.textContent='Проверьте обязательные ответы в анкете.';return;}
+ if(!document.getElementById('briefConsent').checked){statusEl.textContent='Подтвердите согласие на передачу брифа.';return;}
+ if(!endpointReady()){
+   statusEl.textContent='Отправка пока не подключена: необходим адрес веб-приложения. PDF можно сохранить себе ниже.';
+   return;
+ }
+ if(!deliveryId) deliveryId=makeDeliveryId();
+ sendingBrief=true;btn.disabled=true;
+ try{
+  statusEl.textContent='Собираем PDF…';
+  const pdf=prepared?.signature===pdfSignature()?prepared:await preparePdf();
+  displayPdfLinks(pdf);
+  const b64=await blobToBase64(pdf.blob);
+  if(pdf.blob.size>15*1024*1024)throw new Error('PDF слишком большой для отправки. Скачайте файл себе.');
+  const f=readFields();
+  const payload={
+    id:deliveryId,
+    startedAt:briefOpenedAt,
+    honey:document.getElementById('briefHoney').value,
+    venue:String(f.q1||'').slice(0,80),
+    contact:String(f.q6||f.q7||f.q8||f.q9||'').slice(0,100),
+    pdfBase64:b64
+  };
+  statusEl.textContent='Отправляем PDF на почту и в Telegram…';
+  // A simple text/plain POST has no CORS preflight. We verify server-side status
+  // separately, rather than assuming an opaque no-cors response means success.
+  try{
+   await fetch(PARADOX_DELIVERY_URL,{
+    method:'POST',mode:'no-cors',redirect:'follow',headers:{'Content-Type':'text/plain;charset=UTF-8'},body:JSON.stringify(payload)
+   });
+  }catch(error){console.warn('Cross-origin send:',error);}
+  const result=await waitForReceipt(deliveryId,text=>{statusEl.textContent=text;});
+  if(result.state==='sent'){
+    statusEl.textContent='Готово! PDF получен на почте и в Telegram PARADOX. Ниже можете сохранить копию себе.';
+  }else if(result.state==='partial'){
+    statusEl.textContent='PDF доставлен не везде. Почта: '+(result.email?'получено':'ошибка')+'; Telegram: '+(result.telegram?'получено':'ошибка')+'. Мы уже могли получить копию — не отправляйте повторно без проверки.';
+  }else if(result.state==='failed'){
+    statusEl.textContent='Не удалось доставить PDF. Сохраните файл себе и отправьте в переписке с PARADOX.';
+  }else{
+    statusEl.textContent='Не удалось подтвердить отправку. Сохраните PDF себе и уточните у PARADOX, поступил ли файл, прежде чем повторять.';
+  }
+ }catch(error){console.error('Brief delivery:',error);statusEl.textContent=error.message||'Ошибка отправки. Сохраните PDF себе.';}
+ finally{sendingBrief=false;btn.disabled=false;}
+}
+document.getElementById('sendPdf').addEventListener('click',sendBriefToParadox);
+// If the answers change, use a fresh delivery ID for the new PDF.
+form.addEventListener('input',e=>{if(e.target.closest('.question'))deliveryId=null;});
+form.addEventListener('change',e=>{if(e.target.closest('.question'))deliveryId=null;});
+
+setup();
+})();</script></body></html>
