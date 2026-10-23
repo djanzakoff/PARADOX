@@ -511,7 +511,13 @@ async function sendBriefToParadox(){
       id:deliveryId,startedAt:briefOpenedAt,
       honey:document.getElementById('briefHoney').value,
       venue:String(f.q1||'').slice(0,80),
-      contact:String(f.q6||f.q7||f.q8||f.q9||'').slice(0,100),
+      venueType:String(f.q2||'').slice(0,80),
+      city:String(f.q3||'').slice(0,80),
+      website:String(f.q5||'').slice(0,180),
+      contact:String(f.q6||'').slice(0,100),
+      messenger:String(f.q7||'').slice(0,100),
+      phone:String(f.q8||'').slice(0,45),
+      email:String(f.q9||'').slice(0,120),
       pdfBase64:await blobToBase64(pdf.blob)
    };
    // Google Apps Script Web App does not expose cross-origin response headers.
