@@ -1,0 +1,30 @@
+name: PARADOX Mail Cloud - self test
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: paradox-mail-cloud-smoke
+  cancel-in-progress: false
+
+jobs:
+  send-self-test:
+    name: Send test only to paradoxmenu@mail.ru
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Checkout read-only
+        uses: actions/checkout@v4
+
+      - name: Python runtime
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: SMTP self-test (no customer emails)
+        env:
+          PARADOX_MAILRU_APP_PASSWORD: ${{ secrets.PARADOX_MAILRU_APP_PASSWORD }}
+        run: python scripts/paradox_mail_cloud_smoke.py
