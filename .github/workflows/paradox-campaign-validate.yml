@@ -1,0 +1,36 @@
+name: PARADOX - validate outreach campaign
+
+on:
+  workflow_dispatch:
+    inputs:
+      campaign_file:
+        description: "CSV file in outreach/ (example: restaurants.csv)"
+        required: true
+        default: restaurants.csv
+        type: string
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Validate campaign (does not send email)
+        env:
+          CAMPAIGN_FILE: ${{ inputs.campaign_file }}
+        run: |
+          python - <<'PY'
+          import os
+          from pathlib import Path
+          from scripts.paradox_campaign_validate import validate
+          name = os.environ["CAMPAIGN_FILE"]
+          if Path(name).name != name or not name.endswith(".csv"):
+              raise SystemExit("Invalid campaign filename")
+          validate(Path("outreach") / name)
+          PY
