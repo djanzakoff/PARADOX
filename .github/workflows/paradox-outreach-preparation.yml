@@ -1,0 +1,15 @@
+name: PARADOX Outreach Preparation
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Validate approved outreach files
+        run: python scripts/paradox_outreach_validate.py
