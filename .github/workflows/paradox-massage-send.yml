@@ -1,0 +1,28 @@
+name: PARADOX - send 10 massage proposals
+on:
+  workflow_dispatch:
+    inputs:
+      confirmation:
+        description: "Type SEND-MASSAGE-10. Run only once."
+        required: true
+        type: string
+permissions:
+  contents: read
+concurrency:
+  group: paradox-massage-outreach
+  cancel-in-progress: false
+jobs:
+  send:
+    if: ${{ inputs.confirmation == 'SEND-MASSAGE-10' }}
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Send massage proposals
+        env:
+          PARADOX_MAILRU_APP_PASSWORD: ${{ secrets.PARADOX_MAILRU_APP_PASSWORD }}
+          PARADOX_CONFIRM_MASSAGE: ${{ inputs.confirmation }}
+        run: python scripts/paradox_massage_send.py
